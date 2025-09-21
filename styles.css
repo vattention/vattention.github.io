@@ -79,10 +79,11 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     z-index: 1;
+    opacity: 1;
     transition: opacity 0.5s ease;
 }
 
-.hero-video.loaded + .hero-preload-image {
+.hero-video.loaded ~ .hero-preload-image {
     opacity: 0;
 }
 

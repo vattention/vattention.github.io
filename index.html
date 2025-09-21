@@ -31,13 +31,13 @@
 <body>
     <header class="hero-banner">
         <div class="hero-video-container">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="background3.mp4" type="video/mp4">
-                <!-- 如果浏览器不支持视频，显示预加载图片 -->
-                <img src="background.jpg" alt="Background" class="hero-fallback-image">
-            </video>
             <!-- 预加载图片，在视频加载前显示 -->
-            <div class="hero-preload-image" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-preload-image" style="background-image: url('background.jpg');"></div>
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                <source src="background3.mp4" type="video/mp4">
+            </video>
+            <!-- 视频加载失败时的降级图片 -->
+            <img src="background.jpg" alt="Background" class="hero-fallback-image" style="display: none;">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -153,6 +153,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             const video = document.querySelector('.hero-video');
             const preloadImage = document.querySelector('.hero-preload-image');
+            const fallbackImage = document.querySelector('.hero-fallback-image');
+            
+            // 确保预加载图片初始显示
+            if (preloadImage) {
+                preloadImage.style.opacity = '1';
+            }
             
             if (video) {
                 // 当视频可以播放时，显示视频并隐藏预加载图片
@@ -171,11 +177,14 @@
                     }
                 });
                 
-                // 如果视频加载失败，确保预加载图片保持显示
+                // 如果视频加载失败，显示降级图片
                 video.addEventListener('error', function() {
-                    console.log('视频加载失败，使用预加载图片');
+                    console.log('视频加载失败，使用降级图片');
                     if (preloadImage) {
-                        preloadImage.style.opacity = '1';
+                        preloadImage.style.opacity = '0';
+                    }
+                    if (fallbackImage) {
+                        fallbackImage.style.display = 'block';
                     }
                 });
                 
@@ -187,11 +196,24 @@
                 // 尝试播放视频
                 video.play().catch(function(error) {
                     console.log('自动播放被阻止:', error);
-                    // 如果自动播放失败，显示预加载图片
+                    // 如果自动播放失败，保持预加载图片显示
                     if (preloadImage) {
                         preloadImage.style.opacity = '1';
                     }
                 });
+                
+                // 设置超时，如果视频在5秒内没有开始播放，显示降级图片
+                setTimeout(function() {
+                    if (!video.classList.contains('loaded')) {
+                        console.log('视频加载超时，使用降级图片');
+                        if (preloadImage) {
+                            preloadImage.style.opacity = '0';
+                        }
+                        if (fallbackImage) {
+                            fallbackImage.style.display = 'block';
+                        }
+                    }
+                }, 5000);
             }
         });
     </script>
