@@ -506,6 +506,41 @@ a:hover {
     color: #cccccc;
 }
 
+/* 竖屏模式 - 当屏幕高度大于宽度时 */
+@media (orientation: portrait) and (min-height: 100vw) {
+    .hero-banner {
+        height: 100vw;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+    
+    .hero-video {
+        width: 100vw;
+        height: 100vw;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .hero-fallback-image {
+        width: 100vw;
+        height: 100vw;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .hero-preload-image {
+        width: 100vw;
+        height: 100vw;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .hero-video-container {
+        height: 100vw;
+    }
+}
+
 /* 选择文本样式 */
 ::selection {
     background-color: rgba(255, 43, 255, 1);
