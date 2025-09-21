@@ -176,38 +176,87 @@
             }
             
             if (video) {
-                // 在微信中，显示播放按钮让用户手动播放
+                // 在微信中，尝试自动模拟点击播放
                 if (isWeChat()) {
-                    console.log('检测到微信环境，显示播放按钮');
-                    if (playButton) {
-                        playButton.style.display = 'block';
-                    }
+                    console.log('检测到微信环境，尝试自动播放');
                     if (preloadImage) {
                         preloadImage.style.opacity = '1';
                     }
                     
-                    // 添加点击播放功能
-                    if (playButton) {
-                        playButton.addEventListener('click', function() {
-                            video.play().then(function() {
-                                console.log('视频开始播放');
-                                playButton.style.display = 'none';
-                                if (preloadImage) {
-                                    preloadImage.style.opacity = '0';
-                                }
-                            }).catch(function(error) {
-                                console.log('播放失败:', error);
-                                // 播放失败时显示降级图片
-                                if (preloadImage) {
-                                    preloadImage.style.opacity = '0';
-                                }
-                                if (fallbackImage) {
-                                    fallbackImage.style.display = 'block';
-                                }
-                                playButton.style.display = 'none';
+                    // 延迟一点时间后尝试播放，模拟用户交互
+                    setTimeout(function() {
+                        // 先尝试直接播放
+                        video.play().then(function() {
+                            console.log('微信中视频自动播放成功');
+                            if (preloadImage) {
+                                preloadImage.style.opacity = '0';
+                            }
+                        }).catch(function(error) {
+                            console.log('直接播放失败，尝试模拟点击:', error);
+                            
+                            // 如果直接播放失败，创建一个隐藏的按钮并模拟点击
+                            const hiddenButton = document.createElement('button');
+                            hiddenButton.style.position = 'absolute';
+                            hiddenButton.style.left = '-9999px';
+                            hiddenButton.style.top = '-9999px';
+                            hiddenButton.style.opacity = '0';
+                            hiddenButton.style.pointerEvents = 'none';
+                            document.body.appendChild(hiddenButton);
+                            
+                            // 添加点击事件
+                            hiddenButton.addEventListener('click', function() {
+                                video.play().then(function() {
+                                    console.log('模拟点击播放成功');
+                                    if (preloadImage) {
+                                        preloadImage.style.opacity = '0';
+                                    }
+                                    document.body.removeChild(hiddenButton);
+                                }).catch(function(error) {
+                                    console.log('模拟点击播放也失败:', error);
+                                    // 显示播放按钮让用户手动点击
+                                    if (playButton) {
+                                        playButton.style.display = 'block';
+                                    }
+                                    document.body.removeChild(hiddenButton);
+                                });
                             });
+                            
+                            // 模拟点击
+                            hiddenButton.click();
+                            
+                            // 如果3秒后还没成功，显示播放按钮
+                            setTimeout(function() {
+                                if (preloadImage.style.opacity !== '0') {
+                                    console.log('自动播放超时，显示播放按钮');
+                                    if (playButton) {
+                                        playButton.style.display = 'block';
+                                    }
+                                    
+                                    // 添加手动点击播放功能
+                                    if (playButton) {
+                                        playButton.addEventListener('click', function() {
+                                            video.play().then(function() {
+                                                console.log('手动点击播放成功');
+                                                playButton.style.display = 'none';
+                                                if (preloadImage) {
+                                                    preloadImage.style.opacity = '0';
+                                                }
+                                            }).catch(function(error) {
+                                                console.log('手动点击播放失败:', error);
+                                                if (preloadImage) {
+                                                    preloadImage.style.opacity = '0';
+                                                }
+                                                if (fallbackImage) {
+                                                    fallbackImage.style.display = 'block';
+                                                }
+                                                playButton.style.display = 'none';
+                                            });
+                                        });
+                                    }
+                                }
+                            }, 3000);
                         });
-                    }
+                    }, 500);
                     return;
                 }
                 
