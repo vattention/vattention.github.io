@@ -1,5 +1,60 @@
 /* 职位详情页面专用样式 */
 
+/* 职位页面背景 */
+.job-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.job-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.job-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.job-background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.03);
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.job-content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
 /* 面包屑导航 */
 .breadcrumb {
     display: flex;
@@ -7,6 +62,9 @@
     gap: 0.5rem;
     margin: 2rem 0 3rem;
     font-size: 0.9rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .breadcrumb-link {
@@ -31,11 +89,15 @@
 /* 职位头部 */
 .job-header {
     margin-bottom: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .job-meta {
     display: flex;
     gap: 1rem;
+    /* align-items: center; */
+    justify-content: center;
     margin-bottom: 1rem;
     flex-wrap: wrap;
 }
@@ -47,16 +109,23 @@
     font-weight: 500;
     color: #cccccc;
     background-color: #1a1a1a;
-    padding: 0.25rem 0.75rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 4px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
 }
 
 .job-title {
     font-size: 2.5rem;
     font-weight: 700;
+    text-align: center;
     color: #ffffff;
     line-height: 1.2;
-    margin: 0;
+    margin: 0 0 5rem 0;
+    text-decoration: none;
 }
 
 /* 职位内容 */
@@ -113,8 +182,9 @@
     background-color: #1a1a1a;
     padding: 3rem;
     border-radius: 8px;
-    margin: 3rem 0;
+    margin: 3rem auto;
     border: 1px solid #333333;
+    max-width: 800px;
 }
 
 .section-subtitle {
@@ -198,6 +268,18 @@
 }
 
 /* 响应式设计 */
+@media (max-width: 768px) {
+    .job-background-text {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-background-text {
+        font-size: 6rem;
+    }
+}
+
 @media (max-width: 768px) {
     .job-title {
         font-size: 2rem;

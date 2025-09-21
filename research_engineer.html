@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>研究工程师 - 招聘职位</title>
+    <title>Vattention Careers - Research Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="job-page.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <!-- 背景层 -->
+    <div class="job-background">
+        <div class="job-background-image"></div>
+        <div class="job-background-overlay"></div>
+        <div class="job-background-text">Vattention</div>
+    </div>
+    
+    <div class="container job-content-wrapper">
         <nav class="breadcrumb">
-            <a href="index.html" class="breadcrumb-link">← 返回招聘职位</a>
+            <a href="index.html" class="breadcrumb-link">← Back to Careers</a>
             <span class="breadcrumb-separator">|</span>
-            <span class="breadcrumb-current">申请</span>
+            <span class="breadcrumb-current">Apply</span>
         </nav>
 
         <header class="job-header">
             <div class="job-meta">
-                <span class="job-category">工程</span>
-                <span class="job-type">全职</span>
+                <span class="job-category">Engineering</span>
+                <span class="job-type">Full-time</span>
                 <span class="job-location">Hangzhou</span>
             </div>
-            <h1 class="job-title">研究工程师</h1>
+            <h1 class="job-title">Research Engineer</h1>
         </header>
 
         <main class="job-content">
             <section class="job-section">
-                <h2 class="section-title">职位描述</h2>
+                <h2 class="section-title">Job Description</h2>
                 <p class="section-text">
                     研究工程师负责推动我们AI辅助开发技术的边界。您将参与前沿研究项目，
                     将最新的AI研究成果转化为实际可用的产品功能。
@@ -43,7 +50,7 @@
             </section>
 
             <section class="job-section">
-                <h2 class="section-title">关于我们</h2>
+                <h2 class="section-title">About Vattention</h2>
                 <p class="section-text">
                     我们是一家专注于创新的科技公司，致力于自动化编程。
                     我们旅程的第一步是构建专业程序员的最佳工具，结合创新研究、设计和工程。
@@ -59,56 +66,55 @@
             </section>
 
             <section class="job-section">
-                <h2 class="section-title">申请流程</h2>
+                <h2 class="section-title">Application Process</h2>
                 <p class="section-text">
-                    如果看起来合适，我们会联系安排2-3次简短的技术面试。
-                    之后，我们会在我们的办公室安排现场面试，您将完成一个小项目，讨论想法，并会见团队。
+                    Upon an initial review, candidates will be invited for 2-3 online interviews. The final stage is an on-site visit, which includes a practical exercise (optional), in-depth discussions, and a meeting with the team.
                 </p>
             </section>
 
             <section class="application-section">
-                <h2 class="section-title">加入我们，构建编程的未来</h2>
-                <p class="section-subtitle">帮助我们推进为AI辅助开发提供动力的研究</p>
+                <h2 class="section-title">Join Us, Shape the Future of Creativity</h2>
+                <p class="section-subtitle">Help us advance the research that powers AI-assisted content creation</p>
                 
                 <form class="application-form" id="applicationForm">
                     <div class="form-group">
-                        <label for="fullName" class="form-label">姓名 *</label>
+                        <label for="fullName" class="form-label">Name *</label>
                         <input type="text" id="fullName" name="fullName" class="form-input" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email" class="form-label">邮箱地址 *</label>
+                        <label for="email" class="form-label">Email Address *</label>
                         <input type="email" id="email" name="email" class="form-input" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="resume" class="form-label">简历 *</label>
+                        <label for="resume" class="form-label">Resume *</label>
                         <input type="file" id="resume" name="resume" class="form-file" accept=".pdf,.doc,.docx" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="linkedin" class="form-label">LinkedIn 个人资料（可选）</label>
+                        <label for="linkedin" class="form-label">LinkedIn Profile (Optional)</label>
                         <input type="url" id="linkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourprofile">
                     </div>
                     
                     <div class="form-group">
-                        <label for="github" class="form-label">GitHub 个人资料（可选）</label>
+                        <label for="github" class="form-label">GitHub Profile (Optional)</label>
                         <input type="url" id="github" name="github" class="form-input" placeholder="https://github.com/yourusername">
                     </div>
                     
                     <div class="form-group">
-                        <label for="project" class="form-label">告诉我们一个您引以为豪的研究项目。分享技术挑战、您的方法以及它对您的意义。*</label>
+                        <label for="project" class="form-label">Tell us about a project you're proud of. Share the technical challenges, your approach, and its significance.*</label>
                         <textarea id="project" name="project" class="form-textarea" rows="6" required></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-button">提交申请</button>
+                    <button type="submit" class="submit-button">Submit Application</button>
                 </form>
             </section>
         </main>
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-text">— 我们的团队</p>
+                <p class="footer-text">Vattention</p>
             </div>
         </footer>
     </div>
@@ -116,7 +122,7 @@
     <script>
         document.getElementById('applicationForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('感谢您的申请！我们会尽快与您联系。');
+            alert('Thank you for your application! We will get back to you soon.');
         });
     </script>
 </body>
