@@ -153,6 +153,17 @@
     </div>
 
     <script>
+        // 检测是否在微信中
+        function isWeChat() {
+            return /micromessenger/i.test(navigator.userAgent);
+        }
+        
+        // 检测是否在微信内浏览器
+        function isWeChatBrowser() {
+            const ua = navigator.userAgent.toLowerCase();
+            return ua.indexOf('micromessenger') !== -1;
+        }
+        
         // 视频加载控制
         document.addEventListener('DOMContentLoaded', function() {
             const video = document.querySelector('.hero-video');
@@ -165,9 +176,116 @@
             }
             
             if (video) {
+                // 微信内浏览器的特殊处理
+                if (isWeChatBrowser()) {
+                    console.log('检测到微信内浏览器，使用微信专用播放策略');
+                    
+                    // 设置微信内浏览器专用的视频属性
+                    video.muted = true;
+                    video.volume = 0;
+                    video.loop = true;
+                    video.playsInline = true;
+                    video.webkitPlaysInline = true;
+                    video.setAttribute('x5-video-player-type', 'h5');
+                    video.setAttribute('x5-video-player-fullscreen', 'false');
+                    video.setAttribute('x5-video-orientation', 'portraint');
+                    
+                    // 微信内浏览器需要用户交互才能播放，尝试多种方法
+                    const tryPlayVideo = function() {
+                        // 方法1：直接播放
+                        video.play().then(function() {
+                            console.log('微信内浏览器视频播放成功');
+                            if (preloadImage) {
+                                preloadImage.style.opacity = '0';
+                            }
+                        }).catch(function(error) {
+                            console.log('直接播放失败，尝试其他方法:', error);
+                            
+                            // 方法2：模拟用户点击
+                            const clickEvent = new MouseEvent('click', {
+                                view: window,
+                                bubbles: true,
+                                cancelable: true
+                            });
+                            video.dispatchEvent(clickEvent);
+                            
+                            // 延迟后再次尝试播放
+                            setTimeout(function() {
+                                video.play().then(function() {
+                                    console.log('模拟点击后播放成功');
+                                    if (preloadImage) {
+                                        preloadImage.style.opacity = '0';
+                                    }
+                                }).catch(function(error) {
+                                    console.log('模拟点击播放也失败:', error);
+                                    
+                                    // 方法3：创建临时交互元素
+                                    const tempDiv = document.createElement('div');
+                                    tempDiv.style.position = 'absolute';
+                                    tempDiv.style.top = '0';
+                                    tempDiv.style.left = '0';
+                                    tempDiv.style.width = '100%';
+                                    tempDiv.style.height = '100%';
+                                    tempDiv.style.zIndex = '9999';
+                                    tempDiv.style.background = 'transparent';
+                                    document.body.appendChild(tempDiv);
+                                    
+                                    tempDiv.addEventListener('click', function() {
+                                        video.play().then(function() {
+                                            console.log('临时元素点击播放成功');
+                                            if (preloadImage) {
+                                                preloadImage.style.opacity = '0';
+                                            }
+                                            document.body.removeChild(tempDiv);
+                                        }).catch(function(error) {
+                                            console.log('临时元素点击播放失败:', error);
+                                            document.body.removeChild(tempDiv);
+                                        });
+                                    });
+                                    
+                                    // 自动点击临时元素
+                                    setTimeout(function() {
+                                        tempDiv.click();
+                                    }, 100);
+                                });
+                            }, 500);
+                        });
+                    };
+                    
+                    // 延迟尝试播放，给页面加载时间
+                    setTimeout(tryPlayVideo, 1000);
+                    
+                    // 监听视频事件
+                    video.addEventListener('canplaythrough', function() {
+                        video.muted = true;
+                        video.volume = 0;
+                    });
+                    
+                    video.addEventListener('playing', function() {
+                        video.muted = true;
+                        video.volume = 0;
+                        if (preloadImage) {
+                            preloadImage.style.opacity = '0';
+                        }
+                    });
+                    
+                    video.addEventListener('error', function() {
+                        console.log('微信内浏览器视频加载失败，使用降级图片');
+                        if (preloadImage) {
+                            preloadImage.style.opacity = '0';
+                        }
+                        if (fallbackImage) {
+                            fallbackImage.style.display = 'block';
+                        }
+                    });
+                    
+                    return;
+                }
                 // 当视频可以播放时，显示视频并隐藏预加载图片
                 video.addEventListener('canplaythrough', function() {
                     video.classList.add('loaded');
+                    video.muted = true;
+                    video.volume = 0;
                     if (preloadImage) {
                         preloadImage.style.opacity = '0';
                     }
@@ -176,6 +294,8 @@
                 // 当视频开始播放时，确保预加载图片隐藏
                 video.addEventListener('playing', function() {
                     video.classList.add('loaded');
+                    video.muted = true;
+                    video.volume = 0;
                     if (preloadImage) {
                         preloadImage.style.opacity = '0';
                     }
@@ -194,6 +314,7 @@
                 
                 // 设置视频属性
                 video.muted = true;
+                video.volume = 0;
                 video.loop = true;
                 video.playsInline = true;
                 
