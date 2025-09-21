@@ -33,7 +33,7 @@
         <div class="hero-video-container">
             <!-- 预加载图片，在视频加载前显示 -->
             <div class="hero-preload-image" style="background-image: url('background.jpg');"></div>
-            <video class="hero-video" autoplay muted loop playsinline preload="metadata" x5-video-player-type="h5"  webkit-playsinline="true"  x-webkit-airplay="true"  x5-video-player-fullscreen="true">
+            <video id="backgroundVideo" class="hero-video" autoplay muted loop playsinline preload="metadata" x5-video-player-type="h5"  webkit-playsinline="true"  x-webkit-airplay="true"  x5-video-player-fullscreen="true">
                 <source src="background3.mp4" type="video/mp4">
             </video>
             <!-- 视频加载失败时的降级图片 -->
@@ -221,12 +221,11 @@
             }
         });
         
+        // WeChat Video Play
         function doPlay() {
             WeixinJSBridge.invoke("getNetworkType", {}, function (e) {
-                var $video1 = $("#video1");    
-                var $video2 = $("#video2");    
-                $video1[0].play();    
-                $video2[0].play();  
+                var $video1 = $("#backgroundVideo");
+                $video1[0].play();  
             });
         }
         if (window.WeixinJSBridge) {  
