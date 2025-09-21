@@ -512,6 +512,6 @@ a:hover {
     color: #ffffff;
 }
 
-#videoRef video::-webkit-media-controls {
+#backgroundVideo video::-webkit-media-controls {
     display: none !important;
 }
