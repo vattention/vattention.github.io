@@ -1,0 +1,244 @@
+/* 职位详情页面专用样式 */
+
+/* 面包屑导航 */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0 3rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-link {
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #ffffff;
+}
+
+.breadcrumb-separator {
+    color: #666666;
+}
+
+.breadcrumb-current {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* 职位头部 */
+.job-header {
+    margin-bottom: 3rem;
+}
+
+.job-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.job-category,
+.job-type,
+.job-location {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #cccccc;
+    background-color: #1a1a1a;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+}
+
+.job-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* 职位内容 */
+.job-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.job-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 0.5rem;
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #b3b3b3;
+    margin-bottom: 1.5rem;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.project-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #b3b3b3;
+}
+
+.project-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* 申请表单 */
+.application-section {
+    background-color: #1a1a1a;
+    padding: 3rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    border: 1px solid #333333;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #999999;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.application-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.form-file {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    background-color: #ffffff;
+    color: #0a0a0a;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #cccccc;
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .job-title {
+        font-size: 2rem;
+    }
+    
+    .job-meta {
+        gap: 0.5rem;
+    }
+    
+    .job-category,
+    .job-type,
+    .job-location {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .application-section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .breadcrumb {
+        margin: 1rem 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .application-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 0.6rem;
+    }
+}

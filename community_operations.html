@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社群运营 - 招聘职位</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="job-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="index.html" class="breadcrumb-link">← 返回招聘职位</a>
+            <span class="breadcrumb-separator">|</span>
+            <span class="breadcrumb-current">申请</span>
+        </nav>
+
+        <header class="job-header">
+            <div class="job-meta">
+                <span class="job-category">市场推广</span>
+                <span class="job-type">全职</span>
+                <span class="job-location">Hangzhou</span>
+            </div>
+            <h1 class="job-title">社群运营</h1>
+        </header>
+
+        <main class="job-content">
+            <section class="job-section">
+                <h2 class="section-title">职位描述</h2>
+                <p class="section-text">
+                    社群运营负责建立和维护活跃的开发者社区，促进用户参与和品牌忠诚度。
+                    您将通过各种渠道与用户互动，收集反馈，并推动社区增长。
+                </p>
+                <p class="section-text">主要职责包括...</p>
+                <ul class="project-list">
+                    <li>管理和运营多个社交媒体平台和社区论坛</li>
+                    <li>策划和执行社区活动和线上/线下活动</li>
+                    <li>与用户互动，收集反馈并推动产品改进</li>
+                    <li>创建和发布吸引人的内容，包括教程、案例研究等</li>
+                    <li>监控社区健康度指标，制定增长策略</li>
+                </ul>
+            </section>
+
+            <section class="job-section">
+                <h2 class="section-title">关于我们</h2>
+                <p class="section-text">
+                    我们是一家专注于创新的科技公司，致力于自动化编程。
+                    我们旅程的第一步是构建专业程序员的最佳工具，结合创新研究、设计和工程。
+                </p>
+                <p class="section-text">
+                    我们是一群工程师和科学家，他们构建了受人喜爱的产品，创建了大型开源项目，
+                    创办了规模化企业，赢得了奥林匹克奖牌，并发表了重要研究。
+                </p>
+                <p class="section-text">
+                    我们的组织非常扁平，团队小而精干。我们特别喜欢那些寻求真理、充满激情和富有创造力的人。
+                    我们享受激烈的辩论、疯狂的想法和代码发布。
+                </p>
+            </section>
+
+            <section class="job-section">
+                <h2 class="section-title">申请流程</h2>
+                <p class="section-text">
+                    如果看起来合适，我们会联系安排2-3次简短的面试。
+                    之后，我们会在我们的办公室安排现场面试，您将完成一个小项目，讨论想法，并会见团队。
+                </p>
+            </section>
+
+            <section class="application-section">
+                <h2 class="section-title">加入我们，构建编程的未来</h2>
+                <p class="section-subtitle">帮助我们推进为AI辅助开发提供动力的研究</p>
+                
+                <form class="application-form" id="applicationForm">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">姓名 *</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">邮箱地址 *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resume" class="form-label">简历 *</label>
+                        <input type="file" id="resume" name="resume" class="form-file" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="linkedin" class="form-label">LinkedIn 个人资料（可选）</label>
+                        <input type="url" id="linkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourprofile">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="github" class="form-label">GitHub 个人资料（可选）</label>
+                        <input type="url" id="github" name="github" class="form-input" placeholder="https://github.com/yourusername">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project" class="form-label">告诉我们一个您引以为豪的社群运营项目。分享挑战、您的方法以及它对您的意义。*</label>
+                        <textarea id="project" name="project" class="form-textarea" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">提交申请</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">— 我们的团队</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的申请！我们会尽快与您联系。');
+        });
+    </script>
+</body>
+</html>

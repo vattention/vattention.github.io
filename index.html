@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招聘职位 - 我们正在寻找优秀人才</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 添加一些额外的视觉效果 */
+        .hero-banner .char::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .hero-banner .char:hover::before {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-banner">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="background3.mp4" type="video/mp4">
+                <!-- 如果浏览器不支持视频，显示预加载图片 -->
+                <img src="background.jpg" alt="Background" class="hero-fallback-image">
+            </video>
+            <!-- 预加载图片，在视频加载前显示 -->
+            <div class="hero-preload-image" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="char" data-char="V">V</span>
+                <span class="char" data-char="a">a</span>
+                <span class="char" data-char="t">t</span>
+                <span class="char" data-char="t">t</span>
+                <span class="char" data-char="e">e</span>
+                <span class="char" data-char="n">n</span>
+                <span class="char" data-char="t">t</span>
+                <span class="char" data-char="i">i</span>
+                <span class="char" data-char="o">o</span>
+                <span class="char" data-char="n">n</span>
+            </h1>
+            <p class="hero-subtitle">Visionary Attention, Future Invention</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">工程天才</h1>
+                <p class="hero-subtitle">
+                    我们是一家专注于创新的科技公司，致力于构建未来的工程师团队。
+                    我们相信通过人工智能和人类智慧的完美结合，能够创造出超越任何单一程序员的超级工程师。
+                </p>
+                <p class="hero-description">
+                    这个混合型工程师将拥有对代码库的轻松控制，无需低熵的按键操作。
+                    他们将以判断的速度进行迭代，即使在最复杂的系统中也是如此。
+                    通过结合人工智能和人类智慧，他们将超越任何纯AI系统。
+                </p>
+                <p class="hero-description">
+                    我们是一群研究人员和工程师。我们构建软件和模型，在有用和可能之间发明前沿技术。
+                    我们的工作已经改善了数百万程序员的生活。
+                </p>
+                <p class="hero-description">
+                    如果这让你感到兴奋，我们很乐意听到你的声音。
+                </p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="careers-section">
+                <h2 class="section-title">招聘职位</h2>
+                
+                <div class="job-category">
+                    <h3 class="category-title">Engineering</h3>
+                    <div class="job-table">
+                        <div class="job-row">
+                            <a href="infrastructure_engineer.html" class="job-link">
+                                <div class="job-title">基础设施工程师</div>
+                                <div class="job-location">Hangzhou</div>
+                            </a>
+                        </div>
+                        <div class="job-row">
+                            <a href="research_engineer.html" class="job-link">
+                                <div class="job-title">研究工程师</div>
+                                <div class="job-location">Hangzhou</div>
+                            </a>
+                        </div>
+                        <div class="job-row">
+                            <a href="product_engineer.html" class="job-link">
+                                <div class="job-title">产品工程师</div>
+                                <div class="job-location">Hangzhou</div>
+                            </a>
+                        </div>
+                        <div class="job-row">
+                            <a href="data_scientist.html" class="job-link">
+                                <div class="job-title">增长数据科学家</div>
+                                <div class="job-location">Hangzhou</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-category">
+                    <h3 class="category-title">Go-to-market</h3>
+                    <div class="job-table">
+                        <div class="job-row">
+                            <a href="growth_marketing.html" class="job-link">
+                                <div class="job-title">增长营销</div>
+                                <div class="job-location">Hangzhou</div>
+                            </a>
+                        </div>
+                        <div class="job-row">
+                            <a href="community_operations.html" class="job-link">
+                                <div class="job-title">社群运营</div>
+                                <div class="job-location">Hangzhou</div>
+                            </a>
+                        </div>
+                        <div class="job-row">
+                            <a href="video_editing.html" class="job-link">
+                                <div class="job-title">视频后期制作</div>
+                                <div class="job-location">Hangzhou</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">— 我们的团队</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 视频加载控制
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.hero-video');
+            const preloadImage = document.querySelector('.hero-preload-image');
+            
+            if (video) {
+                // 当视频可以播放时，显示视频并隐藏预加载图片
+                video.addEventListener('canplaythrough', function() {
+                    video.classList.add('loaded');
+                    if (preloadImage) {
+                        preloadImage.style.opacity = '0';
+                    }
+                });
+                
+                // 当视频开始播放时，确保预加载图片隐藏
+                video.addEventListener('playing', function() {
+                    video.classList.add('loaded');
+                    if (preloadImage) {
+                        preloadImage.style.opacity = '0';
+                    }
+                });
+                
+                // 如果视频加载失败，确保预加载图片保持显示
+                video.addEventListener('error', function() {
+                    console.log('视频加载失败，使用预加载图片');
+                    if (preloadImage) {
+                        preloadImage.style.opacity = '1';
+                    }
+                });
+                
+                // 设置视频属性
+                video.muted = true;
+                video.loop = true;
+                video.playsInline = true;
+                
+                // 尝试播放视频
+                video.play().catch(function(error) {
+                    console.log('自动播放被阻止:', error);
+                    // 如果自动播放失败，显示预加载图片
+                    if (preloadImage) {
+                        preloadImage.style.opacity = '1';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

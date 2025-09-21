@@ -1,0 +1,461 @@
+/* 重置和基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #e5e5e5;
+    background-color: #0a0a0a;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 英雄横幅 */
+.hero-banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-video.loaded {
+    opacity: 1;
+}
+
+.hero-fallback-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-preload-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.hero-video.loaded + .hero-preload-image {
+    opacity: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-banner .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.hero-banner .hero-title {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.1em;
+}
+
+.hero-banner .char {
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+.hero-banner .char:hover {
+    transform: translateY(-10px) scale(1.2);
+    color: #00ffff;
+    text-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 30px #00ffff,
+        0 0 40px #00ffff;
+    animation: glow 0.6s ease-in-out;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00ffff;
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #00ffff,
+            0 0 20px #00ffff,
+            0 0 30px #00ffff,
+            0 0 40px #00ffff;
+    }
+    100% {
+        text-shadow: 
+            0 0 10px #00ffff,
+            0 0 20px #00ffff,
+            0 0 30px #00ffff,
+            0 0 40px #00ffff;
+    }
+}
+
+.hero-banner .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+}
+
+/* 英雄区域 */
+.hero {
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #b3b3b3;
+    line-height: 1.7;
+}
+
+.hero-description {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #999999;
+    line-height: 1.7;
+}
+
+/* 主要内容区域 */
+.main-content {
+    padding: 80px 0;
+}
+
+.careers-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+/* 职位分类 */
+.job-category {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 0.5rem;
+}
+
+/* 职位表格 */
+.job-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.job-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #333333;
+    transition: background-color 0.2s ease;
+}
+
+.job-row:hover {
+    background-color: #1a1a1a;
+}
+
+.job-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.job-link:hover {
+    color: inherit;
+}
+
+.job-row:last-child {
+    border-bottom: none;
+}
+
+.job-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    flex: 1;
+}
+
+.job-location {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999999;
+    text-align: right;
+    min-width: 120px;
+}
+
+/* 页脚 */
+.footer {
+    padding: 60px 0 40px;
+    text-align: center;
+    border-top: 1px solid #333333;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999999;
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero-banner {
+        height: 80vh;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+    
+    .hero-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .hero-fallback-image {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .hero-preload-image {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .hero-banner .hero-title {
+        font-size: 3.5rem;
+        gap: 0.05em;
+    }
+    
+    .hero-banner .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero {
+        padding: 80px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .job-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+    
+    .job-location {
+        text-align: left;
+        min-width: auto;
+        font-size: 0.9rem;
+        color: #cccccc;
+    }
+    
+    .main-content {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 70vh;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+    
+    .hero-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .hero-fallback-image {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .hero-preload-image {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .hero-banner .hero-title {
+        font-size: 2.5rem;
+        gap: 0.02em;
+    }
+    
+    .hero-banner .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .category-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 链接样式 */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #cccccc;
+}
+
+/* 选择文本样式 */
+::selection {
+    background-color: #333333;
+    color: #ffffff;
+}
