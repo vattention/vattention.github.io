@@ -63,46 +63,46 @@
                 <h2 class="intro-title">Creative Genius</h2>
                 <!-- 在 Vattention Lab，我们相信人机共创能重塑未来创作。我们专注于构建智能生产力工具，赋能创作者将创意构想高效转化为精彩内容，超越单一能力，共同开启内容创作新篇章。-->
                 <p class="intro-subtitle">
-                    At <strong><i>Vattention Lab</i></strong>, we believe in the transformative power of Human-AI Co-creation for the future of creation. We build intelligent productivity tools that empower creators to bring their visions to life with unparalleled efficiency and impact, surpassing individual capabilities to unlock a new era of content creation.
+                    <span style="font-weight: bold; color: #fff;">Vattention</span> is a company dedicated to the transformative power of Human-AI Co-creation, believing it to be fundamental to the future of content creation. We build intelligent productivity tools that empower creators to bring their visions to life with unparalleled efficiency and impact, surpassing individual capabilities to unlock a new era of content creation.
                 </p>
                 <p class="intro-description">
                     Our creative agent empowers creators with effortless tool control, minimizing repetitive operations. They'll iterate at inspiration's speed, working efficiently even in complex systems. Blending AI with human creativity, our tools will transcend pure AI, expanding creative frontiers.
                 </p>
                 <p class="intro-description">
-                    We are a dynamic team of researchers and engineers, passionately dedicated to building the cutting-edge software and models that are empowering countless creative professionals behind the scenes. We are thrilled by the impact our work has on those who truly master the art of creation, and we eagerly invite you to join us in shaping the future of creativity.
+                    We are a dynamic team of researchers and engineers, passionately dedicated to building the cutting-edge software and models that are empowering countless creative professionals behind the scenes.
+                </p>
+                <p class="intro-description">
+                    We are thrilled by the impact our work has on those who truly master the art of creation, and we eagerly invite you to join us in shaping the future of creativity.
+                </p>
+                <p class="intro-description">
+                    — <a href="https://www.mikecaptain.com" target="_blank" rel="noopener noreferrer">Michael</a>, James, and the entire Vattention team
                 </p>
             </div>
         </section>
 
         <main class="main-content">
             <section class="careers-section">
-                <h2 class="section-title">招聘职位</h2>
-                
+                <h2 class="section-title">Careers</h2>
+                </p>
                 <div class="job-category">
                     <h3 class="category-title">Engineering</h3>
                     <div class="job-table">
                         <div class="job-row">
                             <a href="infrastructure_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">基础设施工程师</div>
-                                <div class="job-location">Hangzhou</div>
+                                <div class="job-title">Infrastructure Engineer</div>
+                                <div class="job-location">Hangzhou / Beijing / Remote</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="research_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">研究工程师</div>
-                                <div class="job-location">Hangzhou</div>
+                                <div class="job-title">Research Engineer</div>
+                                <div class="job-location">Hangzhou / Beijing / Remote</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="product_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">产品工程师</div>
-                                <div class="job-location">Hangzhou</div>
-                            </a>
-                        </div>
-                        <div class="job-row">
-                            <a href="data_scientist.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">增长数据科学家</div>
-                                <div class="job-location">Hangzhou</div>
+                                <div class="job-title">Product Engineer</div>
+                                <div class="job-location">Hangzhou / Beijing / Remote</div>
                             </a>
                         </div>
                     </div>
@@ -113,20 +113,20 @@
                     <div class="job-table">
                         <div class="job-row">
                             <a href="growth_marketing.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">增长营销</div>
-                                <div class="job-location">Hangzhou</div>
+                                <div class="job-title">Growth Marketing</div>
+                                <div class="job-location">Hangzhou / Beijing / Remote</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="community_operations.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">社群运营</div>
-                                <div class="job-location">Hangzhou</div>
+                                <div class="job-title">Community Operations</div>
+                                <div class="job-location">Hangzhou / Beijing / Remote</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="video_editing.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">视频后期制作</div>
-                                <div class="job-location">Hangzhou</div>
+                                <div class="job-title">Video Editing</div>
+                                <div class="job-location">Hangzhou / Beijing / Remote</div>
                             </a>
                         </div>
                     </div>
@@ -136,7 +136,15 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-text">— 我们的团队</p>
+                <p class="footer-text">Vattention Lab, <span id="currentYear"></span></p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var yearSpan = document.getElementById('currentYear');
+                        if (yearSpan) {
+                            yearSpan.textContent = new Date().getFullYear();
+                        }
+                    });
+                </script>
             </div>
         </footer>
     </div>

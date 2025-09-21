@@ -245,8 +245,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid #333333;
+    padding: 0.75rem 0;
+    /* border-bottom: 1px solid #333333; */
     transition: background-color 0.2s ease;
 }
 
@@ -276,6 +276,8 @@ body {
     font-size: 1.1rem;
     font-weight: 500;
     color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
     flex: 1;
 }
 
@@ -447,7 +449,8 @@ html {
 /* 链接样式 */
 a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
     transition: color 0.2s ease;
 }
 
