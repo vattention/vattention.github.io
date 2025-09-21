@@ -33,7 +33,8 @@
         <div class="hero-video-container">
             <!-- 预加载图片，在视频加载前显示 -->
             <div class="hero-preload-image" style="background-image: url('background.jpg');"></div>
-            <video src="background3.mp4" type="video/mp4" id="backgroundVideo" class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                <source src="background3.mp4" type="video/mp4">
             </video>
             <!-- 视频加载失败时的降级图片 -->
             <img src="background.jpg" alt="Background" class="hero-fallback-image" style="display: none;">
@@ -166,6 +167,7 @@
             if (video) {
                 // 当视频可以播放时，显示视频并隐藏预加载图片
                 video.addEventListener('canplaythrough', function() {
+                    console.log('视频可以播放，切换到视频显示');
                     video.classList.add('loaded');
                     if (preloadImage) {
                         preloadImage.style.opacity = '0';
@@ -174,6 +176,16 @@
                 
                 // 当视频开始播放时，确保预加载图片隐藏
                 video.addEventListener('playing', function() {
+                    console.log('视频开始播放，确保预加载图片隐藏');
+                    video.classList.add('loaded');
+                    if (preloadImage) {
+                        preloadImage.style.opacity = '0';
+                    }
+                });
+                
+                // 当视频加载完成时
+                video.addEventListener('loadeddata', function() {
+                    console.log('视频数据加载完成');
                     video.classList.add('loaded');
                     if (preloadImage) {
                         preloadImage.style.opacity = '0';

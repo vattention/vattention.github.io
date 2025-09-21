@@ -49,7 +49,7 @@ body {
     object-fit: cover;
     object-position: center center;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -80,7 +80,7 @@ body {
     background-repeat: no-repeat;
     z-index: 1;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.8s ease;
 }
 
 .hero-video.loaded ~ .hero-preload-image {
