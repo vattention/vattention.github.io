@@ -130,32 +130,32 @@ body {
 
 .hero-banner .char:hover {
     transform: translateY(-10px) scale(1.2);
-    color: #ccffff;
+    color: #ff2bff;
     text-shadow: 
-        0 0 10px #ccffff,
-        0 0 20px #ccffff,
-        0 0 30px #ccffff,
-        0 0 40px #ccffff;
+        0 0 10px #ff2bff,
+        0 0 20px #ff2bff,
+        0 0 30px #ff2bff,
+        0 0 40px #ff2bff;
     animation: glow 0.6s ease-in-out;
 }
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 5px #ccffff;
+        text-shadow: 0 0 5px #ff2bff;
     }
     50% {
         text-shadow: 
-            0 0 10px #ccffff,
-            0 0 20px #ccffff,
-            0 0 30px #ccffff,
-            0 0 40px #ccffff;
+            0 0 10px #ff2bff,
+            0 0 20px #ff2bff,
+            0 0 30px #ff2bff,
+            0 0 40px #ff2bff;
     }
     100% {
         text-shadow: 
-            0 0 10px #ccffff,
-            0 0 20px #ccffff,
-            0 0 30px #ccffff,
-            0 0 40px #ccffff;
+            0 0 10px #ff2bff,
+            0 0 20px #ff2bff,
+            0 0 30px #ff2bff,
+            0 0 40px #ff2bff;
     }
 }
 
@@ -166,6 +166,42 @@ body {
     letter-spacing: 0.05em;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     opacity: 0.9;
+}
+
+/* 播放按钮 */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    padding: 20px 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.play-icon {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.play-text {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* 介绍区域 */
@@ -352,6 +388,18 @@ body {
         font-size: 1.2rem;
     }
     
+    .play-button {
+        padding: 15px 25px;
+    }
+    
+    .play-icon {
+        font-size: 2.5rem;
+    }
+    
+    .play-text {
+        font-size: 0.9rem;
+    }
+    
     .intro-section {
         padding: 80px 0 60px;
     }
@@ -460,6 +508,6 @@ a:hover {
 
 /* 选择文本样式 */
 ::selection {
-    background-color: #333333;
+    background-color: rgba(255, 43, 255, 1);
     color: #ffffff;
 }
