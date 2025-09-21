@@ -33,7 +33,7 @@
         <div class="hero-video-container">
             <!-- 预加载图片，在视频加载前显示 -->
             <div class="hero-preload-image" style="background-image: url('background.jpg');"></div>
-            <video class="hero-video" muted loop playsinline preload="metadata">
+            <video class="hero-video" muted loop playsinline preload="none">
                 <source src="background3.mp4" type="video/mp4">
             </video>
             <!-- 视频加载失败时的降级图片 -->
@@ -153,140 +153,64 @@
     </div>
 
     <script>
-        // 视频加载控制
-        let videoLoaded = false;
-        let playAttempted = false;
-        
+        // 最简单的视频控制
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM 加载完成');
+            
             const video = document.querySelector('.hero-video');
             const preloadImage = document.querySelector('.hero-preload-image');
             const fallbackImage = document.querySelector('.hero-fallback-image');
             
-            // 确保预加载图片初始显示
+            if (!video) {
+                console.log('视频元素不存在');
+                return;
+            }
+            
+            // 确保预加载图片显示
             if (preloadImage) {
                 preloadImage.style.opacity = '1';
             }
             
-            if (video) {
-                // 当视频可以播放时，显示视频并隐藏预加载图片
-                video.addEventListener('canplaythrough', function() {
-                    if (!videoLoaded) {
-                        console.log('视频可以播放，切换到视频显示');
-                        videoLoaded = true;
-                        video.classList.add('loaded');
-                        if (preloadImage) {
-                            preloadImage.style.opacity = '0';
-                        }
-                    }
-                });
-                
-                // 当视频开始播放时，确保预加载图片隐藏
-                video.addEventListener('playing', function() {
-                    if (!videoLoaded) {
-                        console.log('视频开始播放，确保预加载图片隐藏');
-                        videoLoaded = true;
-                        video.classList.add('loaded');
-                        if (preloadImage) {
-                            preloadImage.style.opacity = '0';
-                        }
-                    }
-                });
-                
-                // 当视频加载完成时
-                video.addEventListener('loadeddata', function() {
-                    if (!videoLoaded) {
-                        console.log('视频数据加载完成');
-                        videoLoaded = true;
-                        video.classList.add('loaded');
-                        if (preloadImage) {
-                            preloadImage.style.opacity = '0';
-                        }
-                    }
-                });
-                
-                // 如果视频加载失败，显示降级图片
-                video.addEventListener('error', function() {
-                    console.log('视频加载失败，使用降级图片');
-                    if (preloadImage) {
-                        preloadImage.style.opacity = '0';
-                    }
-                    if (fallbackImage) {
-                        fallbackImage.style.display = 'block';
-                    }
-                });
-                
-                // 设置视频属性
-                video.muted = true;
-                video.loop = true;
-                video.playsInline = true;
-                
-                // 尝试播放视频（只尝试一次）
-                if (!playAttempted) {
-                    playAttempted = true;
-                    video.play().catch(function(error) {
-                        console.log('自动播放被阻止:', error);
-                        // 如果自动播放失败，保持预加载图片显示
-                        if (preloadImage) {
-                            preloadImage.style.opacity = '1';
-                        }
-                    });
-                }
-                
-                // 设置超时，如果视频在5秒内没有开始播放，显示降级图片
-                setTimeout(function() {
-                    if (!videoLoaded) {
-                        console.log('视频加载超时，使用降级图片');
-                        if (preloadImage) {
-                            preloadImage.style.opacity = '0';
-                        }
-                        if (fallbackImage) {
-                            fallbackImage.style.display = 'block';
-                        }
-                    }
-                }, 5000);
-            }
-        });
-        
-        // WeChat Video Play - 优化版本，防止重复播放
-        function doPlay() {
-            if (playAttempted || videoLoaded) {
-                console.log('视频已经尝试播放或已加载，跳过微信播放');
-                return;
-            }
+            // 设置视频属性
+            video.muted = true;
+            video.loop = true;
+            video.playsInline = true;
             
-            WeixinJSBridge.invoke("getNetworkType", {}, function (e) {
-                const video = document.querySelector('.hero-video');
-                if (video && !playAttempted) {
-                    playAttempted = true;
-                    video.muted = true;
-                    video.loop = true;
-                    video.playsInline = true;
-                    video.play().catch(function(error) {
-                        console.log('微信内播放失败:', error);
-                    });
+            // 监听播放事件
+            video.addEventListener('playing', function() {
+                console.log('视频开始播放');
+                video.classList.add('loaded');
+                if (preloadImage) {
+                    preloadImage.style.opacity = '0';
                 }
-            });
-        }
-        
-        // 检测是否在微信环境中
-        function isWeChat() {
-            return /micromessenger/i.test(navigator.userAgent);
-        }
-        
-        // 只在微信环境中执行微信相关代码
-        if (isWeChat()) {
-            if (window.WeixinJSBridge) {  
-                doPlay();
-            } else {  
-                document.addEventListener(    
-                    "WeixinJSBridgeReady",    
-                    function () {      
-                        doPlay();    
-                    },    
-                    false  
-                );
-            }
-        }
+            }, { once: true });
+            
+            // 监听错误事件
+            video.addEventListener('error', function() {
+                console.log('视频加载失败');
+                if (preloadImage) {
+                    preloadImage.style.opacity = '0';
+                }
+                if (fallbackImage) {
+                    fallbackImage.style.display = 'block';
+                }
+            }, { once: true });
+            
+            // 延迟加载和播放视频
+            setTimeout(function() {
+                console.log('开始加载视频');
+                video.load();
+                
+                // 等待视频可以播放
+                video.addEventListener('canplay', function() {
+                    console.log('视频可以播放，开始播放');
+                    video.play().catch(function(error) {
+                        console.log('播放失败:', error);
+                    });
+                }, { once: true });
+                
+            }, 2000);
+        });
     </script>
 </body>
 </html>
