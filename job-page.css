@@ -55,16 +55,27 @@
     z-index: 1;
 }
 
-/* 面包屑导航 */
+/* 面包屑导航 - 固定定位 */
 .breadcrumb {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin: 2rem 0 3rem;
     font-size: 0.9rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.breadcrumb:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .breadcrumb-link {
@@ -91,6 +102,7 @@
     margin-bottom: 3rem;
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 100px; /* 为固定的breadcrumb留出空间 */
 }
 
 .job-meta {
@@ -322,5 +334,73 @@
     .form-input,
     .form-textarea {
         padding: 0.6rem;
+    }
+}
+
+/* 语言切换按钮 */
+.language-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    padding: 4px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.language-switch button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 40px;
+}
+
+.language-switch button.active {
+    background-color: rgba(255, 43, 255, 0.8);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(255, 43, 255, 0.3);
+}
+
+.language-switch button:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.language-switch button:active {
+    transform: scale(0.95);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .language-switch {
+        top: 15px;
+        right: 15px;
+        padding: 3px;
+    }
+    
+    .language-switch button {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 35px;
+    }
+    
+    .breadcrumb {
+        top: 15px;
+        left: 15px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .job-header {
+        margin-top: 80px; /* 移动设备上减少顶部间距 */
     }
 }

@@ -16,6 +16,12 @@
         <div class="job-background-text">Vattention</div>
     </div>
     
+    <!-- 语言切换按钮 -->
+    <div class="language-switch">
+        <button id="lang-zh" class="active">中文</button>
+        <button id="lang-en">EN</button>
+    </div>
+
     <div class="container job-content-wrapper">
         <nav class="breadcrumb">
             <a href="index.html" class="breadcrumb-link">← Back to Careers</a>
@@ -115,11 +121,6 @@
         </footer>
     </div>
 
-    <script>
-        document.getElementById('applicationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('感谢您的申请！我们会尽快与您联系。');
-        });
-    </script>
+    <script src="language-switch.js"></script>
 </body>
 </html>

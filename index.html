@@ -26,9 +26,65 @@
             width: 100px;
             height: 100px;
         }
+        
+        /* 语言切换按钮样式 */
+        .language-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 25px;
+            padding: 4px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .language-switch button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 40px;
+        }
+        .language-switch button.active {
+            background-color: rgba(255, 43, 255, 0.8);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(255, 43, 255, 0.3);
+        }
+        .language-switch button:hover:not(.active) {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        .language-switch button:active {
+            transform: scale(0.95);
+        }
+        @media (max-width: 768px) {
+            .language-switch {
+                top: 15px;
+                right: 15px;
+                padding: 3px;
+            }
+            .language-switch button {
+                padding: 6px 12px;
+                font-size: 12px;
+                min-width: 35px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- 语言切换按钮 -->
+    <div class="language-switch">
+        <button id="lang-zh" class="active">中文</button>
+        <button id="lang-en">EN</button>
+    </div>
+
     <header class="hero-banner">
         <div class="hero-video-container">
             <!-- 预加载图片，在视频加载前显示 -->
@@ -53,22 +109,22 @@
                 <span class="char" data-char="o">o</span>
                 <span class="char" data-char="n">n</span>
             </h1>
-            <p class="hero-subtitle">Visionary Attention, Future Invention</p>
+            <p class="hero-subtitle" data-zh="前瞻性关注，未来创新" data-en="Visionary Attention, Future Invention">Visionary Attention, Future Invention</p>
         </div>
     </header>
 
     <div class="container">
         <section class="intro-section">
             <div class="intro-content">
-                <h2 class="intro-title">Human-AI Cocreation</h2>
+                <h2 class="intro-title" data-zh="人机共创" data-en="Human-AI Cocreation">Human-AI Cocreation</h2>
                 <!-- 在 Vattention Lab，我们相信人机共创能重塑未来创作。我们专注于构建智能生产力工具，赋能创作者将创意构想高效转化为精彩内容，超越单一能力，共同开启内容创作新篇章。-->
-                <p class="intro-subtitle">
+                <p class="intro-subtitle" data-zh="<span style='font-weight: bold; color: #fff;'>Vattention</span> 是一家致力于人机共创变革力量的公司，相信这是内容创作未来的基础。我们构建智能生产力工具，赋能创作者以无与伦比的效率和影响力将愿景变为现实。" data-en="<span style='font-weight: bold; color: #fff;'>Vattention</span> is a company dedicated to the transformative power of Human-AI Co-creation, believing it to be fundamental to the future of content creation. We build intelligent productivity tools that empower creators to bring their visions to life with unparalleled efficiency and impact.">
                     <span style="font-weight: bold; color: #fff;">Vattention</span> is a company dedicated to the transformative power of Human-AI Co-creation, believing it to be fundamental to the future of content creation. We build intelligent productivity tools that empower creators to bring their visions to life with unparalleled efficiency and impact.
                 </p>
-                <p class="intro-description">
+                <p class="intro-description" data-zh="我们的创意智能体赋能创作者轻松控制工具，最小化重复操作。将AI与人类创造力融合，我们的工具将超越纯AI，拓展创意边界。" data-en="Our creative agent empowers creators with effortless tool control, minimizing repetitive operations. Blending AI with human creativity, our tools will transcend pure AI, expanding creative frontiers.">
                     Our creative agent empowers creators with effortless tool control, minimizing repetitive operations. Blending AI with human creativity, our tools will transcend pure AI, expanding creative frontiers.
                 </p>
-                <p class="intro-description">
+                <p class="intro-description" data-zh="我们是一个充满活力的研究者和工程师团队，热情致力于构建尖端的软件和模型，在幕后赋能无数创意专业人士。我们为工作对真正掌握创作艺术的人产生的影响而兴奋，我们热切邀请您加入我们，共同塑造创造力的未来。" data-en="We are a dynamic team of researchers and engineers, passionately dedicated to building the cutting-edge software and models that are empowering countless creative professionals behind the scenes. We are thrilled by the impact our work has on those who truly master the art of creation, and we eagerly invite you to join us in shaping the future of creativity.">
                     We are a dynamic team of researchers and engineers, passionately dedicated to building the cutting-edge software and models that are empowering countless creative professionals behind the scenes. We are thrilled by the impact our work has on those who truly master the art of creation, and we eagerly invite you to join us in shaping the future of creativity.
                 </p>
                 <p class="intro-description">
@@ -79,50 +135,44 @@
 
         <main class="main-content">
             <section class="careers-section">
-                <h2 class="section-title">Careers</h2>
+                <h2 class="section-title" data-zh="职业机会" data-en="Careers">Careers</h2>
                 </p>
                 <div class="job-category">
-                    <h3 class="category-title">Product Development</h3>
+                    <h3 class="category-title" data-zh="产品开发" data-en="Product Development">Product Development</h3>
                     <div class="job-table">
                         <div class="job-row">
-                            <a href="infrastructure_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">Software Engineer, Infrastructure</div>
+                            <a href="ai_engineer_backend.html" class="job-link" target="_blank" rel="noopener noreferrer">
+                                <div class="job-title" data-zh="AI工程师，后端与智能体" data-en="AI Engineer, Backend & Agent">AI Engineer, Backend & Agent</div>
                                 <div class="job-location">⚲ Hangzhou / Beijing</div>
                             </a>
                         </div>
                         <div class="job-row">
-                            <a href="agent_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">Software Engineer, Agent Engine</div>
-                                <div class="job-location">⚲ Hangzhou</div>
+                            <a href="ai_engineer_model.html" class="job-link" target="_blank" rel="noopener noreferrer">
+                                <div class="job-title" data-zh="AI工程师，模型算法" data-en="AI Engineer, Model Algorithm">AI Engineer, Model Algorithm</div>
+                                <div class="job-location">⚲ Hangzhou / Beijing</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="client_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">Software Engineer, Desktop Client</div>
+                                <div class="job-title" data-zh="软件工程师，桌面客户端" data-en="Software Engineer, Desktop Client">Software Engineer, Desktop Client</div>
                                 <div class="job-location">⚲ Hangzhou</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="vsdk_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">Software Engineer, VSDK & Computer Graphics</div>
+                                <div class="job-title" data-zh="软件工程师，VSDK与计算机图形" data-en="Software Engineer, VSDK & Computer Graphics">Software Engineer, VSDK & Computer Graphics</div>
                                 <div class="job-location">⚲ Hangzhou</div>
                             </a>
                         </div>
                         <div class="job-row">
-                            <a href="research_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">Software Engineer, Model</div>
-                                <div class="job-location">⚲ Hangzhou / Beijing</div>
-                            </a>
-                        </div>
-                        <div class="job-row">
                             <a href="product_engineer_ai.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">Product Engineer, AI Agent</div>
+                                <div class="job-title" data-zh="产品工程师，AI智能体" data-en="Product Engineer, AI Agent">Product Engineer, AI Agent</div>
                                 <div class="job-location">⚲ Hangzhou</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="product_engineer_urd.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title">Product Engineer, User Research & Data</div>
+                                <div class="job-title" data-zh="产品工程师，用户研究与数据" data-en="Product Engineer, User Research & Data">Product Engineer, User Research & Data</div>
                                 <div class="job-location">⚲ Hangzhou</div>
                             </a>
                         </div>
@@ -240,6 +290,40 @@
                 }, { once: true });
                 
             }, 2000);
+        });
+        
+        // 语言切换功能
+        let currentLanguage = 'zh';
+        
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // 更新按钮状态
+            document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            
+            // 更新页面内容
+            const elements = document.querySelectorAll('[data-zh][data-en]');
+            elements.forEach(element => {
+                element.innerHTML = element.getAttribute(`data-${lang}`);
+            });
+            
+            // 更新页面语言属性
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            
+            // 保存语言偏好到本地存储
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // 初始化语言切换
+        document.addEventListener('DOMContentLoaded', function() {
+            // 从本地存储获取语言偏好
+            const savedLanguage = localStorage.getItem('preferredLanguage') || 'zh';
+            switchLanguage(savedLanguage);
+            
+            // 绑定按钮事件
+            document.getElementById('lang-zh').addEventListener('click', () => switchLanguage('zh'));
+            document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
         });
     </script>
 </body>
