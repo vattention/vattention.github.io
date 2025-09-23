@@ -81,8 +81,8 @@
 <body>
     <!-- 语言切换按钮 -->
     <div class="language-switch">
-        <button id="lang-zh" class="active">中文</button>
-        <button id="lang-en">EN</button>
+        <button id="lang-zh">中文</button>
+        <button id="lang-en" class="active">EN</button>
     </div>
 
     <header class="hero-banner">
@@ -142,31 +142,31 @@
                     <div class="job-table">
                         <div class="job-row">
                             <a href="ai_engineer_backend.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title" data-zh="AI工程师，后端与智能体" data-en="AI Engineer, Backend & Agent">AI Engineer, Backend & Agent</div>
+                                <div class="job-title" data-zh="AI 工程师，后端 & Agent" data-en="AI Engineer, Backend & Agent">AI Engineer, Backend & Agent</div>
                                 <div class="job-location" data-zh="⚲ 杭州 / 北京" data-en="⚲ Hangzhou / Beijing">⚲ Hangzhou / Beijing</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="ai_engineer_model.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title" data-zh="AI工程师，模型算法" data-en="AI Engineer, Model Algorithm">AI Engineer, Model Algorithm</div>
+                                <div class="job-title" data-zh="AI 工程师，模型算法" data-en="AI Engineer, Model Algorithm">AI Engineer, Model Algorithm</div>
                                 <div class="job-location" data-zh="⚲ 杭州 / 北京" data-en="⚲ Hangzhou / Beijing">⚲ Hangzhou / Beijing</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="client_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title" data-zh="软件工程师，桌面客户端" data-en="Software Engineer, Desktop Client">Software Engineer, Desktop Client</div>
+                                <div class="job-title" data-zh="软件工程师，Desktop Video App" data-en="Software Engineer, Desktop Video App">Software Engineer, Desktop Client</div>
                                 <div class="job-location" data-zh="⚲ 杭州" data-en="⚲ Hangzhou">⚲ Hangzhou</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="vsdk_engineer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title" data-zh="软件工程师，VSDK与计算机图形" data-en="Software Engineer, VSDK & Computer Graphics">Software Engineer, VSDK & Computer Graphics</div>
+                                <div class="job-title" data-zh="软件工程师，多媒体开发" data-en="Software Engineer, Multimedia Dev">Software Engineer, Multimedia Dev</div>
                                 <div class="job-location" data-zh="⚲ 杭州" data-en="⚲ Hangzhou">⚲ Hangzhou</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="product_engineer_ai.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title" data-zh="产品工程师，AI智能体" data-en="Product Engineer, AI Agent">Product Engineer, AI Agent</div>
+                                <div class="job-title" data-zh="产品工程师，AI Agent" data-en="Product Engineer, AI Agent">Product Engineer, AI Agent</div>
                                 <div class="job-location" data-zh="⚲ 杭州" data-en="⚲ Hangzhou">⚲ Hangzhou</div>
                             </a>
                         </div>
@@ -178,13 +178,13 @@
                         </div>
                         <div class="job-row">
                             <a href="product_engineer_video.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title" data-zh="产品工程师，视频应用" data-en="Product Engineer, Video Apps">Product Engineer, Video Apps</div>
+                                <div class="job-title" data-zh="产品工程师，Desktop Video App" data-en="Product Engineer, Desktop Video App">Product Engineer, Video Apps</div>
                                 <div class="job-location" data-zh="⚲ 杭州" data-en="⚲ Hangzhou">⚲ Hangzhou</div>
                             </a>
                         </div>
                         <div class="job-row">
                             <a href="designer.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title" data-zh="体验设计师，视频应用" data-en="Experience Designer, Video Apps">Experience Designer, Video Apps</div>
+                                <div class="job-title" data-zh="体验设计师，Desktop Video App" data-en="Experience Designer, Desktop Video App">Experience Designer, Video Apps</div>
                                 <div class="job-location" data-zh="⚲ 杭州" data-en="⚲ Hangzhou">⚲ Hangzhou</div>
                             </a>
                         </div>
@@ -293,7 +293,7 @@
         });
         
         // 语言切换功能
-        let currentLanguage = 'zh';
+        let currentLanguage = 'en'; // 默认英文
         
         function switchLanguage(lang) {
             currentLanguage = lang;
@@ -317,8 +317,8 @@
         
         // 初始化语言切换
         document.addEventListener('DOMContentLoaded', function() {
-            // 从本地存储获取语言偏好
-            const savedLanguage = localStorage.getItem('preferredLanguage') || 'zh';
+            // 从本地存储获取语言偏好，如果没有保存过则默认为英文
+            const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
             switchLanguage(savedLanguage);
             
             // 绑定按钮事件
