@@ -1,5 +1,5 @@
 // 通用语言切换脚本
-let currentLanguage = 'zh';
+let currentLanguage = 'en';
 
 function switchLanguage(lang) {
     currentLanguage = lang;
@@ -28,8 +28,8 @@ function switchLanguage(lang) {
 
 // 初始化语言切换
 document.addEventListener('DOMContentLoaded', function() {
-    // 从本地存储获取语言偏好
-    const savedLanguage = localStorage.getItem('preferredLanguage') || 'zh';
+    // 从本地存储获取语言偏好，如果没有保存过则默认为英文
+    const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
     switchLanguage(savedLanguage);
     
     // 绑定按钮事件
