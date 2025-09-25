@@ -44,18 +44,18 @@
         <main class="job-content">
             <section class="job-section">
                 <h2 class="section-title" data-zh="职位描述" data-en="Job Description">Job Description</h2>
-                <p class="section-text" data-zh="作为AI智能体产品工程师，您将负责将我们前沿的AI技术转化为直观强大的用户界面和体验，以及开发和维护AI智能体。您将直接与用户合作，了解他们的需求并构建他们喜爱的功能。" data-en="As a Product Engineer of AI Agent, you will be responsible for transforming our cutting-edge AI technologies into intuitive and powerful user interfaces and experiences, as well as developing and maintaining AI Agents. You will work directly with users to understand their needs and build features they love.">
+                <p class="section-text" data-zh="作为 AI Agent 产品工程师，您将负责将我们前沿的 AI 技术转化为直观强大的用户界面和体验，以及开发和维护 AI Agent。您将直接与用户合作，了解他们的需求并构建他们喜爱的功能。" data-en="As a Product Engineer of AI Agent, you will be responsible for transforming our cutting-edge AI technologies into intuitive and powerful user interfaces and experiences, as well as developing and maintaining AI Agents. You will work directly with users to understand their needs and build features they love.">
                     As a Product Engineer of AI Agent, you will be responsible for transforming our cutting-edge AI technologies into intuitive and powerful user interfaces and experiences, as well as developing and maintaining AI Agents. You will work directly with users to understand their needs and build features they love.
                 </p>
                 <p class="section-text" data-zh="主要职责：" data-en="Responsibilities:">Responsibilities:</p>
                 <ul class="project-list">
-                    <li data-zh="设计和实现AI智能体产品的核心功能和用户交互" data-en="Design and implement core features and user interactions for AI Agent products">Design and implement core features and user interactions for AI Agent products</li>
+                    <li data-zh="设计和实现 AI 智能体产品的核心功能和用户交互" data-en="Design and implement core features and user interactions for AI Agent products">Design and implement core features and user interactions for AI Agent products</li>
                     <li data-zh="构建视频编辑者喜爱的性能卓越且美观的体验" data-en="Build performant and beautiful experiences that video editors love">Build performant and beautiful experiences that video editors love</li>
                     <li data-zh="为智能体产品设定用户体验标准" data-en="Set the standard for UX of agent products">Set the standard for UX of agent products</li>
                 </ul>
                 <p class="section-text" data-zh="任职要求：" data-en="Qualifications:">Qualifications:</p>
                 <ul class="project-list">
-                    <li data-zh="任何学科的学士或以上学历（欢迎STEM、人文、艺术、法律、管理等所有领域）" data-en="Bachelor's degree or above in any discipline (STEM, humanities, arts, law, management, etc. are all welcome)">Bachelor's degree or above in any discipline (STEM, humanities, arts, law, management, etc. are all welcome)</li>
+                    <li data-zh="任何学科的学士或以上学历（欢迎 STEM、人文、艺术、法律、管理等所有领域）" data-en="Bachelor's degree or above in any discipline (STEM, humanities, arts, law, management, etc. are all welcome)">Bachelor's degree or above in any discipline (STEM, humanities, arts, law, management, etc. are all welcome)</li>
                     <li data-zh="熟练使用任何 AI Coding Agent（如 Cursor、Claude Code、Augment 等）进行产品原型设计" data-en="Proficient in using any AI coding agent (such as Cursor, Claude Code, Augment, etc.) for product prototyping">Proficient in using any AI coding agent (such as Cursor, Claude Code, Augment, etc.) for product prototyping</li>
                     <li data-zh="在以下至少一个领域有深入知识：视频后期制作、3D 建模、动画、平面设计或 UI / UX 设计" data-en="In-depth knowledge in at least one of the following areas: video post-production, 3D modeling, animation, graphic design, or UI/UX design">In-depth knowledge in at least one of the following areas: video post-production, 3D modeling, animation, graphic design, or UI/UX design</li>
                     <li data-zh="自我驱动，主动性超过 80% 的同龄人，动手能力极强" data-en="Self-driven with stronger initiative than 80% of peers; highly hands-on and practical">Self-driven with stronger initiative than 80% of peers; highly hands-on and practical</li> 
@@ -134,7 +134,15 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-text">Vattention</p>
+                <p class="footer-text">© <span id="currentYear"></span> Vattention Lab. All rights reserved.<br/><br/>San Francisco | Singapore | Hangzhou | Beijing</p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var yearSpan = document.getElementById('currentYear');
+                        if (yearSpan) {
+                            yearSpan.textContent = new Date().getFullYear();
+                        }
+                    });
+                </script>
             </div>
         </footer>
     </div>

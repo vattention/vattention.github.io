@@ -44,7 +44,7 @@
         <main class="job-content">
             <section class="job-section">
                 <h2 class="section-title" data-zh="职位描述" data-en="Job Description">Job Description</h2>
-                <p class="section-text" data-zh="多媒体开发工程师负责构建支持我们产品功能的平台。有时这意味着开发高性能的视频SDK和计算机图形系统。有时这意味着处理扩展到数百万创作者的挑战。" data-en="Multimedia development engineers build platforms that support our product features. Sometimes this means developing high-performance video SDKs and computer graphics systems. Sometimes this means handling the challenges of scaling to millions of creators.">
+                <p class="section-text" data-zh="多媒体开发工程师负责构建支持我们产品功能的平台。有时这意味着开发高性能的视频 SDK 和算法。" data-en="Multimedia development engineers build platforms that support our product features. Sometimes this means developing high-performance video SDKs and computer graphics systems. Sometimes this means handling the challenges of scaling to millions of creators.">
                     多媒体开发工程师负责构建支持我们产品功能的平台。有时这意味着开发高性能的视频SDK和计算机图形系统。有时这意味着处理扩展到数百万创作者的挑战。
                 </p>
                 <p class="section-text" data-zh="任职要求：" data-en="Qualifications:">Qualifications:</p>
@@ -125,7 +125,15 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-text">Vattention</p>
+                <p class="footer-text">© <span id="currentYear"></span> Vattention Lab. All rights reserved.<br/><br/>San Francisco | Singapore | Hangzhou | Beijing</p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var yearSpan = document.getElementById('currentYear');
+                        if (yearSpan) {
+                            yearSpan.textContent = new Date().getFullYear();
+                        }
+                    });
+                </script>
             </div>
         </footer>
     </div>

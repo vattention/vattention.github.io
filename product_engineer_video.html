@@ -44,22 +44,23 @@
         <main class="job-content">
             <section class="job-section">
                 <h2 class="section-title" data-zh="职位描述" data-en="Job Description">Job Description</h2>
-                <p class="section-text" data-zh="作为视频应用产品工程师，您将负责识别和分析目标用户的视频制作需求，设计相应的产品功能，并在不同阶段根据需要迭代添加或移除功能。" data-en="As a Product Engineer of Video Apps, you will be responsible for identifying and analyzing the video production needs of target users, designing corresponding product features, and iteratively adding or removing features as needed at different stages.">
-                    As a Product Engineer of Video Apps, you will be responsible for identifying and analyzing the video production needs of target users, designing corresponding product features, and iteratively adding or removing features as needed at different stages.
+                <p class="section-text" data-zh="作为视频应用产品工程师，您将负责构建视频编辑器中基础产品功能，主要用于人类创作使用，并且考虑人类和 AI 共同使用的基础 API 或 SDK。您将设计直观强大的用户界面和体验，将前沿的 AI 技术转化为实用的创作工具。" data-en="As a Product Engineer of Video Apps, you will be responsible for building fundamental product features in video editors, primarily for human creators, while also considering foundational APIs or SDKs for human-AI collaborative use. You will design intuitive and powerful user interfaces and experiences, transforming cutting-edge AI technologies into practical creative tools.">
+                    As a Product Engineer of Video Apps, you will be responsible for building fundamental product features in video editors, primarily for human creators, while also considering foundational APIs or SDKs for human-AI collaborative use. You will design intuitive and powerful user interfaces and experiences, transforming cutting-edge AI technologies into practical creative tools.
                 </p>
                 <p class="section-text" data-zh="主要职责：" data-en="Responsibilities:">Responsibilities:</p>
                 <ul class="project-list">
-                    <li data-zh="设计和实现AI智能体的核心功能" data-en="Design and implement core features of AI Agents">Design and implement core features of AI Agents</li>
-                    <li data-zh="构建智能AI智能体建议和自动完成系统" data-en="Build intelligent AI Agent suggestion and auto-completion systems">Build intelligent AI Agent suggestion and auto-completion systems</li>
-                    <li data-zh="开发用户友好的AI交互界面" data-en="Develop user-friendly AI interaction interfaces">Develop user-friendly AI interaction interfaces</li>
-                    <li data-zh="优化产品性能和用户体验" data-en="Optimize product performance and user experience">Optimize product performance and user experience</li>
-                    <li data-zh="集成新的AI智能体功能到现有产品中" data-en="Integrate new AI Agent features into existing products">Integrate new AI Agent features into existing products</li>
+                    <li data-zh="设计和实现视频编辑器的核心产品功能" data-en="Design and implement core product features for video editors">Design and implement core product features for video editors</li>
+                    <li data-zh="构建支持人类和 AI 协作的基础 API 和 SDK" data-en="Build foundational APIs and SDKs that support human-AI collaboration">Build foundational APIs and SDKs that support human-AI collaboration</li>
+                    <li data-zh="开发直观易用的视频编辑用户界面" data-en="Develop intuitive and user-friendly video editing interfaces">Develop intuitive and user-friendly video editing interfaces</li>
+                    <li data-zh="优化视频处理性能和用户体验" data-en="Optimize video processing performance and user experience">Optimize video processing performance and user experience</li>
+                    <li data-zh="集成 AI 功能到传统视频编辑工作流中" data-en="Integrate AI capabilities into traditional video editing workflows">Integrate AI capabilities into traditional video editing workflows</li>
                 </ul>
                 <p class="section-text" data-zh="任职要求：" data-en="Qualifications:">Qualifications:</p>
                 <ul class="project-list">
                     <li data-zh="具备学士或以上学位，不限定专业，理/工/农/医/文/史/哲/法/管/艺等均可" data-en="Bachelor's degree or above in any discipline (STEM, humanities, arts, law, management, etc. are all welcome)">Bachelor's degree or above in any discipline (STEM, humanities, arts, law, management, etc. are all welcome)</li>
                     <li data-zh="熟练使用Cursor/Claude Code/Augment等任意AI编程智能体进行产品原型设计" data-en="Proficient in using any AI coding agent such as Cursor, Claude Code, or Augment for product prototyping">Proficient in using any AI coding agent such as Cursor, Claude Code, or Augment for product prototyping</li>
-                    <li data-zh="对以下任意领域之一有深入的了解：视频后期制作、3D建模、动画制作、平面设计、UI/UX设计" data-en="In-depth knowledge in at least one of the following areas: video post-production, 3D modeling, animation, graphic design, or UI/UX design">In-depth knowledge in at least one of the following areas: video post-production, 3D modeling, animation, graphic design, or UI/UX design</li>
+                    <li data-zh="具备视频后期制作产品的实际使用经验，如 DaVinci Resolve、Adobe Premiere、Final Cut Pro X、CapCut、Vegas Pro 等" data-en="Practical experience with video post-production software such as DaVinci Resolve, Adobe Premiere, Final Cut Pro X, CapCut, Vegas Pro, etc.">Practical experience with video post-production software such as DaVinci Resolve, Adobe Premiere, Final Cut Pro X, CapCut, Vegas Pro, etc.</li>
+                    <li data-zh="具备通过 vibe coding 实现快速原型开发能力者优先考虑" data-en="Experience with vibe coding for rapid prototyping is preferred">Experience with vibe coding for rapid prototyping is preferred</li>
                     <li data-zh="自我驱动，主动性超过 80% 的同龄人，动手能力极强" data-en="Self-driven with stronger initiative than 80% of peers; highly hands-on and practical">Self-driven with stronger initiative than 80% of peers; highly hands-on and practical</li> 
                     <li data-zh="乐于帮助和支持团队成员" data-en="Enjoy helping and supporting team members">Enjoy helping and supporting team members</li> 
                     <li data-zh="对新技术的强烈好奇心，愿意尝试新产品，并乐于分享见解" data-en="Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights">Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights</li> 
@@ -136,7 +137,15 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-text">Vattention</p>
+                <p class="footer-text">© <span id="currentYear"></span> Vattention Lab. All rights reserved.<br/><br/>San Francisco | Singapore | Hangzhou | Beijing</p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var yearSpan = document.getElementById('currentYear');
+                        if (yearSpan) {
+                            yearSpan.textContent = new Date().getFullYear();
+                        }
+                    });
+                </script>
             </div>
         </footer>
     </div>

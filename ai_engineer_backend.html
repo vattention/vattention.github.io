@@ -148,7 +148,15 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-text">Vattention</p>
+                <p class="footer-text">© <span id="currentYear"></span> Vattention Lab. All rights reserved.<br/><br/>San Francisco | Singapore | Hangzhou | Beijing</p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var yearSpan = document.getElementById('currentYear');
+                        if (yearSpan) {
+                            yearSpan.textContent = new Date().getFullYear();
+                        }
+                    });
+                </script>
             </div>
         </footer>
     </div>
