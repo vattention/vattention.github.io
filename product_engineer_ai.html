@@ -76,11 +76,11 @@
                 </p>
                 <p class="section-text">
                     <span data-zh="我们的团队汇聚了来自领先科技公司和顶尖大学的人才，包括 " data-en="Our team brings together talent from leading tech companies and top universities, including ">Our team brings together talent from leading tech companies and top universities, including </span>
-                    <b style="color:#fff;"><span data-zh="阿里巴巴、字节跳动、腾讯、百度、小米、北京大学、中国科学技术大学、哥伦比亚大学、加州大学洛杉矶分校、华中科技大学、帝国理工学院" data-en="Alibaba, ByteDance, Tencent, Baidu, Xiaomi, Peking University, Univ. of Sci & Tech of China, Columbia University, Univ. of California Los Angeles, and Imperial College London">Alibaba, ByteDance, Tencent, Baidu, Xiaomi, Peking University, Univ. of Sci & Tech of China, Columbia University, Univ. of California Los Angeles, and Imperial College London</span></b>
+                    <b style="color:#fff;"><span data-zh="阿里巴巴、字节跳动、腾讯、百度、小米、北京大学、中国科学技术大学、加州大学洛杉矶分校、华中科技大学、中山大学、清华大学、佐治亚理工学院、英国诺丁汉大学" data-en="Alibaba, ByteDance, Tencent, Baidu, Xiaomi, Peking University, Univ. of Sci & Tech of China, Univ. of California Los Angeles, Sun Yat-sen University, Tsinghua University, Georgia Institute of Technology, and the University of Nottingham">Alibaba, ByteDance, Tencent, Baidu, Xiaomi, Peking University, Univ. of Sci & Tech of China, Univ. of California Los Angeles, Sun Yat-sen University, Tsinghua University, Georgia Institute of Technology, and the University of Nottingham</span></b>
                     <span data-zh="。我们还有来自 AI 独角兽团队的成员，如 " data-en=". We also have members from AI unicorns such as ">. We also have members from AI unicorns such as </span>
-                    <b style="color:#fff;"><span data-zh="即梦 AI、微软小冰、出门问问、零一万物" data-en="Dreamina AI, Microsoft Xiaoice, Mobvoi, and 01.AI">Dreamina AI, Microsoft Xiaoice, Mobvoi, and 01.AI</span></b>
+                    <b style="color:#fff;"><span data-zh="零一万物" data-en="01.AI">01.AI</span></b>
                     <span data-zh="，以及来自内容驱动公司和机构的成员，如 " data-en=", as well as from content-driven companies and institutions like ">, as well as from content-driven companies and institutions like </span>
-                    <b style="color:#fff;"><span data-zh="剪映、快手、哔哩哔哩、北京电影学院、欢聚时代" data-en="CapCut, Kwai, Joyy, Beijing Film Academy, Wondershare Filmora, Bilibili">CapCut, Kwai, Joyy, Beijing Film Academy, Wondershare Filmora, Bilibili</span></b>
+                    <b style="color:#fff;"><span data-zh="剪映、TikTok、虎牙、快手、Musical.ly、欢聚时代" data-en="CapCut, TikTok, Huya, Kwai, Joyy, Wondershare Filmora, Musical.ly">CapCut, TikTok, Huya, Kwai, Joyy, Wondershare Filmora, Musical.ly</span></b>
                     <span data-zh="。" data-en=".">.</span>
                 </p>
             </section>
@@ -92,20 +92,49 @@
                 </p>
             </section>
 
-
             <section class="application-section">
-                <h2 class="section-title" data-zh="加入我们，构建视频工业化的未来" data-en="Join Us, Shape the Future of Video Industry">Join Us, Shape the Future of Video Industry</h2>
-                <p class="section-subtitle" data-zh="帮助我们推进为 AI 辅助视频创作提供动力的研究" data-en="Help us advance the research that powers AI-assisted video creation">Help us advance the research that powers AI-assisted video creation</p>
+                <h2 class="section-title" data-zh="加入我们，塑造创造力的未来" data-en="Join Us, Shape the Future of Creativity">Join Us, Shape the Future of Creativity</h2>
+                <p class="section-subtitle" data-zh="帮助我们推进为AI辅助内容创作提供动力的研究" data-en="Help us advance the research that powers AI-assisted content creation">Help us advance the research that powers AI-assisted content creation</p>
                 
-                <p class="section-text" style="text-align: center; font-size: 1.2em; margin-top: 2em;" data-zh="请将您的简历发送至：careers@vattention.com" data-en="Please send your resume to: careers@vattention.com">
-                    Please send your resume to: careers@vattention.com
-                </p>
+                <form class="application-form" id="applicationForm">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label" data-zh="姓名 *" data-en="Name *">Name *</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label" data-zh="邮箱地址 *" data-en="Email Address *">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resume" class="form-label" data-zh="简历 *" data-en="Resume *">Resume *</label>
+                        <input type="file" id="resume" name="resume" class="form-file" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="linkedin" class="form-label" data-zh="LinkedIn 主页（可选）" data-en="LinkedIn Profile (Optional)">LinkedIn Profile (Optional)</label>
+                        <input type="url" id="linkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourprofile">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="github" class="form-label" data-zh="GitHub 主页（可选）" data-en="GitHub Profile (Optional)">GitHub Profile (Optional)</label>
+                        <input type="url" id="github" name="github" class="form-input" placeholder="https://github.com/yourusername">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project" class="form-label" data-zh="告诉我们一个您引以为豪的项目。分享技术挑战、您的方法和其意义。*" data-en="Tell us about a project you're proud of. Share the technical challenges, your approach, and its significance. *">Tell us about a project you're proud of. Share the technical challenges, your approach, and its significance. *</label>
+                        <textarea id="project" name="project" class="form-textarea" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button" data-zh="提交申请" data-en="Submit Application">Submit Application</button>
+                </form>
             </section>
         </main>
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-text">© <span id="currentYear"></span> Vattention. All rights reserved.<br/><br/>San Francisco | Singapore | Hangzhou | Beijing</p>
+                <p class="footer-text">© <span id="currentYear"></span> Vattention Lab. All rights reserved.<br/><br/>San Francisco | Singapore | Hangzhou | Beijing</p>
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
                         var yearSpan = document.getElementById('currentYear');
