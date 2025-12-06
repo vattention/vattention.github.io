@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facio Privacy Policy</title>
+    <title>Facio Privacy Policy - Vattention</title>
     <style>
         * {
             margin: 0;
@@ -104,11 +104,11 @@
 <body>
     <div class="container">
         <h1>Facio Privacy Policy</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> December 5, 2024</p>
+        <p class="last-updated"><strong>Last Updated:</strong> December 6, 2024</p>
 
         <div class="section">
             <h2>1. Overview</h2>
-            <p>Facio ("we", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains how Facio collects, uses, and shares user data when you use our Chrome extension.</p>
+            <p>Facio ("we", "our", or "the extension") is a product developed by <strong>Vattention</strong>. We are committed to protecting your privacy. This Privacy Policy explains how Facio collects, uses, and shares user data when you use our Chrome extension.</p>
         </div>
 
         <div class="section">
@@ -323,7 +323,7 @@
                 <li>Contribute to the project</li>
                 <li>Report security issues</li>
             </ul>
-            <p>GitHub Repository: <a href="https://github.com/[your-username]/facio" target="_blank">https://github.com/[your-username]/facio</a></p>
+            <p>For source code and security issues, please contact us via email.</p>
         </div>
 
         <div class="section">
@@ -331,29 +331,25 @@
             <div class="contact-info">
                 <p>If you have questions about this Privacy Policy or Facio's privacy practices, please contact us:</p>
                 <ul>
-                    <li><strong>GitHub Issues:</strong> <a href="https://github.com/[your-username]/facio/issues" target="_blank">https://github.com/[your-username]/facio/issues</a></li>
-                    <li><strong>Email:</strong> [Your Email Address]</li>
+                    <li><strong>Company:</strong> Vattention</li>
+                    <li><strong>Email:</strong> <a href="mailto:devops-google@vattention.com">devops-google@vattention.com</a></li>
+                    <li><strong>Website:</strong> <a href="https://vattention.com" target="_blank">https://vattention.com</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="summary">
-            <h2>Summary</h2>
-            <p>In simple terms:</p>
-            <ul>
-                <li>Everything stays on your device</li>
-                <li>No tracking or analytics</li>
-                <li>Data is collected only when you explicitly save media</li>
-                <li>Data is shared only with your local Electron application</li>
-                <li>No external servers or third-party sharing</li>
-                <li>No selling of data</li>
-                <li>Open source and transparent</li>
-                <li>Your privacy is fully protected</li>
-            </ul>
-        </div>
 
         <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ecf0f1; text-align: center; color: #7f8c8d; font-size: 0.9em;">
-            <p>© 2024 Facio. All rights reserved.</p>
+            <p>© <span id="currentYear">2025</span> Vattention. All rights reserved.</p>
+            <p style="margin-top: 10px;">San Francisco | Singapore | Hangzhou | Beijing</p>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var yearSpan = document.getElementById('currentYear');
+                    if (yearSpan) {
+                        yearSpan.textContent = new Date().getFullYear();
+                    }
+                });
+            </script>
         </div>
     </div>
 </body>
