@@ -509,25 +509,26 @@
 
             <!-- 宠物角色滚动展示 -->
             <section class="pets-scroll-section">
+                <h2 class="section-title pets-section-title" data-zh="Vattention 团队的宠物队友们" data-en="Vattention Team's Pet Companions">Vattention Team's Pet Companions</h2>
                 <div class="pets-scroll-container">
                     <div class="pets-scroll-track">
                         <!-- 第一组宠物 -->
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/beta-01.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name">Beta</div>
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
                             </div>
                         </div>
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/beta-02.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name">Beta</div>
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
                             </div>
                         </div>
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/beta-03.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name">Beta</div>
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
                             </div>
                         </div>
                         <div class="pet-card">
@@ -551,7 +552,7 @@
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/雪糕01.jpeg" alt="雪糕" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name">雪糕</div>
+                                <div class="pet-name" data-zh="雪糕" data-en="Orea">雪糕</div>
                             </div>
                         </div>
                         <div class="pet-card">
@@ -570,19 +571,19 @@
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/beta-01.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name">Beta</div>
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
                             </div>
                         </div>
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/beta-02.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name">Beta</div>
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
                             </div>
                         </div>
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/beta-03.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name">Beta</div>
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
                             </div>
                         </div>
                         <div class="pet-card">
@@ -606,7 +607,7 @@
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/雪糕01.jpeg" alt="雪糕" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name">雪糕</div>
+                                <div class="pet-name" data-zh="雪糕" data-en="Orea">雪糕</div>
                             </div>
                         </div>
                         <div class="pet-card">
@@ -909,9 +910,14 @@
                 const petImages = allPetCards.map(card => {
                     const imgElement = card.querySelector('.pet-avatar img');
                     const nameElement = card.querySelector('.pet-name');
+                    const nameZh = nameElement && nameElement.hasAttribute('data-zh') ? nameElement.getAttribute('data-zh') : (nameElement ? nameElement.textContent.trim() : '');
+                    const nameEn = nameElement && nameElement.hasAttribute('data-en') ? nameElement.getAttribute('data-en') : (nameElement ? nameElement.textContent.trim() : '');
+                    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
                     return {
                         src: imgElement ? imgElement.getAttribute('src') : '',
-                        name: nameElement ? nameElement.textContent.trim() : ''
+                        name: currentLang === 'zh' ? nameZh : nameEn,
+                        nameZh: nameZh,
+                        nameEn: nameEn
                     };
                 });
                 
@@ -947,7 +953,16 @@
                 
                 petModalImage.src = pet.src;
                 petModalImage.alt = pet.name;
-                petModalName.textContent = pet.name;
+                
+                // 更新模态框中的宠物名字（支持中英文）
+                const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                if (pet.nameZh && pet.nameEn) {
+                    petModalName.textContent = currentLang === 'zh' ? pet.nameZh : pet.nameEn;
+                    petModalName.setAttribute('data-zh', pet.nameZh);
+                    petModalName.setAttribute('data-en', pet.nameEn);
+                } else {
+                    petModalName.textContent = pet.name;
+                }
                 
                 petModal.classList.add('active');
                 document.body.style.overflow = 'hidden'; // 防止背景滚动
@@ -1086,6 +1101,13 @@
             
             // 更新页面语言属性
             document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            
+            // 更新模态框中的宠物名字（如果模态框已打开）
+            const petModalName = document.getElementById('pet-modal-name');
+            if (petModalName && petModalName.hasAttribute('data-zh') && petModalName.hasAttribute('data-en')) {
+                const modalName = lang === 'zh' ? petModalName.getAttribute('data-zh') : petModalName.getAttribute('data-en');
+                petModalName.textContent = modalName;
+            }
             
             // 保存语言偏好到本地存储
             localStorage.setItem('preferredLanguage', lang);

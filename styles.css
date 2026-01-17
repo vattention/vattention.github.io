@@ -786,6 +786,11 @@ body {
     overflow: hidden;
 }
 
+.pets-section-title {
+    margin-bottom: 2rem;
+    padding: 0 20px;
+}
+
 .pets-scroll-container {
     width: 100%;
     overflow: hidden;
