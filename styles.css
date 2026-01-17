@@ -250,6 +250,11 @@ body {
     overflow: hidden;
 }
 
+.team-section-title {
+    margin-bottom: 2rem;
+    padding: 0 20px;
+}
+
 .team-scroll-container {
     width: 100%;
     overflow: hidden;
@@ -346,6 +351,16 @@ body {
     color: #ffffff;
     margin-bottom: 0.5rem;
     padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.member-founding-team {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.3px;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
 }
 
 .member-role {
