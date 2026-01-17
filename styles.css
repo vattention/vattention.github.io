@@ -839,6 +839,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 5px; /* 为 hover 上移预留空间 */
+    margin-bottom: 5px; /* 为 hover 上移预留空间 */
 }
 
 .pet-avatar {
@@ -850,6 +852,14 @@ body {
     background: rgba(26, 26, 26, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+}
+
+.pet-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
 }
 
 .pet-card:hover .pet-avatar {
@@ -877,6 +887,174 @@ body {
     font-weight: 600;
     text-align: left;
     z-index: 2;
+}
+
+/* 宠物照片放大查看模态框 */
+.pet-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pet-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.pet-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.pet-modal-content {
+    position: relative;
+    z-index: 10001;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: petModalFadeIn 0.3s ease;
+}
+
+@keyframes petModalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pet-modal-image-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pet-modal-image-container img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.pet-modal-name {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+.pet-modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10002;
+    line-height: 1;
+    padding: 0;
+}
+
+.pet-modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.pet-modal-prev,
+.pet-modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #ffffff;
+    font-size: 3rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10002;
+    line-height: 1;
+    padding: 0;
+}
+
+.pet-modal-prev {
+    left: -60px;
+}
+
+.pet-modal-next {
+    right: -60px;
+}
+
+.pet-modal-prev:hover,
+.pet-modal-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.pet-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .pet-modal-prev {
+        left: 10px;
+    }
+    
+    .pet-modal-next {
+        right: 10px;
+    }
+    
+    .pet-modal-close {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .pet-modal-name {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
 }
 
 /* 平滑滚动 */

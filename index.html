@@ -626,6 +626,20 @@
             </section>
         </main>
 
+        <!-- 宠物照片放大查看模态框 -->
+        <div id="pet-modal" class="pet-modal">
+            <div class="pet-modal-overlay"></div>
+            <div class="pet-modal-content">
+                <button class="pet-modal-close" aria-label="关闭">&times;</button>
+                <button class="pet-modal-prev" aria-label="上一张">&#8249;</button>
+                <button class="pet-modal-next" aria-label="下一张">&#8250;</button>
+                <div class="pet-modal-image-container">
+                    <img id="pet-modal-image" src="" alt="">
+                    <div class="pet-modal-name" id="pet-modal-name"></div>
+                </div>
+            </div>
+        </div>
+
         <footer class="footer">
             <div class="footer-content">
                 <p class="footer-text">© <span id="currentYear"></span> Vattention. All rights reserved.<br/><br/>Singapore | Hangzhou | Beijing | Los Angeles</p>
@@ -860,7 +874,193 @@
             setTimeout(() => {
                 // 强制浏览器重新计算布局
                 petsTrack.offsetHeight;
+                
+                // 触发自定义事件，通知宠物模态框功能重新绑定事件
+                document.dispatchEvent(new CustomEvent('petsResorted'));
             }, 0);
+        });
+        
+        // 宠物照片点击放大查看功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 等待随机排序完成后再初始化
+            setTimeout(function() {
+                const petModal = document.getElementById('pet-modal');
+                const petModalImage = document.getElementById('pet-modal-image');
+                const petModalName = document.getElementById('pet-modal-name');
+                const petModalClose = document.querySelector('.pet-modal-close');
+                const petModalOverlay = document.querySelector('.pet-modal-overlay');
+                const petModalPrev = document.querySelector('.pet-modal-prev');
+                const petModalNext = document.querySelector('.pet-modal-next');
+                
+                if (!petModal || !petModalImage || !petModalName) {
+                    console.log('模态框元素未找到');
+                    return;
+                }
+                
+                let currentPetIndex = 0;
+                let allPets = [];
+                
+                // 获取所有宠物信息（只获取第一组，避免重复）
+                function getAllPets() {
+                const petsTrack = document.querySelector('.pets-scroll-track');
+                if (!petsTrack) return [];
+                
+                const allPetCards = Array.from(petsTrack.querySelectorAll('.pet-card'));
+                const petImages = allPetCards.map(card => {
+                    const imgElement = card.querySelector('.pet-avatar img');
+                    const nameElement = card.querySelector('.pet-name');
+                    return {
+                        src: imgElement ? imgElement.getAttribute('src') : '',
+                        name: nameElement ? nameElement.textContent.trim() : ''
+                    };
+                });
+                
+                // 找到重复组的开始位置
+                let firstGroupSize = allPetCards.length / 2;
+                for (let i = 1; i < petImages.length; i++) {
+                    let isMatch = true;
+                    for (let j = 0; j < i && j + i < petImages.length; j++) {
+                        if (petImages[j].src !== petImages[j + i].src) {
+                            isMatch = false;
+                            break;
+                        }
+                    }
+                    if (isMatch && i > 0) {
+                        firstGroupSize = i;
+                        break;
+                    }
+                }
+                
+                return petImages.slice(0, firstGroupSize);
+            }
+            
+            // 打开模态框
+            function openPetModal(index) {
+                if (allPets.length === 0) {
+                    allPets = getAllPets();
+                }
+                
+                if (index < 0 || index >= allPets.length) return;
+                
+                currentPetIndex = index;
+                const pet = allPets[currentPetIndex];
+                
+                petModalImage.src = pet.src;
+                petModalImage.alt = pet.name;
+                petModalName.textContent = pet.name;
+                
+                petModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+            }
+            
+            // 关闭模态框
+            function closePetModal() {
+                petModal.classList.remove('active');
+                document.body.style.overflow = ''; // 恢复滚动
+            }
+            
+            // 切换到上一张
+            function showPrevPet() {
+                if (allPets.length === 0) return;
+                currentPetIndex = (currentPetIndex - 1 + allPets.length) % allPets.length;
+                openPetModal(currentPetIndex);
+            }
+            
+            // 切换到下一张
+            function showNextPet() {
+                if (allPets.length === 0) return;
+                currentPetIndex = (currentPetIndex + 1) % allPets.length;
+                openPetModal(currentPetIndex);
+            }
+            
+                // 为所有宠物卡片添加点击事件
+                function attachPetCardClickEvents() {
+                    const allPetCards = document.querySelectorAll('.pet-card');
+                    console.log('找到宠物卡片数量:', allPetCards.length);
+                    
+                    allPetCards.forEach((petCard, index) => {
+                        petCard.style.cursor = 'pointer';
+                        petCard.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            
+                            console.log('点击了宠物卡片:', index);
+                            
+                            const imgElement = petCard.querySelector('.pet-avatar img');
+                            const nameElement = petCard.querySelector('.pet-name');
+                            
+                            if (imgElement && nameElement) {
+                                allPets = getAllPets();
+                                if (allPets.length === 0) {
+                                    console.log('未找到宠物数据');
+                                    return;
+                                }
+                                
+                                const src = imgElement.getAttribute('src');
+                                const name = nameElement.textContent.trim();
+                                
+                                console.log('宠物信息:', src, name);
+                                
+                                // 找到当前点击的宠物在列表中的索引
+                                const petIndex = allPets.findIndex(pet => pet.src === src && pet.name === name);
+                                console.log('找到索引:', petIndex);
+                                
+                                if (petIndex !== -1) {
+                                    openPetModal(petIndex);
+                                } else {
+                                    console.log('未找到匹配的宠物:', src, name, '所有宠物:', allPets);
+                                }
+                            } else {
+                                console.log('未找到图片或名字元素');
+                            }
+                        });
+                    });
+                }
+                
+                // 初始化时绑定事件
+                attachPetCardClickEvents();
+                
+                // 监听随机排序完成事件，重新绑定事件
+                document.addEventListener('petsResorted', function() {
+                    attachPetCardClickEvents();
+                });
+                
+                // 关闭按钮点击
+                if (petModalClose) {
+                    petModalClose.addEventListener('click', closePetModal);
+                }
+                
+                // 背景点击关闭
+                if (petModalOverlay) {
+                    petModalOverlay.addEventListener('click', closePetModal);
+                }
+                
+                // 左右箭头切换
+                if (petModalPrev) {
+                    petModalPrev.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        showPrevPet();
+                    });
+                }
+                
+                if (petModalNext) {
+                    petModalNext.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        showNextPet();
+                    });
+                }
+                
+                // ESC 键关闭
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && petModal.classList.contains('active')) {
+                        closePetModal();
+                    } else if (e.key === 'ArrowLeft' && petModal.classList.contains('active')) {
+                        showPrevPet();
+                    } else if (e.key === 'ArrowRight' && petModal.classList.contains('active')) {
+                        showNextPet();
+                    }
+                });
+            }, 500); // 延迟500ms确保随机排序完成
         });
         
         // 语言切换功能
