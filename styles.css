@@ -239,6 +239,165 @@ body {
     line-height: 1.7;
 }
 
+/* 团队成员滚动展示区域 */
+.team-scroll-section {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 80px 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.5) 50%, rgba(10, 10, 10, 0) 100%);
+    overflow: hidden;
+}
+
+.team-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-scroll-container::before,
+.team-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.team-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0));
+}
+
+.team-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0));
+}
+
+.team-scroll-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-horizontal 50s linear infinite;
+    will-change: transform;
+    width: fit-content;
+}
+
+.team-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.team-member-card {
+    flex: 0 0 320px;
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.team-member-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 43, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(255, 43, 255, 0.2);
+    background: rgba(30, 30, 30, 0.9);
+}
+
+.member-avatar {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.team-member-card:hover .member-avatar {
+    transform: scale(1.02);
+}
+
+.member-avatar img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.member-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.member-role {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #ff2bff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 1.5rem;
+}
+
+.member-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+.member-tags .tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    background: rgba(255, 43, 255, 0.15);
+    border: 1px solid rgba(255, 43, 255, 0.3);
+    border-radius: 12px;
+    color: #ff2bff;
+    font-weight: 500;
+}
+
+.member-quote {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #b3b3b3;
+    font-style: italic;
+    margin-bottom: 1rem;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.member-bio {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #808080;
+    margin-top: auto;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* 主要内容区域 */
 .main-content {
     padding: 80px 0;
@@ -432,6 +591,29 @@ body {
     .main-content {
         padding: 60px 0;
     }
+    
+    .team-scroll-section {
+        padding: 60px 0;
+    }
+    
+    .team-member-card {
+        flex: 0 0 280px;
+        min-height: 450px;
+        padding: 1.5rem;
+    }
+    
+    .member-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .member-name {
+        font-size: 1.1rem;
+    }
+    
+    .member-quote {
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -485,6 +667,43 @@ body {
     
     .category-title {
         font-size: 1.25rem;
+    }
+    
+    .team-scroll-section {
+        padding: 40px 0;
+    }
+    
+    .team-member-card {
+        flex: 0 0 260px;
+        min-height: 420px;
+        padding: 1.25rem;
+    }
+    
+    .member-bio {
+        font-size: 0.7rem;
+    }
+    
+    .member-avatar {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .member-name {
+        font-size: 1rem;
+    }
+    
+    .member-tags .tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .member-quote {
+        font-size: 0.8rem;
+    }
+    
+    .team-scroll-container::before,
+    .team-scroll-container::after {
+        width: 80px;
     }
 }
 
