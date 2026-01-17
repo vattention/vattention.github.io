@@ -487,6 +487,10 @@ body {
 
 /* 页脚 */
 .footer {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     padding: 60px 0 40px;
     text-align: center;
     border-top: 1px solid #333333;
@@ -599,6 +603,25 @@ body {
         flex: 0 0 280px;
         min-height: 450px;
         padding: 1.5rem;
+    }
+    
+    .pets-scroll-section {
+        padding: 50px 0;
+    }
+    
+    .pet-card {
+        flex: 0 0 180px;
+    }
+    
+    .pet-avatar {
+        width: 180px;
+        height: 180px;
+        border-radius: 18px;
+    }
+    
+    .pet-name {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.9rem;
     }
     
     .member-avatar {
@@ -726,6 +749,134 @@ body {
     .team-scroll-container::after {
         width: 80px;
     }
+    
+    .pets-scroll-section {
+        padding: 40px 0;
+    }
+    
+    .pet-card {
+        flex: 0 0 150px;
+    }
+    
+    .pet-avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+    }
+    
+    .pet-name {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .pets-scroll-container::before,
+    .pets-scroll-container::after {
+        width: 80px;
+    }
+}
+
+/* 宠物角色滚动展示 */
+.pets-scroll-section {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 60px 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.3) 50%, rgba(10, 10, 10, 0) 100%);
+    overflow: hidden;
+}
+
+.pets-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.pets-scroll-container::before,
+.pets-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.pets-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0));
+}
+
+.pets-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0));
+}
+
+.pets-scroll-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-pets-horizontal 60s linear infinite;
+    will-change: transform;
+    width: fit-content;
+}
+
+.pets-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-pets-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.pet-card {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pet-avatar {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pet-card:hover .pet-avatar {
+    transform: translateY(-5px);
+    border-color: rgba(255, 43, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(255, 43, 255, 0.2);
+}
+
+.pet-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pet-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), transparent);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+    z-index: 2;
 }
 
 /* 平滑滚动 */
