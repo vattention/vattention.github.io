@@ -569,7 +569,7 @@
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/雪糕01.jpeg" alt="雪糕" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name" data-zh="雪糕" data-en="Orea">雪糕</div>
+                                <div class="pet-name" data-zh="雪糕" data-en="Oreo">雪糕</div>
                             </div>
                         </div>
                         <div class="pet-card">
@@ -624,7 +624,7 @@
                         <div class="pet-card">
                             <div class="pet-avatar">
                                 <img src="pets-photos/雪糕01.jpeg" alt="雪糕" loading="lazy" onerror="this.style.display='none'">
-                                <div class="pet-name" data-zh="雪糕" data-en="Orea">雪糕</div>
+                                <div class="pet-name" data-zh="雪糕" data-en="Oreo">雪糕</div>
                             </div>
                         </div>
                         <div class="pet-card">
@@ -647,14 +647,36 @@
         <!-- 宠物照片放大查看模态框 -->
         <div id="pet-modal" class="pet-modal">
             <div class="pet-modal-overlay"></div>
-            <div class="pet-modal-content">
-                <button class="pet-modal-close" aria-label="关闭">&times;</button>
-                <button class="pet-modal-prev" aria-label="上一张">&#8249;</button>
-                <button class="pet-modal-next" aria-label="下一张">&#8250;</button>
-                <div class="pet-modal-image-container">
-                    <img id="pet-modal-image" src="" alt="">
-                    <div class="pet-modal-name" id="pet-modal-name"></div>
+            
+            <!-- 顶部工具栏 -->
+            <div class="pet-modal-header">
+                <div class="pet-modal-info">
+                    <span class="pet-modal-title" id="pet-modal-name"></span>
                 </div>
+                <button class="pet-modal-close-new" aria-label="关闭">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+
+            <div class="pet-modal-content-new">
+                <div class="pet-modal-image-wrapper">
+                    <img id="pet-modal-image" src="" alt="">
+                </div>
+            </div>
+
+            <!-- 底部浮动控制岛 -->
+            <div class="pet-modal-controls-island">
+                <button class="pet-control-btn prev" aria-label="上一张">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <div class="pet-modal-counter">
+                    <span id="pet-current-index">01</span>
+                    <span class="counter-separator">/</span>
+                    <span id="pet-total-count">00</span>
+                </div>
+                <button class="pet-control-btn next" aria-label="下一张">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
             </div>
         </div>
 
@@ -905,10 +927,12 @@
                 const petModal = document.getElementById('pet-modal');
                 const petModalImage = document.getElementById('pet-modal-image');
                 const petModalName = document.getElementById('pet-modal-name');
-                const petModalClose = document.querySelector('.pet-modal-close');
+                const petModalClose = document.querySelector('.pet-modal-close-new');
                 const petModalOverlay = document.querySelector('.pet-modal-overlay');
-                const petModalPrev = document.querySelector('.pet-modal-prev');
-                const petModalNext = document.querySelector('.pet-modal-next');
+                const petModalPrev = document.querySelector('.pet-control-btn.prev');
+                const petModalNext = document.querySelector('.pet-control-btn.next');
+                const petCurrentIndex = document.getElementById('pet-current-index');
+                const petTotalCount = document.getElementById('pet-total-count');
                 
                 if (!petModal || !petModalImage || !petModalName) {
                     console.log('模态框元素未找到');
@@ -918,181 +942,142 @@
                 let currentPetIndex = 0;
                 let allPets = [];
                 
-                // 获取所有宠物信息（只获取第一组，避免重复）
+                // 获取所有宠物信息
                 function getAllPets() {
-                const petsTrack = document.querySelector('.pets-scroll-track');
-                if (!petsTrack) return [];
-                
-                const allPetCards = Array.from(petsTrack.querySelectorAll('.pet-card'));
-                const petImages = allPetCards.map(card => {
-                    const imgElement = card.querySelector('.pet-avatar img');
-                    const nameElement = card.querySelector('.pet-name');
-                    const nameZh = nameElement && nameElement.hasAttribute('data-zh') ? nameElement.getAttribute('data-zh') : (nameElement ? nameElement.textContent.trim() : '');
-                    const nameEn = nameElement && nameElement.hasAttribute('data-en') ? nameElement.getAttribute('data-en') : (nameElement ? nameElement.textContent.trim() : '');
-                    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-                    return {
-                        src: imgElement ? imgElement.getAttribute('src') : '',
-                        name: currentLang === 'zh' ? nameZh : nameEn,
-                        nameZh: nameZh,
-                        nameEn: nameEn
-                    };
-                });
-                
-                // 找到重复组的开始位置
-                let firstGroupSize = allPetCards.length / 2;
-                for (let i = 1; i < petImages.length; i++) {
-                    let isMatch = true;
-                    for (let j = 0; j < i && j + i < petImages.length; j++) {
-                        if (petImages[j].src !== petImages[j + i].src) {
-                            isMatch = false;
-                            break;
-                        }
-                    }
-                    if (isMatch && i > 0) {
-                        firstGroupSize = i;
-                        break;
-                    }
-                }
-                
-                return petImages.slice(0, firstGroupSize);
-            }
-            
-            // 打开模态框
-            function openPetModal(index) {
-                if (allPets.length === 0) {
-                    allPets = getAllPets();
-                }
-                
-                if (index < 0 || index >= allPets.length) return;
-                
-                currentPetIndex = index;
-                const pet = allPets[currentPetIndex];
-                
-                petModalImage.src = pet.src;
-                petModalImage.alt = pet.name;
-                
-                // 更新模态框中的宠物名字（支持中英文）
-                const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-                if (pet.nameZh && pet.nameEn) {
-                    petModalName.textContent = currentLang === 'zh' ? pet.nameZh : pet.nameEn;
-                    petModalName.setAttribute('data-zh', pet.nameZh);
-                    petModalName.setAttribute('data-en', pet.nameEn);
-                } else {
-                    petModalName.textContent = pet.name;
-                }
-                
-                petModal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // 防止背景滚动
-            }
-            
-            // 关闭模态框
-            function closePetModal() {
-                petModal.classList.remove('active');
-                document.body.style.overflow = ''; // 恢复滚动
-            }
-            
-            // 切换到上一张
-            function showPrevPet() {
-                if (allPets.length === 0) return;
-                currentPetIndex = (currentPetIndex - 1 + allPets.length) % allPets.length;
-                openPetModal(currentPetIndex);
-            }
-            
-            // 切换到下一张
-            function showNextPet() {
-                if (allPets.length === 0) return;
-                currentPetIndex = (currentPetIndex + 1) % allPets.length;
-                openPetModal(currentPetIndex);
-            }
-            
-                // 为所有宠物卡片添加点击事件
-                function attachPetCardClickEvents() {
-                    const allPetCards = document.querySelectorAll('.pet-card');
-                    console.log('找到宠物卡片数量:', allPetCards.length);
+                    const petsTrack = document.querySelector('.pets-scroll-track');
+                    if (!petsTrack) return [];
                     
-                    allPetCards.forEach((petCard, index) => {
-                        petCard.style.cursor = 'pointer';
-                        petCard.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            e.stopPropagation();
+                    const allPetCards = Array.from(petsTrack.querySelectorAll('.pet-card'));
+                    const petImages = allPetCards.map(card => {
+                        const imgElement = card.querySelector('.pet-avatar img');
+                        const nameElement = card.querySelector('.pet-name');
+                        const nameZh = nameElement && nameElement.hasAttribute('data-zh') ? nameElement.getAttribute('data-zh') : (nameElement ? nameElement.textContent.trim() : '');
+                        const nameEn = nameElement && nameElement.hasAttribute('data-en') ? nameElement.getAttribute('data-en') : (nameElement ? nameElement.textContent.trim() : '');
+                        return {
+                            src: imgElement ? imgElement.getAttribute('src') : '',
+                            nameZh: nameZh,
+                            nameEn: nameEn
+                        };
+                    });
+                    
+                    // 找到第一组（非克隆）
+                    const firstGroupSize = petImages.length / 2;
+                    return petImages.slice(0, firstGroupSize);
+                }
+                
+                // 格式化数字
+                function formatNumber(num) {
+                    return (num + 1).toString().padStart(2, '0');
+                }
+
+                function updateCounter() {
+                    if (allPets.length === 0) allPets = getAllPets();
+                    if (petTotalCount) petTotalCount.textContent = allPets.length.toString().padStart(2, '0');
+                }
+
+                // 打开模态框
+                function openPetModal(index) {
+                    updateCounter();
+                    
+                    if (index < 0 || index >= allPets.length) return;
+                    
+                    const isAlreadyOpen = petModal.classList.contains('active');
+                    currentPetIndex = index;
+                    const pet = allPets[currentPetIndex];
+                    
+                    // 更新计数器
+                    if (petCurrentIndex) petCurrentIndex.textContent = formatNumber(currentPetIndex);
+
+                    if (isAlreadyOpen) {
+                        petModalImage.style.opacity = '0';
+                        petModalImage.style.transform = 'scale(0.98)';
+                        
+                        setTimeout(() => {
+                            petModalImage.src = pet.src;
+                            const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                            petModalName.textContent = currentLang === 'zh' ? pet.nameZh : pet.nameEn;
                             
-                            console.log('点击了宠物卡片:', index);
-                            
-                            const imgElement = petCard.querySelector('.pet-avatar img');
-                            const nameElement = petCard.querySelector('.pet-name');
-                            
-                            if (imgElement && nameElement) {
-                                allPets = getAllPets();
-                                if (allPets.length === 0) {
-                                    console.log('未找到宠物数据');
-                                    return;
-                                }
-                                
-                                const src = imgElement.getAttribute('src');
-                                const name = nameElement.textContent.trim();
-                                
-                                console.log('宠物信息:', src, name);
-                                
-                                // 找到当前点击的宠物在列表中的索引
-                                const petIndex = allPets.findIndex(pet => pet.src === src && pet.name === name);
-                                console.log('找到索引:', petIndex);
-                                
-                                if (petIndex !== -1) {
-                                    openPetModal(petIndex);
-                                } else {
-                                    console.log('未找到匹配的宠物:', src, name, '所有宠物:', allPets);
-                                }
-                            } else {
-                                console.log('未找到图片或名字元素');
-                            }
+                            petModalImage.onload = () => {
+                                petModalImage.style.opacity = '1';
+                                petModalImage.style.transform = 'scale(1)';
+                            };
+                        }, 200);
+                    } else {
+                        petModalImage.src = pet.src;
+                        const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                        petModalName.textContent = currentLang === 'zh' ? pet.nameZh : pet.nameEn;
+                        
+                        petModal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                }
+
+                // 关闭模态框
+                function closePetModal() {
+                    petModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+
+                // 切换
+                function showPrevPet() {
+                    updateCounter();
+                    if (allPets.length === 0) return;
+                    currentPetIndex = (currentPetIndex - 1 + allPets.length) % allPets.length;
+                    openPetModal(currentPetIndex);
+                }
+                
+                function showNextPet() {
+                    updateCounter();
+                    if (allPets.length === 0) return;
+                    currentPetIndex = (currentPetIndex + 1) % allPets.length;
+                    openPetModal(currentPetIndex);
+                }
+
+                // 事件绑定
+                function attachEvents() {
+                    document.querySelectorAll('.pet-card').forEach(card => {
+                        card.addEventListener('click', function() {
+                            const img = card.querySelector('.pet-avatar img');
+                            const src = img ? img.getAttribute('src') : '';
+                            updateCounter();
+                            const idx = allPets.findIndex(p => p.src === src);
+                            if (idx !== -1) openPetModal(idx);
                         });
                     });
                 }
-                
-                // 初始化时绑定事件
-                attachPetCardClickEvents();
-                
-                // 监听随机排序完成事件，重新绑定事件
-                document.addEventListener('petsResorted', function() {
-                    attachPetCardClickEvents();
+
+                attachEvents();
+                document.addEventListener('petsResorted', () => {
+                    allPets = getAllPets(); // 重新排序后重置数据
+                    updateCounter();
+                    attachEvents();
                 });
+                if (petModalClose) petModalClose.addEventListener('click', closePetModal);
+                if (petModalOverlay) petModalOverlay.addEventListener('click', closePetModal);
+                if (petModalPrev) petModalPrev.addEventListener('click', e => { e.stopPropagation(); showPrevPet(); });
+                if (petModalNext) petModalNext.addEventListener('click', e => { e.stopPropagation(); showNextPet(); });
                 
-                // 关闭按钮点击
-                if (petModalClose) {
-                    petModalClose.addEventListener('click', closePetModal);
-                }
-                
-                // 背景点击关闭
-                if (petModalOverlay) {
-                    petModalOverlay.addEventListener('click', closePetModal);
-                }
-                
-                // 左右箭头切换
-                if (petModalPrev) {
-                    petModalPrev.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        showPrevPet();
+                document.addEventListener('keydown', e => {
+                    if (!petModal.classList.contains('active')) return;
+                    if (e.key === 'Escape') closePetModal();
+                    if (e.key === 'ArrowLeft') showPrevPet();
+                    if (e.key === 'ArrowRight') showNextPet();
+                });
+
+                // 磁吸效果
+                const magneticBtn = document.querySelector('.pet-modal-controls-island');
+                if (magneticBtn) {
+                    magneticBtn.addEventListener('mousemove', e => {
+                        const rect = magneticBtn.getBoundingClientRect();
+                        const x = (e.clientX - rect.left - rect.width / 2) * 0.2;
+                        const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
+                        magneticBtn.style.transform = `translateX(calc(-50% + ${x}px)) translateY(${y}px)`;
+                    });
+                    magneticBtn.addEventListener('mouseleave', () => {
+                        magneticBtn.style.transform = 'translateX(-50%) translateY(0)';
                     });
                 }
-                
-                if (petModalNext) {
-                    petModalNext.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        showNextPet();
-                    });
-                }
-                
-                // ESC 键关闭
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && petModal.classList.contains('active')) {
-                        closePetModal();
-                    } else if (e.key === 'ArrowLeft' && petModal.classList.contains('active')) {
-                        showPrevPet();
-                    } else if (e.key === 'ArrowRight' && petModal.classList.contains('active')) {
-                        showNextPet();
-                    }
-                });
-            }, 500); // 延迟500ms确保随机排序完成
+            }, 500);
         });
         
         // 语言切换功能
