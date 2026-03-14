@@ -267,6 +267,22 @@
                     </div>
                     <div class="team-member-card">
                         <div class="member-avatar">
+                            <img src="team-photos/王权.jpg" alt="王权" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="member-name">Lykos</div>
+                        <div class="member-founding-team" data-zh="Member of Founding Team" data-en="Member of Founding Team">Member of Founding Team</div>
+                        <div class="member-role" data-zh="Vattention 产品工程师" data-en="Vattention Product Engineer">Vattention Product Engineer</div>
+                        <div class="member-tags">
+                            <span class="tag" data-zh="有猫" data-en="Cat Owner">Cat Owner</span>
+                            <span class="tag" data-zh="咖啡" data-en="Coffee">Coffee</span>
+                            <span class="tag" data-zh="后期制作" data-en="Post-Production">Post-Production</span>
+                            <span class="tag" data-zh="Serendipper" data-en="Serendipper">Serendipper</span>
+                        </div>
+                        <div class="member-quote" data-zh="产品是技术与用户需求的完美结合，我们要打造真正有用的AI创作工具。" data-en="Products are the perfect combination of technology and user needs. We want to build truly useful AI creative tools.">Products are the perfect combination of technology and user needs. We want to build truly useful AI creative tools.</div>
+                        <div class="member-bio" data-zh="曾任万兴科技视频剪辑创作工具主产品策划、影像领域某知名独角兽公司产品线品负责人，丰富的视频创作工具产品经验，覆盖 AI 视频生成与剪辑、传统视频后期制作、营销与短剧等 To B 领域、To Pro 与 To C 视频制作领域。" data-en="Former Wondershare video editing creative tools main product planner, product line lead at a renowned unicorn company in the imaging field. Rich experience in video creation tool products, covering AI video generation & editing, traditional video post-production, marketing & short drama in To B, To Pro and To C video production fields.">Former Wondershare video editing creative tools main product planner, product line lead at a renowned unicorn company in the imaging field. Rich experience in video creation tool products, covering AI video generation & editing, traditional video post-production, marketing & short drama in To B, To Pro and To C video production fields.</div>
+                    </div>
+                    <div class="team-member-card">
+                        <div class="member-avatar">
                             <img src="team-photos/何升鸿.jpg" alt="何升鸿" loading="lazy" onerror="this.style.display='none'">
                         </div>
                         <div class="member-name">Wick</div>
@@ -314,6 +330,24 @@
                         </div>
                         <div class="member-quote" data-zh="让每一次内容触达，都在数据与审美之间找到最佳平衡。" data-en="Let every piece of content find the sweet spot between data and aesthetics.">Let every piece of content find the sweet spot between data and aesthetics.</div>
                         <div class="member-bio" data-zh="影视摄影与制作专业，兼具影视审美与极客技术思维，曾在钉钉、网易等科技公司负责音视频产品运营和内容制作，深度参与产品传播、直播体系与全端运营搭建；熟练各类非线性视频编辑工具、多模态视频生成模型与 AI Coding 工具，是内容创作与 AI 工具结合的深度实践者。" data-en="Majored in Film and TV Cinematography and Production, combining cinematic aesthetics with a geeky technical mindset. Has worked at tech companies such as DingTalk and NetEase, leading audio/video product operations and content production, deeply involved in product communication, live-streaming systems and full-stack operations. Proficient with nonlinear video editing tools, multimodal video generation models and AI Coding tools, and a deep practitioner at the intersection of content creation and AI tooling.">Majored in Film and TV Cinematography and Production, combining cinematic aesthetics with a geeky technical mindset. Has worked at tech companies such as DingTalk and NetEase, leading audio/video product operations and content production, deeply involved in product communication, live-streaming systems and full-stack operations. Proficient with nonlinear video editing tools, multimodal video generation models and AI Coding tools, and a deep practitioner at the intersection of content creation and AI tooling.</div>
+                    </div>
+                    <div class="team-member-card">
+                        <div class="member-avatar">
+                            <img src="team-photos/杨鹏.jpg" alt="杨鹏" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="member-name">Jackie</div>
+                        <div class="member-founding-team" data-zh="Member of Founding Team" data-en="Member of Founding Team">Member of Founding Team</div>
+                        <div class="member-role" data-zh="Vattention Founding Marketer" data-en="Vattention Founding Marketer">Vattention Founding Marketer</div>
+                        <div class="member-tags">
+                            <span class="tag" data-zh="增长" data-en="Growth">Growth</span>
+                            <span class="tag" data-zh="SEO" data-en="SEO">SEO</span>
+                            <span class="tag" data-zh="数据分析" data-en="Data Analytics">Data Analytics</span>
+                            <span class="tag" data-zh="KOL" data-en="KOL">KOL</span>
+                            <span class="tag" data-zh="Affiliate" data-en="Affiliate">Affiliate</span>
+                            <span class="tag" data-zh="出海 SaaS" data-en="Global SaaS">Global SaaS</span>
+                        </div>
+                        <div class="member-quote" data-zh="用可验证的增长飞轮，让好产品被更多用户发现并长期留下。" data-en="Using measurable growth flywheels to help great products be discovered and retained by more users.">Using measurable growth flywheels to help great products be discovered and retained by more users.</div>
+                        <div class="member-bio" data-zh="曾任某 AI 创业公司 COO，擅长 0-1 搭建增长和商业体系，覆盖冷启动、SEO、内容、KOL、Affiliate、投放、CRM、数据分析等，在全球化工具与 AI 产品领域的用户增长与收入提升方面经验丰富。" data-en="Former COO of an AI startup, specializing in building growth and monetization systems from 0 to 1, covering cold start, SEO, content, KOL, affiliate, paid acquisition, CRM and data analytics, with extensive experience in user growth and revenue uplift for global tools and AI products.">Former COO of an AI startup, specializing in building growth and monetization systems from 0 to 1, covering cold start, SEO, content, KOL, affiliate, paid acquisition, CRM and data analytics, with extensive experience in user growth and revenue uplift for global tools and AI products.</div>
                     </div>
                     <!-- 重复第一组以实现无缝循环 -->
                     <div class="team-member-card">
@@ -438,6 +472,22 @@
                         </div>
                         <div class="member-quote" data-zh="好的设计应该让复杂的AI能力变得简单直观，让创作者专注于创作本身。" data-en="Good design should make complex AI capabilities simple and intuitive, allowing creators to focus on creation itself.">Good design should make complex AI capabilities simple and intuitive, allowing creators to focus on creation itself.</div>
                         <div class="member-bio" data-zh="清华大学美术学院本科毕业，小红书设计领域五千粉博主，曾先后担任火山引擎智能应用设计师、TikTok Platform UX、瓜瓜龙插画师，设计经验覆盖视频剪辑工具、直播场景编辑器、AI 专业模型后训练平台、AIGC 可视化工作流引擎等。" data-en="Bachelor's degree from Tsinghua University Academy of Arts & Design, Xiaohongshu design blogger with 5K followers. Former Volcano Engine intelligent application designer, TikTok Platform UX, Guagualong illustrator. Design experience covers video editing tools, live streaming scene editors, AI professional model post-training platforms, AIGC visual workflow engines, etc.">Bachelor's degree from Tsinghua University Academy of Arts & Design, Xiaohongshu design blogger with 5K followers. Former Volcano Engine intelligent application designer, TikTok Platform UX, Guagualong illustrator. Design experience covers video editing tools, live streaming scene editors, AI professional model post-training platforms, AIGC visual workflow engines, etc.</div>
+                    </div>
+                    <div class="team-member-card">
+                        <div class="member-avatar">
+                            <img src="team-photos/王权.jpg" alt="王权" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="member-name">Lykos</div>
+                        <div class="member-founding-team" data-zh="Member of Founding Team" data-en="Member of Founding Team">Member of Founding Team</div>
+                        <div class="member-role" data-zh="Vattention 产品工程师" data-en="Vattention Product Engineer">Vattention Product Engineer</div>
+                        <div class="member-tags">
+                            <span class="tag" data-zh="有猫" data-en="Cat Owner">Cat Owner</span>
+                            <span class="tag" data-zh="咖啡" data-en="Coffee">Coffee</span>
+                            <span class="tag" data-zh="后期制作" data-en="Post-Production">Post-Production</span>
+                            <span class="tag" data-zh="Serendipper" data-en="Serendipper">Serendipper</span>
+                        </div>
+                        <div class="member-quote" data-zh="产品是技术与用户需求的完美结合，我们要打造真正有用的AI创作工具。" data-en="Products are the perfect combination of technology and user needs. We want to build truly useful AI creative tools.">Products are the perfect combination of technology and user needs. We want to build truly useful AI creative tools.</div>
+                        <div class="member-bio" data-zh="曾任万兴科技视频剪辑创作工具主产品策划、影像领域某知名独角兽公司产品线品负责人，丰富的视频创作工具产品经验，覆盖 AI 视频生成与剪辑、传统视频后期制作、营销与短剧等 To B 领域、To Pro 与 To C 视频制作领域。" data-en="Former Wondershare video editing creative tools main product planner, product line lead at a renowned unicorn company in the imaging field. Rich experience in video creation tool products, covering AI video generation & editing, traditional video post-production, marketing & short drama in To B, To Pro and To C video production fields.">Former Wondershare video editing creative tools main product planner, product line lead at a renowned unicorn company in the imaging field. Rich experience in video creation tool products, covering AI video generation & editing, traditional video post-production, marketing & short drama in To B, To Pro and To C video production fields.</div>
                     </div>
                     <div class="team-member-card">
                         <div class="member-avatar">
@@ -590,26 +640,123 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="job-category">
-                    <h3 class="category-title" data-zh="其他" data-en="Others">Others</h3>
-                    <div class="job-table">
-                        <div class="job-row">
-                            <a href="human_resource_manager.html" class="job-link" target="_blank" rel="noopener noreferrer">
-                                <div class="job-title" data-zh="人力资源经理" data-en="Human Resource Manager">Human Resource Manager</div>
-                                <div class="job-location" data-zh="⚲ 杭州" data-en="⚲ Hangzhou">⚲ Hangzhou</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <!-- 宠物角色滚动展示 -->
             <section class="pets-scroll-section">
                 <h2 class="section-title pets-section-title" data-zh="Vattention 团队的宠物队友们" data-en="Vattention Team's Pet Companions">Vattention Team's Pet Companions</h2>
                 <div class="pets-scroll-container">
-                    <div class="pets-scroll-track" id="pets-scroll-track">
-                        <!-- 宠物卡片将通过 JavaScript 动态加载 -->
+                    <div class="pets-scroll-track">
+                        <!-- 第一组宠物 -->
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/beta-01.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/beta-02.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/beta-03.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/带鱼&雪糕01.jpg" alt="带鱼&雪糕" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">带鱼&雪糕</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/带鱼01.jpeg" alt="带鱼" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">带鱼</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/带鱼02.jpg" alt="带鱼" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">带鱼</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/雪糕01.jpeg" alt="雪糕" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name" data-zh="雪糕" data-en="Oreo">雪糕</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/罐罐01.jpg" alt="罐罐" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">罐罐</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/罐罐02.jpg" alt="罐罐" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">罐罐</div>
+                            </div>
+                        </div>
+                        <!-- 重复第一组以实现无缝循环 -->
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/beta-01.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/beta-02.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/beta-03.jpg" alt="Beta" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name" data-zh="贝塔" data-en="Beta">Beta</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/带鱼&雪糕01.jpg" alt="带鱼&雪糕" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">带鱼&雪糕</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/带鱼01.jpeg" alt="带鱼" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">带鱼</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/带鱼02.jpg" alt="带鱼" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">带鱼</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/雪糕01.jpeg" alt="雪糕" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name" data-zh="雪糕" data-en="Oreo">雪糕</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/罐罐01.jpg" alt="罐罐" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">罐罐</div>
+                            </div>
+                        </div>
+                        <div class="pet-card">
+                            <div class="pet-avatar">
+                                <img src="pets-photos/罐罐02.jpg" alt="罐罐" loading="lazy" onerror="this.style.display='none'">
+                                <div class="pet-name">罐罐</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1097,6 +1244,5 @@
             document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
         });
     </script>
-    <script src="pets-loader.js"></script>
 </body>
 </html>
