@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* 添加一些额外的视觉效果 */
+        /* 字母微交互 */
         .hero-banner .char::before {
             content: '';
             position: absolute;
@@ -26,29 +26,30 @@
         }
         
         .hero-banner .char:hover::before {
-            width: 100px;
-            height: 100px;
+            width: 72px;
+            height: 72px;
         }
         
-        /* 语言切换按钮样式 */
+        /* 语言切换按钮样式（VideoTutor inspired） */
         .language-switch {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 1000;
             display: flex;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 25px;
+            background: rgba(13, 18, 32, 0.72);
+            border-radius: 999px;
             padding: 4px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(140, 173, 255, 0.22);
+            box-shadow: 0 12px 34px rgba(4, 9, 22, 0.35);
         }
         .language-switch button {
             background: none;
             border: none;
-            color: #ffffff;
+            color: #d8e2ff;
             padding: 8px 16px;
-            border-radius: 20px;
+            border-radius: 999px;
             cursor: pointer;
             font-size: 14px;
             font-weight: 500;
@@ -56,13 +57,13 @@
             min-width: 40px;
         }
         .language-switch button.active {
-            background-color: rgba(255, 43, 255, 0.8);
+            background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 52%, #22d3ee 100%);
             color: #ffffff;
-            box-shadow: 0 2px 8px rgba(255, 43, 255, 0.3);
+            box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
         }
         .language-switch button:hover:not(.active) {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
+            background-color: rgba(163, 185, 255, 0.14);
+            color: #eff4ff;
         }
         .language-switch button:active {
             transform: scale(0.95);

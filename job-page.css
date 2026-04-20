@@ -30,7 +30,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background:
+        radial-gradient(900px 460px at 86% -2%, rgba(99, 102, 241, 0.22) 0%, transparent 62%),
+        radial-gradient(760px 420px at 6% 8%, rgba(34, 211, 238, 0.16) 0%, transparent 56%),
+        linear-gradient(180deg, rgba(6, 10, 23, 0.72) 0%, rgba(5, 8, 20, 0.88) 68%, rgba(5, 7, 14, 0.94) 100%);
     z-index: -1;
 }
 
@@ -41,9 +44,9 @@
     transform: translate(-50%, -50%);
     font-size: 12rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.03);
+    color: rgba(207, 221, 255, 0.06);
     letter-spacing: 0.1em;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 26px rgba(99, 102, 241, 0.14);
     z-index: 0;
     user-select: none;
     pointer-events: none;
@@ -65,31 +68,32 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(13, 18, 32, 0.72);
     padding: 8px 16px;
-    border-radius: 25px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(140, 173, 255, 0.22);
+    box-shadow: 0 12px 34px rgba(4, 9, 22, 0.35);
     transition: all 0.3s ease;
 }
 
 .breadcrumb:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(14, 21, 38, 0.9);
+    border-color: rgba(170, 193, 255, 0.32);
 }
 
 .breadcrumb-link {
-    color: #999999;
+    color: #b9c7ea;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .breadcrumb-link:hover {
-    color: #ffffff;
+    color: #f4f7ff;
 }
 
 .breadcrumb-separator {
-    color: #666666;
+    color: #7e8bb2;
 }
 
 .breadcrumb-current {
@@ -119,10 +123,11 @@
 .job-location {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #cccccc;
-    background-color: #1a1a1a;
+    color: #d4def8;
+    background: rgba(16, 24, 48, 0.78);
     padding: 0.5rem 0.75rem;
-    border-radius: 4px;
+    border-radius: 999px;
+    border: 1px solid rgba(140, 173, 255, 0.22);
     height: 2rem;
     display: flex;
     align-items: center;
@@ -136,7 +141,7 @@
     text-align: center;
     color: #ffffff;
     line-height: 1.2;
-    margin: 0 0 5rem 0;
+    margin: 0 0 4rem 0;
     text-decoration: none;
 }
 
@@ -147,7 +152,12 @@
 }
 
 .job-section {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
+    background: rgba(16, 24, 48, 0.72);
+    border: 1px solid rgba(140, 173, 255, 0.2);
+    border-radius: 18px;
+    padding: 24px 26px;
+    box-shadow: 0 14px 34px rgba(3, 8, 22, 0.25);
 }
 
 .section-title {
@@ -155,14 +165,14 @@
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #333333;
+    border-bottom: 1px solid rgba(140, 173, 255, 0.2);
     padding-bottom: 0.5rem;
 }
 
 .section-text {
     font-size: 1rem;
     line-height: 1.7;
-    color: #b3b3b3;
+    color: #c9d4f8;
     margin-bottom: 1.5rem;
 }
 
@@ -178,30 +188,31 @@
     margin-bottom: 0.75rem;
     font-size: 1rem;
     line-height: 1.6;
-    color: #b3b3b3;
+    color: #c9d4f8;
 }
 
 .project-list li::before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #ffffff;
+    color: #a5b4fc;
     font-weight: bold;
 }
 
 /* 申请表单 */
 .application-section {
-    background-color: #1a1a1a;
+    background: rgba(16, 24, 48, 0.78);
     padding: 3rem;
-    border-radius: 8px;
+    border-radius: 20px;
     margin: 3rem auto;
-    border: 1px solid #333333;
+    border: 1px solid rgba(140, 173, 255, 0.24);
+    box-shadow: 0 16px 40px rgba(4, 10, 28, 0.28);
     max-width: 800px;
 }
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: #999999;
+    color: #9badde;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -227,30 +238,30 @@
 .form-textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #333333;
-    border-radius: 4px;
+    border: 1px solid rgba(140, 173, 255, 0.24);
+    border-radius: 10px;
     font-size: 1rem;
     font-family: inherit;
-    background-color: #0a0a0a;
-    color: #ffffff;
+    background: rgba(9, 14, 30, 0.82);
+    color: #f2f6ff;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: #ffffff;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    border-color: rgba(129, 140, 248, 0.9);
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
 }
 
 .form-file {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #333333;
-    border-radius: 4px;
+    border: 1px solid rgba(140, 173, 255, 0.24);
+    border-radius: 10px;
     font-size: 0.9rem;
-    background-color: #0a0a0a;
-    color: #ffffff;
+    background: rgba(9, 14, 30, 0.82);
+    color: #f2f6ff;
 }
 
 .form-textarea {
@@ -259,20 +270,21 @@
 }
 
 .submit-button {
-    background-color: #ffffff;
-    color: #0a0a0a;
+    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 52%, #22d3ee 100%);
+    color: #ffffff;
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
     font-weight: 500;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.2s ease;
     width: 100%;
 }
 
 .submit-button:hover {
-    background-color: #cccccc;
+    filter: brightness(1.06);
+    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.38);
 }
 
 .submit-button:active {
@@ -344,19 +356,20 @@
     right: 20px;
     z-index: 1000;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
+    background: rgba(13, 18, 32, 0.72);
+    border-radius: 999px;
     padding: 4px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(140, 173, 255, 0.22);
+    box-shadow: 0 12px 34px rgba(4, 9, 22, 0.35);
 }
 
 .language-switch button {
     background: none;
     border: none;
-    color: #ffffff;
+    color: #d8e2ff;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 999px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
@@ -365,14 +378,14 @@
 }
 
 .language-switch button.active {
-    background-color: rgba(255, 43, 255, 0.8);
+    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 52%, #22d3ee 100%);
     color: #ffffff;
-    box-shadow: 0 2px 8px rgba(255, 43, 255, 0.3);
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
 }
 
 .language-switch button:hover:not(.active) {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    background-color: rgba(163, 185, 255, 0.14);
+    color: #eff4ff;
 }
 
 .language-switch button:active {
