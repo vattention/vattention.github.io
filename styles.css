@@ -1561,9 +1561,9 @@ body::before {
 .home-feature-title {
     color: var(--deck-text);
     font-family: var(--f-head);
-    font-size: clamp(2.15rem, 3.25vw, 3.85rem);
+    font-size: clamp(1.85rem, 2.65vw, 3.15rem);
     font-weight: 600;
-    line-height: 1.08;
+    line-height: 1.12;
     letter-spacing: 0;
 }
 
@@ -2543,7 +2543,7 @@ body::before {
     }
 
     .home-feature-title {
-        font-size: clamp(1.85rem, 8.6vw, 3.1rem);
+        font-size: clamp(1.55rem, 7.2vw, 2.55rem);
     }
 
     .home-feature-visual {
