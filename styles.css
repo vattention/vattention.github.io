@@ -2092,7 +2092,7 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
 .blog-shell {
     max-width: 980px;
     margin: 0 auto;
-    padding: 140px 28px 80px;
+    padding: 96px 28px 80px;
 }
 
 .blog-landing {
@@ -2111,10 +2111,10 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
 .blog-hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-    align-items: end;
-    gap: 56px;
-    min-height: 360px;
-    padding-bottom: 38px;
+    align-items: start;
+    gap: 48px;
+    min-height: 0;
+    padding-bottom: 32px;
 }
 
 .blog-hero h1 {
@@ -2918,13 +2918,13 @@ html[data-theme="light"] strong {
 
     .blog-landing {
         width: auto;
-        padding: 104px 16px 64px;
+        padding: 80px 16px 64px;
     }
 
     .blog-hero-grid {
         display: block;
-        min-height: 340px;
-        padding-bottom: 32px;
+        min-height: 0;
+        padding-bottom: 28px;
     }
 
     .blog-hero h1 {

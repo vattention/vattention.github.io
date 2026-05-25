@@ -43,3 +43,4 @@
 - [x] Test AC43: Blog article detail hero title uses a smaller article-scale size on desktop and mobile without horizontal overflow.
 - [x] Test AC44: Homepage Manifesto signature reads "Michael, Founder of Vattention" and no longer includes James or the entire team.
 - [x] Test AC45: Homepage Latest writing section uses the same shell width as the navigation and homepage feature card on desktop and mobile.
+- [x] Test AC46: Blog listing title area sits closer to the top navigation with a compact hero height on desktop and mobile.
