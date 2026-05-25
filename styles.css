@@ -1683,8 +1683,8 @@ body::before {
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
     align-items: end;
     gap: 56px;
-    min-height: 560px;
-    padding-bottom: 46px;
+    min-height: 360px;
+    padding-bottom: 38px;
 }
 
 .blog-hero h1 {
@@ -1692,8 +1692,8 @@ body::before {
     margin: 0.7rem 0 1.5rem;
     color: var(--deck-text);
     font-family: var(--f-head);
-    font-size: clamp(3.2rem, 8vw, 7.2rem);
-    line-height: 0.98;
+    font-size: clamp(2.7rem, 6vw, 5.25rem);
+    line-height: 1.02;
 }
 
 .blog-hero p:not(.section-label) {
@@ -2261,12 +2261,12 @@ body::before {
 
     .blog-hero-grid {
         display: block;
-        min-height: 430px;
+        min-height: 340px;
         padding-bottom: 32px;
     }
 
     .blog-hero h1 {
-        font-size: clamp(3rem, 15vw, 4.7rem);
+        font-size: clamp(2.35rem, 10vw, 3.4rem);
     }
 
     .featured-post-section,
