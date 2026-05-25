@@ -1514,7 +1514,7 @@ body::before {
     max-width: 520px;
     color: var(--deck-text);
     font-family: var(--f-body);
-    font-size: clamp(1.35rem, 2.2vw, 2.05rem);
+    font-size: clamp(1.18rem, 1.85vw, 1.72rem);
     font-weight: 500;
     line-height: 1.24;
 }
@@ -2529,7 +2529,7 @@ body::before {
     .home-hero-statement {
         margin-top: 2rem;
         max-width: 620px;
-        font-size: clamp(1.18rem, 5vw, 1.55rem);
+        font-size: clamp(1.08rem, 4.5vw, 1.35rem);
     }
 
     .home-feature-section {

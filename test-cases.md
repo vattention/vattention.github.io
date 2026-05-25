@@ -22,3 +22,4 @@
 - [x] Test AC22: Homepage latest essay title uses a smaller feature-title scale while preserving first-viewport visibility and no responsive overflow.
 - [x] Test AC23: Homepage hero content outer edges align with the latest essay card outer edges on desktop and mobile.
 - [x] Test AC24: Homepage hero has more vertical breathing room from the fixed nav and latest essay card while keeping the card visible and aligned.
+- [x] Test AC25: Homepage hero statement text is reduced in scale on desktop and mobile without overflowing or changing the hero copy.
