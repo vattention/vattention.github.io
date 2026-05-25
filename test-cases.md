@@ -14,3 +14,4 @@
 - [x] Test AC14: Blog listing page is redesigned as a content hub with editorial hero, featured essay, and topic grid, with bilingual copy and no responsive overflow.
 - [x] Test AC15: Homepage hero includes an Anthropic-style latest essay entry under the title, linking to the newest on-site Blog article with bilingual copy.
 - [x] Test AC16: Blog listing hero title uses a restrained editorial scale on desktop and mobile instead of poster-sized typography.
+- [x] Test AC17: Homepage latest essay entry uses a Project Glasswing-style story card with copy, visual panel, and Read the story action.
