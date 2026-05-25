@@ -38,3 +38,5 @@
 - [x] Test AC38: Blog listing hero title is reduced to a column-header scale on desktop and mobile without horizontal overflow.
 - [x] Test AC39: Blog listing hero title and featured article title are both reduced further on desktop and mobile without horizontal overflow.
 - [x] Test AC40: Root page background is dark so top overscroll between fixed navigation and page content does not flash white.
+- [x] Test AC41: A bottom fixed Dark / Light theme switcher appears across homepage, blog, article, and job pages.
+- [x] Test AC42: Theme selection persists in localStorage and updates the page root, navigation, main surfaces, and text colors without horizontal overflow on desktop and mobile.

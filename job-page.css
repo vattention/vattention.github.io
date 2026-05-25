@@ -343,6 +343,65 @@ body::before {
     box-shadow: 0 10px 24px rgba(178, 231, 50, 0.18);
 }
 
+html[data-theme="light"] body {
+    background:
+        linear-gradient(rgba(25, 22, 18, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(25, 22, 18, 0.04) 1px, transparent 1px),
+        radial-gradient(760px 420px at 74% 3%, rgba(111, 148, 0, 0.12) 0%, transparent 58%),
+        linear-gradient(180deg, #faf6ed 0%, #eee7d8 56%, #f6f2e9 100%);
+}
+
+html[data-theme="light"] .job-background-image {
+    opacity: 0.16;
+    filter: saturate(0.72) contrast(0.92);
+}
+
+html[data-theme="light"] .job-background-overlay {
+    background:
+        linear-gradient(180deg, rgba(250, 246, 237, 0.58) 0%, rgba(245, 241, 232, 0.9) 62%, rgba(238, 231, 216, 0.98) 100%),
+        linear-gradient(90deg, rgba(111, 148, 0, 0.1) 0%, transparent 30%, transparent 70%, rgba(111, 148, 0, 0.07) 100%);
+}
+
+html[data-theme="light"] .job-background-text {
+    color: rgba(25, 22, 18, 0.055);
+}
+
+html[data-theme="light"] .breadcrumb,
+html[data-theme="light"] .language-switch {
+    background: linear-gradient(rgba(248, 244, 234, 0.78), rgba(248, 244, 234, 0.78)) !important;
+    background-color: rgba(248, 244, 234, 0.78) !important;
+    border-color: rgba(25, 22, 18, 0.14) !important;
+    box-shadow: 0 14px 38px rgba(66, 55, 38, 0.12);
+}
+
+html[data-theme="light"] .breadcrumb:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)) !important;
+    background-color: rgba(255, 255, 255, 0.88) !important;
+}
+
+html[data-theme="light"] .language-switch button {
+    color: var(--deck-text-dim);
+}
+
+html[data-theme="light"] .language-switch button:hover:not(.active) {
+    background-color: rgba(25, 22, 18, 0.07);
+    color: var(--deck-text);
+}
+
+html[data-theme="light"] .job-category,
+html[data-theme="light"] .job-type,
+html[data-theme="light"] .job-location,
+html[data-theme="light"] .job-section,
+html[data-theme="light"] .application-section {
+    background: var(--deck-panel);
+    border-color: var(--deck-rule);
+}
+
+html[data-theme="light"] b[style],
+html[data-theme="light"] strong {
+    color: var(--deck-text) !important;
+}
+
 @media (max-width: 768px) {
     .language-switch {
         top: 15px;
