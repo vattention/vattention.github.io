@@ -434,7 +434,7 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 3rem;
-    color: #ffffff;
+    color: var(--deck-text);
     text-align: center;
     letter-spacing: -0.01em;
 }
@@ -1949,6 +1949,7 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
     grid-row: 1 / span 4;
     font-family: var(--f-head);
     max-width: 460px;
+    color: var(--deck-text);
     font-size: clamp(2.1rem, 3.2vw, 3.55rem);
     line-height: 1.05;
     margin: 0;
@@ -2660,6 +2661,11 @@ html[data-theme="light"] .intro-content {
     box-shadow: 0 34px 92px rgba(66, 55, 38, 0.13);
 }
 
+html[data-theme="light"] .intro-subtitle [style],
+html[data-theme="light"] .intro-subtitle span[style] {
+    color: var(--deck-text) !important;
+}
+
 html[data-theme="light"] .home-feature-read {
     color: #faf6ed;
     background: var(--deck-text);
@@ -2693,7 +2699,9 @@ html[data-theme="light"] .hero-story-media span {
 
 html[data-theme="light"] .hero-story-link,
 html[data-theme="light"] .blog-post-card,
-html[data-theme="light"] .voice-card {
+html[data-theme="light"] .voice-card,
+html[data-theme="light"] .company-card,
+html[data-theme="light"] .blog-feature-card {
     background: rgba(255, 255, 255, 0.66);
     border-color: var(--deck-rule);
     box-shadow: 0 18px 54px rgba(66, 55, 38, 0.08);
@@ -2718,6 +2726,23 @@ html[data-theme="light"] .blog-topic-card {
     background: var(--deck-bg);
 }
 
+html[data-theme="light"] .pets-scroll-section {
+    background: linear-gradient(180deg, rgba(245, 241, 232, 0) 0%, rgba(111, 148, 0, 0.055) 50%, rgba(245, 241, 232, 0) 100%);
+}
+
+html[data-theme="light"] .pets-scroll-container::before {
+    background: linear-gradient(to right, rgba(245, 241, 232, 1), rgba(245, 241, 232, 0));
+}
+
+html[data-theme="light"] .pets-scroll-container::after {
+    background: linear-gradient(to left, rgba(245, 241, 232, 1), rgba(245, 241, 232, 0));
+}
+
+html[data-theme="light"] .pet-avatar {
+    background: rgba(255, 255, 255, 0.68);
+    border-color: rgba(25, 22, 18, 0.16);
+}
+
 html[data-theme="light"] .article-content blockquote {
     background: rgba(111, 148, 0, 0.08);
 }
@@ -2727,6 +2752,14 @@ html[data-theme="light"] .job-section,
 html[data-theme="light"] .application-section {
     background: var(--deck-panel);
     border-color: var(--deck-rule);
+}
+
+html[data-theme="light"] .member-quote {
+    color: var(--deck-text);
+}
+
+html[data-theme="light"] .member-bio {
+    color: var(--deck-text-dim);
 }
 
 html[data-theme="light"] .job-row {
