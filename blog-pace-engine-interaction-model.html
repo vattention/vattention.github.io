@@ -45,7 +45,7 @@
             <div id="article-body" class="article-body-anchor"></div>
 
             <div class="article-content" data-lang-block="zh">
-                <h2>1. 30 多年前，游戏行业走过的一段路</h2>
+                <h2>30 多年前，游戏行业走过的一段路</h2>
                 <p>先讲一段游戏史。</p>
                 <p><strong>1991 年</strong>，Sid Meier 发布《Civilization》（文明），把回合制策略游戏（TBS）推到了一个长寿至今的巅峰。深度、复杂、耐玩——玩家在每个回合里慢慢思考、规划、决策，下一步，再下一步。</p>
                 <p><strong>仅仅一年后的 1992 年</strong>，Westwood Studios 推出《Dune II: Battle for Arrakis》（沙丘魔堡 2），确立了 RTS（实时策略）的全部基础范式：资源采集、基地建设、科技树、战争迷雾、鼠标驱动的实时操控。它销量不算炸，但<strong>所有后来的 RTS 都是踩在它的设计模板上的</strong>。</p>
@@ -62,7 +62,7 @@
                 <p>游戏从回合制走到实时制，从来不是一个「风格选择」，而是<strong>当技术允许之后，人和系统的参与模式必然向真实世界的本来面貌回归</strong>。</p>
                 <p>这条路，<strong>今天 AI 行业正在重走一遍</strong>。</p>
 
-                <h2>2. AI 也在走这条路：从 TBM 到 RTM</h2>
+                <h2>AI 也在走这条路：从 TBM 到 RTM</h2>
                 <p>游戏行业从 <strong>Turn-Based</strong> 走到 <strong>Real-Time</strong>，所有实时交互的游戏才得以大发展，比如 FPS、RTS、MOBA、STG 等等；AI 行业正在从 <strong>TBM</strong> 走到 <strong>RTM</strong>——这是这一篇要立下的核心二分：</p>
                 <ul>
                     <li><strong>Turn-Based Model（TBM，轮次模型）</strong>：按「轮」工作。你说一段，模型等你说完，冻结一切感知去生成，生成完了你接着说。一段一段、一来一回，<strong>像写信</strong>。</li>
@@ -79,7 +79,7 @@
                 </ul>
                 <p>TBM 在这里做不到的事——「问 AI 一下、等它想 3 秒、给你建议」——正是 RTM 必须能做的：<strong>「我做你接」</strong>，在我手刚动的瞬间，把下一步的可能性铺到我面前。</p>
 
-                <h2>3. 我们在做的事：PACE</h2>
+                <h2>我们在做的事：PACE</h2>
                 <p>我们最近在做的一条核心技术线，内部叫 <strong>PACE——Predictive Action Chain Engine</strong>，预测式动作链引擎，在 Z Potential 三月份对我们的报道中我们也提到过。<strong>它本质上是一个为视频编辑场景而生的 RTM</strong>——解决的问题不是「AI 怎么更聪明」，而是 <strong>「AI 怎么真正在场」</strong>：在用户操作的每一个瞬间和下一个瞬间之间，提前把可能性铺好。</p>
                 <p>三句话讲清楚 PACE 在做什么：</p>
                 <ul>
@@ -91,20 +91,20 @@
                 <p>之所以挑 editing 作为「实时 AI」的落点，是因为这里是 AI 时代少数几个<strong>真正的创作场域</strong>之一——用户不是来「让 AI 替他干活」的，是来<strong>和 AI 一起创作</strong>的。剪辑、写作、设计这一类工作的核心快感，本就在于「我有想法、我把它做出来」。AI 在这种场景里如果走「替代」路线，反而会摧毁创作本身的乐趣；它真正该做的，是 <strong>human-AI cocreation——成为创作者手边那个永远在线、永远懂上下文、永远比你快半步的搭档</strong>。所以 editing 几乎注定是 real-time model 最重大的应用方向之一——因为它对「实时」和「协作」这两件事的要求，都被推到了极致。</p>
                 <p>我在上一篇《除夕前的 48 小时极限》里讲过 Video-editing Agent 这个判断，PACE 就是这个判断在引擎层的具体回答——一个为 cocreation 而生的实时引擎。</p>
 
-                <h2>4. 这条路上不止我们一家</h2>
+                <h2>这条路上不止我们一家</h2>
                 <p>把视野放大一点会发现，朝 RTM 这个方向走的，远不止我们。</p>
                 <p><strong>音频领域</strong>最早趟通了 RTM 这条路——Moshi、PersonaPlex、Nemotron VoiceChat 这一批全双工对话 RTM，过去一两年已经实现了输入流和输出流的同时进出。为什么音频先做？因为音频本来就是时间流，<strong>没法回合制</strong>——TBM 在音频里一旦「等用户说完再答」，对话体感就崩了，人和人之间的对话从来不是这么发生的。</p>
                 <p><strong>具身智能领域</strong>走得也很坚决。Physical Intelligence 的 π0——一个面向机器人控制的 RTM——用一套明确的双层架构来应对实时性要求：前台一个永远在转的快策略负责接住每一个感知-动作循环，后台一个慢推理负责拆解长程目标和复杂规划。对话慢一拍只是体验糟，机器人慢一拍是要撞东西的——具身智能对实时性的极致要求，逼出了这套架构。</p>
                 <p><strong>通用多模态对话</strong>这边，最近 Thinking Machines 发了一篇 <a href="https://thinkingmachines.ai/blog/interaction-models/" target="_blank" rel="noopener noreferrer">《Interaction Models》</a>，给 RTM 这个范式做了一次很完整的命名和论述（他们用的词是 「Interaction Model」，本质和 RTM 是同一件事）。文章里讲的「交互性必须是模型的一部分」「时间对齐的微转轮」等等，本质上和音频领域、具身智能那套是同一脉。</p>
                 <p>所以你会发现：<strong>音频、具身、通用对话、视频编辑——四个不同模态、不同团队、不同地点的 RTM 探索，正在向同一个范式收敛</strong>。这件事让我们对 PACE 的方向更笃定了一些——不是孤注一掷，而是和这个时代的暗线同向而行。</p>
 
-                <h2>5. 共同的底层：System 1 / System 2</h2>
+                <h2>共同的底层：System 1 / System 2</h2>
                 <p>这些看似不相干的探索，背后有一个<strong>共同的理论框架在做地基——System 1 与 System 2</strong>。</p>
                 <p>这个框架最早由心理学家 Keith Stanovich 和 Richard West 在双系统理论（Dual-process theory）的研究中正式提出，后来被行为经济学之父、诺贝尔奖得主 Daniel Kahneman 引用到他的著作《思考，快与慢》里，才被心理学圈以外的人广泛知道。它讲了一件挺朴素的事：人脑里有两套系统在协作——S1 是不假思索的直觉反应，快、廉价、永远在线；S2 是慢思考、推理、规划，贵、稀缺、需要被唤起。</p>
                 <p>有意思的是，<strong>这个心理学框架真真切切启发了这一代工程师的设计直觉</strong>。不管是音频领域的全双工模型，还是具身智能的 π0，还是 Thinking Machines 的 Interaction Model，背后的研究者都在带着 S1/S2 的视角想问题——什么任务该交给永远在线的快脑、什么任务该让慢脑异步去啃。一个心理学的认知模型，被工程师们当作架构图来用了。</p>
                 <p>PACE 也是这套范式在视频编辑场景的实例：快脑负责把每一刻的「下一步」实时铺出来，慢脑负责把更复杂的长程判断流式地补进来。</p>
 
-                <h2>6. 一个判断</h2>
+                <h2>一个判断</h2>
                 <p>把这条线一口气拉完：</p>
                 <blockquote>
                     <p>Moshi 是音频对话的 RTM。<br>π0 是具身智能的 RTM。<br>Thinking Machines 是基础型多模态 RTM。<br>PACE 是创作领域的 RTM。</p>
@@ -118,7 +118,7 @@
             </div>
 
             <div class="article-content" data-lang-block="en" hidden>
-                <h2>1. A Path the Game Industry Walked 30 Years Ago</h2>
+                <h2>A Path the Game Industry Walked 30 Years Ago</h2>
                 <p>Let me start with a bit of game history.</p>
                 <p>In <strong>1991</strong>, Sid Meier released <em>Civilization</em>, bringing turn-based strategy games to a peak that still feels alive today. It was deep, complex, and endlessly replayable. Players could think, plan, decide, and then move to the next turn.</p>
                 <p>Just one year later, in <strong>1992</strong>, Westwood Studios released <em>Dune II: Battle for Arrakis</em>. It established the foundation of real-time strategy: resource gathering, base building, tech trees, fog of war, and mouse-driven real-time control. Its sales were not explosive, but almost every later RTS stood on its design template.</p>
@@ -134,7 +134,7 @@
                 <p>The game industry did not move from turns to real time as a matter of taste. When technology allowed it, human-system participation returned toward the native shape of the real world.</p>
                 <p>AI is now walking the same road.</p>
 
-                <h2>2. AI Is Moving from TBM to RTM</h2>
+                <h2>AI Is Moving from TBM to RTM</h2>
                 <p>The game industry moved from <strong>Turn-Based</strong> to <strong>Real-Time</strong>, enabling FPS, RTS, MOBA, STG, and many other real-time interaction forms. AI is now moving from <strong>TBM</strong> to <strong>RTM</strong>. This is the core distinction I want to draw:</p>
                 <ul>
                     <li><strong>Turn-Based Model, or TBM</strong>: the model works by turns. You speak, it waits for you to finish, freezes perception, generates a response, and then waits again. It feels like writing letters back and forth.</li>
@@ -151,7 +151,7 @@
                 </ul>
                 <p>What TBM cannot do here is exactly what RTM must do: respond in the moment, take over the next beat, and place possibilities in front of the user just as their hand starts to move.</p>
 
-                <h2>3. What We Are Building: PACE</h2>
+                <h2>What We Are Building: PACE</h2>
                 <p>One of our core technical directions is called <strong>PACE: Predictive Action Chain Engine</strong>. It is, in essence, an RTM born for video editing. The problem it solves is not "how can AI become smarter?" but "how can AI truly be present?" Between the current user action and the very next moment, it prepares likely next actions ahead of time.</p>
                 <p>PACE can be summarized in three lines:</p>
                 <ul>
@@ -164,20 +164,20 @@
                 <p>We chose editing as the landing point for real-time AI because it is one of the few true creative arenas of the AI era. Users are not here to have AI replace their work; they are here to create together with AI. The joy of editing, writing, and design lies in having an idea and making it real. If AI follows a pure replacement path here, it destroys the pleasure of creation. Its better role is human-AI cocreation: the always-on collaborator beside the creator, aware of context and half a step faster.</p>
                 <p>PACE is our answer at the engine layer: a real-time engine built for cocreation.</p>
 
-                <h2>4. We Are Not the Only Ones Moving This Way</h2>
+                <h2>We Are Not the Only Ones Moving This Way</h2>
                 <p>Zooming out, many teams are moving toward RTM.</p>
                 <p><strong>Audio</strong> got there early. Full-duplex conversational RTMs such as Moshi, PersonaPlex, and Nemotron VoiceChat have already shown simultaneous input and output streams. Audio had to move first because audio itself is a time stream. Once a model waits for the user to finish before replying, the feeling of conversation collapses.</p>
                 <p><strong>Embodied intelligence</strong> is also moving firmly in this direction. Physical Intelligence's π0, an RTM for robot control, uses a clear two-layer architecture: a fast always-on policy catches every perception-action loop, while a slower reasoning layer handles long-horizon goals and complex planning. A late response in chat is annoying; a late response in robotics can cause a collision.</p>
                 <p><strong>General multimodal interaction</strong> is converging too. Thinking Machines recently published <a href="https://thinkingmachines.ai/blog/interaction-models/" target="_blank" rel="noopener noreferrer">Interaction Models</a>, which names and explains this paradigm in detail. Their language around interaction being part of the model and time-aligned micro-turns is essentially the same underlying direction.</p>
                 <p>Audio, embodied AI, general multimodal interaction, and video editing are different modalities and different teams, but their explorations are converging on the same paradigm. That makes us more confident in PACE: it is not a lonely bet, but part of the hidden current of this era.</p>
 
-                <h2>5. The Shared Foundation: System 1 / System 2</h2>
+                <h2>The Shared Foundation: System 1 / System 2</h2>
                 <p>Behind these seemingly separate explorations sits a shared theoretical foundation: <strong>System 1 and System 2</strong>.</p>
                 <p>The framework was formally introduced by psychologists Keith Stanovich and Richard West in dual-process theory, and later popularized beyond psychology by Daniel Kahneman in <em>Thinking, Fast and Slow</em>. It describes a simple idea: the mind has two cooperating systems. System 1 is intuitive, fast, cheap, and always on. System 2 is slower reasoning and planning: expensive, scarce, and summoned when needed.</p>
                 <p>This psychology framework has genuinely influenced engineering intuition. Full-duplex audio models, embodied RTMs, and Thinking Machines' interaction model all carry an S1/S2 flavor: which tasks should go to the always-on fast brain, and which should be handled asynchronously by the slow brain?</p>
                 <p>PACE is this same pattern applied to video editing. The fast brain lays out the next possible action in real time; the slow brain streams in more complex long-horizon judgment.</p>
 
-                <h2>6. A Judgment</h2>
+                <h2>A Judgment</h2>
                 <p>Pulling the thread together:</p>
                 <blockquote>
                     <p>Moshi is an RTM for audio conversation.<br>π0 is an RTM for embodied intelligence.<br>Thinking Machines is building a foundational multimodal RTM.<br>PACE is an RTM for creation.</p>
