@@ -18,3 +18,4 @@
 - [x] Test AC18: Homepage initial viewport shows the large editorial hero while the latest essay section peeks below, and after a short scroll the latest essay section becomes the dominant full-width feature.
 - [x] Test AC19: Homepage hero headline and latest essay title use a reduced editorial scale while keeping the article section visible in the first viewport.
 - [x] Test AC20: Homepage hero positioning does not describe Vattention as building for real-time video creation, and instead uses Human-AI Collaboration in both languages.
+- [x] Test AC21: Homepage hero statement uses proactive agents in English and matching 主动智能体 wording in Chinese.
