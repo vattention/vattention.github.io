@@ -47,7 +47,7 @@
         <button id="lang-en" class="active">EN</button>
     </div>
 
-    <header class="hero-banner">
+    <header class="hero-banner home-landing">
         <div class="hero-video-container">
             <!-- 预加载图片，在视频加载前显示 -->
             <div class="hero-preload-image" style="background-image: url('background.jpg');"></div>
@@ -58,41 +58,33 @@
             <img src="background.jpg" alt="Background" class="hero-fallback-image" style="display: none;">
         </div>
         <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="hero-content home-hero-layout">
+            <div class="home-hero-copy">
             <p class="hero-kicker" data-zh="AI Research and Products for Video Creation" data-en="AI Research and Products for Video Creation">AI Research and Products for Video Creation</p>
-            <h1 class="hero-title">
-                <span class="char" data-char="V">V</span>
-                <span class="char" data-char="a">a</span>
-                <span class="char" data-char="t">t</span>
-                <span class="char" data-char="t">t</span>
-                <span class="char" data-char="e">e</span>
-                <span class="char" data-char="n">n</span>
-                <span class="char" data-char="t">t</span>
-                <span class="char" data-char="i">i</span>
-                <span class="char" data-char="o">o</span>
-                <span class="char" data-char="n">n</span>
-            </h1>
-            <p class="hero-subtitle" data-zh="思接千载，视通万里" data-en="Visionary Attention, Future Invention">Visionary Attention, Future Invention</p>
-            <p class="hero-description" data-zh="我们构建面向视频创作的实时交互模型与产品，让 AI 成为创作者能看见、能协作、能共同完成后期制作的伙伴。" data-en="We build real-time interaction models and products for video creation, turning AI into a collaborator that can see, respond, and help finish post-production work.">We build real-time interaction models and products for video creation, turning AI into a collaborator that can see, respond, and help finish post-production work.</p>
-            <a class="hero-story-link hero-story-card" href="blog-pace-engine-interaction-model.html" aria-label="Read latest essay">
-                <span class="hero-story-copy">
-                    <span class="hero-story-eyebrow" data-zh="最新文章" data-en="Latest essay">Latest essay</span>
-                    <span class="hero-story-title" data-zh="从《文明》的回合制到《星际》的实时制：AI 产品形态正在经历的范式迁移" data-en="From Civilization’s Turn-Based Era to StarCraft’s Real-Time Era: The Paradigm Shift AI Products Are Entering">From Civilization’s Turn-Based Era to StarCraft’s Real-Time Era: The Paradigm Shift AI Products Are Entering</span>
-                    <span class="hero-story-summary" data-zh="关于 PACE Engine、实时交互模型和 AI 产品形态的范式迁移。" data-en="On PACE Engine, real-time interaction models, and a paradigm shift in AI product form.">On PACE Engine, real-time interaction models, and a paradigm shift in AI product form.</span>
-                    <span class="hero-story-read" data-zh="阅读文章" data-en="Read the story">Read the story</span>
-                </span>
-                <span class="hero-story-media" aria-hidden="true">
-                    <span>PACE</span>
-                    <span>RTM</span>
-                    <span>MICRO-TURN</span>
-                </span>
-            </a>
-            <div class="hero-actions">
-                <a class="hero-link primary" href="blog.html" data-zh="阅读 Blog" data-en="Read the Blog">Read the Blog</a>
-                <a class="hero-link" href="#careers" data-zh="查看职位" data-en="View Careers">View Careers</a>
+                <h1 class="home-hero-title" data-zh="面向实时视频创作的 AI 研究与产品" data-en="AI research and products for real-time video creation">AI research and products for real-time video creation</h1>
             </div>
+            <p class="home-hero-statement" data-zh="Vattention 构建实时交互模型与创意智能体，让 AI 能在每一帧里看见上下文、理解意图，并与创作者共同完成后期制作。" data-en="Vattention builds real-time interaction models and creative agents that help AI see context, understand intent, and collaborate with creators through every frame of post-production.">Vattention builds real-time interaction models and creative agents that help AI see context, understand intent, and collaborate with creators through every frame of post-production.</p>
         </div>
     </header>
+
+    <section class="home-feature-section" aria-label="Latest essay">
+        <a class="home-feature-card" href="blog-pace-engine-interaction-model.html" aria-label="Read latest essay">
+            <span class="home-feature-copy">
+                <span class="hero-story-eyebrow" data-zh="最新文章" data-en="Latest essay">Latest essay</span>
+                <span class="home-feature-title" data-zh="从《文明》的回合制到《星际》的实时制：AI 产品形态正在经历的范式迁移" data-en="From Civilization’s Turn-Based Era to StarCraft’s Real-Time Era: The Paradigm Shift AI Products Are Entering">From Civilization’s Turn-Based Era to StarCraft’s Real-Time Era: The Paradigm Shift AI Products Are Entering</span>
+                <span class="home-feature-summary" data-zh="关于 PACE Engine、实时交互模型和 AI 产品形态从回合制走向实时制的长文思考。" data-en="A long-form note on PACE Engine, real-time interaction models, and AI products moving from turn-based prompts toward real-time collaboration.">A long-form note on PACE Engine, real-time interaction models, and AI products moving from turn-based prompts toward real-time collaboration.</span>
+                <span class="home-feature-read" data-zh="继续阅读" data-en="Continue reading">Continue reading</span>
+            </span>
+            <span class="home-feature-visual" aria-hidden="true">
+                <span class="feature-grid"></span>
+                <span class="feature-line one"></span>
+                <span class="feature-line two"></span>
+                <span class="feature-chip">PACE</span>
+                <span class="feature-chip">RTM</span>
+                <span class="feature-chip">MICRO-TURN</span>
+            </span>
+        </a>
+    </section>
 
     <div class="container">
         <section class="intro-section">
