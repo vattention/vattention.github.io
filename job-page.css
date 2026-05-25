@@ -1,39 +1,64 @@
-/* 职位详情页面专用样式 */
+/* 0524 teaser-inspired job page styles */
+:root {
+    --brand-green: #b2e732;
+    --brand-green-hover: #a4d52d;
+    --brand-green-ink: #10130a;
+    --deck-bg: #09090b;
+    --deck-panel: rgba(17, 17, 20, 0.76);
+    --deck-rule: rgba(255, 255, 255, 0.08);
+    --deck-text: #fafafa;
+    --deck-text-dim: #a1a1aa;
+    --deck-text-muted: #71717a;
+    --f-head: 'Space Grotesk', sans-serif;
+    --f-body: 'DM Sans', sans-serif;
+}
 
-/* 职位页面背景 */
+body {
+    font-family: var(--f-body);
+    color: var(--deck-text);
+    background:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px),
+        radial-gradient(760px 420px at 74% 3%, rgba(178, 231, 50, 0.09) 0%, transparent 58%),
+        linear-gradient(180deg, var(--deck-bg) 0%, #050505 54%, #0b0b0d 100%);
+    background-size: 64px 64px, 64px 64px, auto, auto;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -4;
+    pointer-events: none;
+    opacity: 0.48;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+}
+
 .job-background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
     z-index: -3;
     overflow: hidden;
 }
 
 .job-background-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -2;
+    opacity: 0.42;
 }
 
 .job-background-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background:
-        radial-gradient(900px 460px at 86% -2%, rgba(99, 102, 241, 0.22) 0%, transparent 62%),
-        radial-gradient(760px 420px at 6% 8%, rgba(34, 211, 238, 0.16) 0%, transparent 56%),
-        linear-gradient(180deg, rgba(6, 10, 23, 0.72) 0%, rgba(5, 8, 20, 0.88) 68%, rgba(5, 7, 14, 0.94) 100%);
+        linear-gradient(180deg, rgba(9, 9, 11, 0.52) 0%, rgba(9, 9, 11, 0.88) 62%, rgba(5, 5, 5, 0.96) 100%),
+        linear-gradient(90deg, rgba(178, 231, 50, 0.12) 0%, transparent 30%, transparent 70%, rgba(178, 231, 50, 0.08) 100%);
     z-index: -1;
 }
 
@@ -42,12 +67,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 12rem;
+    font-family: var(--f-head);
+    font-size: clamp(6rem, 16vw, 12rem);
     font-weight: 700;
-    color: rgba(207, 221, 255, 0.06);
-    letter-spacing: 0.1em;
-    text-shadow: 0 0 26px rgba(99, 102, 241, 0.14);
-    z-index: 0;
+    color: rgba(250, 250, 250, 0.045);
     user-select: none;
     pointer-events: none;
     white-space: nowrap;
@@ -58,121 +81,171 @@
     z-index: 1;
 }
 
-/* 面包屑导航 - 固定定位 */
-.breadcrumb {
+.breadcrumb,
+.language-switch {
     position: fixed;
-    top: 20px;
-    left: 20px;
     z-index: 1000;
     display: flex;
     align-items: center;
+    background: rgba(9, 9, 11, 0.72);
+    border-radius: 999px;
+    padding: 8px 16px;
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--deck-rule);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
+}
+
+.breadcrumb {
+    top: 20px;
+    left: 20px;
     gap: 0.5rem;
     font-size: 0.9rem;
-    background: rgba(13, 18, 32, 0.72);
-    padding: 8px 16px;
-    border-radius: 999px;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(140, 173, 255, 0.22);
-    box-shadow: 0 12px 34px rgba(4, 9, 22, 0.35);
     transition: all 0.3s ease;
 }
 
 .breadcrumb:hover {
-    background: rgba(14, 21, 38, 0.9);
-    border-color: rgba(170, 193, 255, 0.32);
+    background: rgba(17, 17, 20, 0.9);
+    border-color: rgba(178, 231, 50, 0.34);
 }
 
 .breadcrumb-link {
-    color: #b9c7ea;
+    color: var(--deck-text-dim);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .breadcrumb-link:hover {
-    color: #f4f7ff;
+    color: var(--brand-green);
 }
 
-.breadcrumb-separator {
-    color: #7e8bb2;
+.breadcrumb-separator,
+.section-subtitle {
+    color: var(--deck-text-muted);
 }
 
-.breadcrumb-current {
-    color: #ffffff;
+.breadcrumb-current,
+.form-label {
+    color: var(--deck-text);
     font-weight: 500;
 }
 
-/* 职位头部 */
+.language-switch {
+    top: 20px;
+    right: 20px;
+    padding: 4px;
+}
+
+.language-switch button {
+    min-width: 40px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 999px;
+    background: none;
+    color: #d4d4d8;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.language-switch button.active {
+    background: var(--brand-green);
+    color: var(--brand-green-ink);
+    box-shadow: 0 6px 18px rgba(178, 231, 50, 0.28);
+}
+
+.language-switch button:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fafafa;
+}
+
+.language-switch button:active,
+.submit-button:active {
+    transform: translateY(1px);
+}
+
 .job-header {
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 100px; /* 为固定的breadcrumb留出空间 */
+    max-width: 860px;
+    margin: 100px auto 3rem;
 }
 
 .job-meta {
     display: flex;
-    gap: 1rem;
-    /* align-items: center; */
-    justify-content: center;
-    margin-bottom: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .job-category,
 .job-type,
 .job-location {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #d4def8;
-    background: rgba(16, 24, 48, 0.78);
-    padding: 0.5rem 0.75rem;
-    border-radius: 999px;
-    border: 1px solid rgba(140, 173, 255, 0.22);
+    min-width: fit-content;
     height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: fit-content;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--deck-rule);
+    border-radius: 999px;
+    background: rgba(17, 17, 20, 0.78);
+    color: var(--deck-text);
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .job-title {
-    font-size: 2.5rem;
+    margin: 0 0 4rem;
+    color: var(--deck-text);
+    font-family: var(--f-head);
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
     font-weight: 700;
+    line-height: 1.05;
     text-align: center;
-    color: #ffffff;
-    line-height: 1.2;
-    margin: 0 0 4rem 0;
     text-decoration: none;
 }
 
-/* 职位内容 */
-.job-content {
-    max-width: 800px;
-    margin: 0 auto;
+.job-content,
+.application-section {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.job-section {
+.job-section,
+.application-section {
     margin-bottom: 1.5rem;
-    background: rgba(16, 24, 48, 0.72);
-    border: 1px solid rgba(140, 173, 255, 0.2);
-    border-radius: 18px;
-    padding: 24px 26px;
-    box-shadow: 0 14px 34px rgba(3, 8, 22, 0.25);
+    padding: 28px 30px;
+    border: 1px solid var(--deck-rule);
+    border-radius: 0;
+    background: var(--deck-panel);
+    box-shadow: none;
+}
+
+.application-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
 }
 
 .section-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--deck-rule);
+    color: var(--deck-text);
+    font-family: var(--f-head);
     font-size: 1.5rem;
     font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(140, 173, 255, 0.2);
-    padding-bottom: 0.5rem;
+}
+
+.section-text,
+.project-list li {
+    color: var(--deck-text-dim);
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .section-text {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #c9d4f8;
     margin-bottom: 1.5rem;
 }
 
@@ -186,35 +259,20 @@
     position: relative;
     padding-left: 1.5rem;
     margin-bottom: 0.75rem;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #c9d4f8;
 }
 
 .project-list li::before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #a5b4fc;
-    font-weight: bold;
-}
-
-/* 申请表单 */
-.application-section {
-    background: rgba(16, 24, 48, 0.78);
-    padding: 3rem;
-    border-radius: 20px;
-    margin: 3rem auto;
-    border: 1px solid rgba(140, 173, 255, 0.24);
-    box-shadow: 0 16px 40px rgba(4, 10, 28, 0.28);
-    max-width: 800px;
+    color: var(--brand-green);
+    font-weight: 700;
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
-    color: #9badde;
     margin-bottom: 2rem;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 .application-form {
@@ -228,192 +286,120 @@
 
 .form-label {
     display: block;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #ffffff;
     margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-input,
+.form-textarea,
+.form-file {
+    width: 100%;
+    border: 1px solid var(--deck-rule);
+    border-radius: 0;
+    background: rgba(9, 9, 11, 0.82);
+    color: var(--deck-text);
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 .form-input,
 .form-textarea {
-    width: 100%;
     padding: 0.75rem;
-    border: 1px solid rgba(140, 173, 255, 0.24);
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: inherit;
-    background: rgba(9, 14, 30, 0.82);
-    color: #f2f6ff;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-file {
+    padding: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: rgba(129, 140, 248, 0.9);
-    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
-}
-
-.form-file {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid rgba(140, 173, 255, 0.24);
-    border-radius: 10px;
-    font-size: 0.9rem;
-    background: rgba(9, 14, 30, 0.82);
-    color: #f2f6ff;
+    border-color: var(--brand-green);
+    box-shadow: 0 0 0 3px rgba(178, 231, 50, 0.18);
 }
 
 .form-textarea {
-    resize: vertical;
     min-height: 120px;
+    resize: vertical;
 }
 
 .submit-button {
-    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 52%, #22d3ee 100%);
-    color: #ffffff;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
     width: 100%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0;
+    background: var(--brand-green);
+    color: var(--brand-green-ink);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .submit-button:hover {
-    filter: brightness(1.06);
-    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.38);
+    background: var(--brand-green-hover);
+    box-shadow: 0 10px 24px rgba(178, 231, 50, 0.18);
 }
 
-.submit-button:active {
-    transform: translateY(1px);
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .job-background-text {
-        font-size: 8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .job-background-text {
-        font-size: 6rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .job-title {
-        font-size: 2rem;
-    }
-    
-    .job-meta {
-        gap: 0.5rem;
-    }
-    
-    .job-category,
-    .job-type,
-    .job-location {
-        font-size: 0.8rem;
-        padding: 0.2rem 0.5rem;
-    }
-    
-    .application-section {
-        padding: 2rem 1.5rem;
-        margin: 2rem 0;
-    }
-    
-    .breadcrumb {
-        margin: 1rem 0 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .job-title {
-        font-size: 1.75rem;
-    }
-    
-    .section-title {
-        font-size: 1.25rem;
-    }
-    
-    .application-section {
-        padding: 1.5rem 1rem;
-    }
-    
-    .form-input,
-    .form-textarea {
-        padding: 0.6rem;
-    }
-}
-
-/* 语言切换按钮 */
-.language-switch {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    background: rgba(13, 18, 32, 0.72);
-    border-radius: 999px;
-    padding: 4px;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(140, 173, 255, 0.22);
-    box-shadow: 0 12px 34px rgba(4, 9, 22, 0.35);
-}
-
-.language-switch button {
-    background: none;
-    border: none;
-    color: #d8e2ff;
-    padding: 8px 16px;
-    border-radius: 999px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    min-width: 40px;
-}
-
-.language-switch button.active {
-    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 52%, #22d3ee 100%);
-    color: #ffffff;
-    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
-}
-
-.language-switch button:hover:not(.active) {
-    background-color: rgba(163, 185, 255, 0.14);
-    color: #eff4ff;
-}
-
-.language-switch button:active {
-    transform: scale(0.95);
-}
-
-/* 响应式设计 */
 @media (max-width: 768px) {
     .language-switch {
         top: 15px;
         right: 15px;
         padding: 3px;
     }
-    
+
     .language-switch button {
+        min-width: 35px;
         padding: 6px 12px;
         font-size: 12px;
-        min-width: 35px;
     }
-    
+
     .breadcrumb {
-        top: 0px;
+        top: 15px;
         left: 15px;
         padding: 6px 12px;
         font-size: 0.8rem;
     }
-    
+
     .job-header {
-        margin-top: 80px; /* 移动设备上减少顶部间距 */
+        margin-top: 86px;
+    }
+
+    .job-meta {
+        gap: 0.5rem;
+    }
+
+    .job-category,
+    .job-type,
+    .job-location {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .job-section,
+    .application-section {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-title {
+        font-size: 1.9rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .job-section,
+    .application-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.6rem;
     }
 }

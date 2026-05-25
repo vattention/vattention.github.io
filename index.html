@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
     <style>
         /* 字母微交互 */
         .hero-banner .char::before {
@@ -18,7 +18,7 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(178, 231, 50, 0.24) 0%, transparent 70%);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             transition: all 0.3s ease;
@@ -37,17 +37,17 @@
             right: 20px;
             z-index: 1000;
             display: flex;
-            background: rgba(13, 18, 32, 0.72);
+            background: rgba(9, 9, 11, 0.72);
             border-radius: 999px;
             padding: 4px;
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(140, 173, 255, 0.22);
-            box-shadow: 0 12px 34px rgba(4, 9, 22, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
         }
         .language-switch button {
             background: none;
             border: none;
-            color: #d8e2ff;
+            color: #d4d4d8;
             padding: 8px 16px;
             border-radius: 999px;
             cursor: pointer;
@@ -57,13 +57,13 @@
             min-width: 40px;
         }
         .language-switch button.active {
-            background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 52%, #22d3ee 100%);
-            color: #ffffff;
-            box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
+            background: #b2e732;
+            color: #10130a;
+            box-shadow: 0 6px 18px rgba(178, 231, 50, 0.28);
         }
         .language-switch button:hover:not(.active) {
-            background-color: rgba(163, 185, 255, 0.14);
-            color: #eff4ff;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #fafafa;
         }
         .language-switch button:active {
             transform: scale(0.95);
@@ -138,7 +138,7 @@
         </section>
 
         <!-- 团队成员滚动展示 -->
-        <section class="team-scroll-section">
+        <template id="archived-team-cards">
             <h2 class="section-title team-section-title" data-zh="Founding Team" data-en="Founding Team">Founding Team</h2>
             <div class="team-scroll-container">
                 <div class="team-scroll-track">
@@ -429,9 +429,68 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </template>
 
         <main class="main-content">
+            <section class="user-voices-section" aria-label="User voices">
+                <div class="voices-header">
+                    <p class="voices-label" data-zh="用户原声" data-en="User Voices">User Voices</p>
+                    <h2 class="section-title voices-title" data-zh="创作者真实会说出口的需求" data-en="What creators actually say">What creators actually say</h2>
+                </div>
+                <div class="voice-scroll-container">
+                    <div class="voice-scroll-track">
+                        <article class="voice-card">
+                            <div class="voice-role" data-zh="短视频创作者" data-en="Short-form creator">Short-form creator</div>
+                            <p data-zh="我不想从零开始剪。先帮我把素材里能用的片段挑出来，再给我一个我能继续改的粗剪。" data-en="I do not want to start from zero. Pick the usable moments first, then give me a rough cut I can keep shaping.">I do not want to start from zero. Pick the usable moments first, then give me a rough cut I can keep shaping.</p>
+                        </article>
+                        <article class="voice-card">
+                            <div class="voice-role" data-zh="播客剪辑师" data-en="Podcast editor">Podcast editor</div>
+                            <p data-zh="每期最花时间的不是剪刀本身，是找高光、删废话、对齐字幕。它如果能先理解内容，我会轻松很多。" data-en="The slow part is not the cut itself. It is finding highlights, removing filler, and aligning captions. If it understands the content first, I move faster.">The slow part is not the cut itself. It is finding highlights, removing filler, and aligning captions. If it understands the content first, I move faster.</p>
+                        </article>
+                        <article class="voice-card">
+                            <div class="voice-role" data-zh="品牌内容负责人" data-en="Brand content lead">Brand content lead</div>
+                            <p data-zh="我需要的不是更多模板，而是能记住品牌语气、知道哪些镜头不能用、还能解释为什么这样剪。" data-en="I do not need more templates. I need something that remembers our voice, knows which shots are off-brand, and can explain the edit.">I do not need more templates. I need something that remembers our voice, knows which shots are off-brand, and can explain the edit.</p>
+                        </article>
+                        <article class="voice-card">
+                            <div class="voice-role" data-zh="独立导演" data-en="Independent filmmaker">Independent filmmaker</div>
+                            <p data-zh="AI 可以给建议，但最终节奏要听我的。最好像一个懂后期的助理，而不是替我做决定。" data-en="AI can suggest, but the rhythm has to stay mine. I want an assistant that understands post-production, not something that decides for me.">AI can suggest, but the rhythm has to stay mine. I want an assistant that understands post-production, not something that decides for me.</p>
+                        </article>
+                        <article class="voice-card">
+                            <div class="voice-role" data-zh="电商视频运营" data-en="Commerce video operator">Commerce video operator</div>
+                            <p data-zh="同一个素材要出很多版本：开头不同、卖点不同、时长不同。如果能批量生成再让我挑，会很有用。" data-en="One shoot has to become many versions: different hooks, different claims, different lengths. Batch options I can choose from would be huge.">One shoot has to become many versions: different hooks, different claims, different lengths. Batch options I can choose from would be huge.</p>
+                        </article>
+                        <article class="voice-card">
+                            <div class="voice-role" data-zh="团队制片" data-en="Team producer">Team producer</div>
+                            <p data-zh="我最怕反馈散在群聊里。最好它能把修改意见变成时间线上的动作，然后让我逐条确认。" data-en="Feedback gets lost in chat threads. I want notes turned into timeline actions, then I can approve them one by one.">Feedback gets lost in chat threads. I want notes turned into timeline actions, then I can approve them one by one.</p>
+                        </article>
+                        <article class="voice-card" aria-hidden="true">
+                            <div class="voice-role" data-zh="短视频创作者" data-en="Short-form creator">Short-form creator</div>
+                            <p data-zh="我不想从零开始剪。先帮我把素材里能用的片段挑出来，再给我一个我能继续改的粗剪。" data-en="I do not want to start from zero. Pick the usable moments first, then give me a rough cut I can keep shaping.">I do not want to start from zero. Pick the usable moments first, then give me a rough cut I can keep shaping.</p>
+                        </article>
+                        <article class="voice-card" aria-hidden="true">
+                            <div class="voice-role" data-zh="播客剪辑师" data-en="Podcast editor">Podcast editor</div>
+                            <p data-zh="每期最花时间的不是剪刀本身，是找高光、删废话、对齐字幕。它如果能先理解内容，我会轻松很多。" data-en="The slow part is not the cut itself. It is finding highlights, removing filler, and aligning captions. If it understands the content first, I move faster.">The slow part is not the cut itself. It is finding highlights, removing filler, and aligning captions. If it understands the content first, I move faster.</p>
+                        </article>
+                        <article class="voice-card" aria-hidden="true">
+                            <div class="voice-role" data-zh="品牌内容负责人" data-en="Brand content lead">Brand content lead</div>
+                            <p data-zh="我需要的不是更多模板，而是能记住品牌语气、知道哪些镜头不能用、还能解释为什么这样剪。" data-en="I do not need more templates. I need something that remembers our voice, knows which shots are off-brand, and can explain the edit.">I do not need more templates. I need something that remembers our voice, knows which shots are off-brand, and can explain the edit.</p>
+                        </article>
+                        <article class="voice-card" aria-hidden="true">
+                            <div class="voice-role" data-zh="独立导演" data-en="Independent filmmaker">Independent filmmaker</div>
+                            <p data-zh="AI 可以给建议，但最终节奏要听我的。最好像一个懂后期的助理，而不是替我做决定。" data-en="AI can suggest, but the rhythm has to stay mine. I want an assistant that understands post-production, not something that decides for me.">AI can suggest, but the rhythm has to stay mine. I want an assistant that understands post-production, not something that decides for me.</p>
+                        </article>
+                        <article class="voice-card" aria-hidden="true">
+                            <div class="voice-role" data-zh="电商视频运营" data-en="Commerce video operator">Commerce video operator</div>
+                            <p data-zh="同一个素材要出很多版本：开头不同、卖点不同、时长不同。如果能批量生成再让我挑，会很有用。" data-en="One shoot has to become many versions: different hooks, different claims, different lengths. Batch options I can choose from would be huge.">One shoot has to become many versions: different hooks, different claims, different lengths. Batch options I can choose from would be huge.</p>
+                        </article>
+                        <article class="voice-card" aria-hidden="true">
+                            <div class="voice-role" data-zh="团队制片" data-en="Team producer">Team producer</div>
+                            <p data-zh="我最怕反馈散在群聊里。最好它能把修改意见变成时间线上的动作，然后让我逐条确认。" data-en="Feedback gets lost in chat threads. I want notes turned into timeline actions, then I can approve them one by one.">Feedback gets lost in chat threads. I want notes turned into timeline actions, then I can approve them one by one.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
             <section class="careers-section">
                 <h2 class="section-title" data-zh="开放职位" data-en="Careers">Careers</h2>
                 </p>
@@ -470,18 +529,16 @@
                                 <div class="job-location" data-zh="⚲ 杭州 / 北京" data-en="⚲ Hangzhou / Beijing">⚲ Hangzhou / Beijing</div>
                             </a>
                         </div>
-                        <!--
                         <div class="job-row">
                             <a href="product_engineer_ai.html" class="job-link" target="_blank" rel="noopener noreferrer">
                                 <div class="job-title" data-zh="产品工程师，AI Agent" data-en="Product Engineer, AI Agent">Product Engineer, AI Agent</div>
-                                <div class="job-location" data-zh="⚲ 杭州 / 北京" data-en="⚲ Hangzhou / Beijing">⚲ Hangzhou / Beijing</div>
+                                <div class="job-location" data-zh="⚲ 杭州" data-en="⚲ Hangzhou">⚲ Hangzhou</div>
                             </a>
                         </div>
-                        -->
                         <div class="job-row">
                             <a href="product_engineer_urd.html" class="job-link" target="_blank" rel="noopener noreferrer">
                                 <div class="job-title" data-zh="产品工程师，数据与视效" data-en="Product Engineer, Data & VFX">Product Engineer, Data & VFX</div>
-                                <div class="job-location" data-zh="⚲ 杭州 / 北京" data-en="⚲ Hangzhou / Beijing">⚲ Hangzhou / Beijing</div>
+                                <div class="job-location" data-zh="⚲ 杭州" data-en="⚲ Hangzhou">⚲ Hangzhou</div>
                             </a>
                         </div>
                         <!--
@@ -690,7 +747,7 @@
             }
             
             // 延迟加载非首屏的滚动区域内容
-            const scrollSections = document.querySelectorAll('.team-scroll-section, .pets-scroll-section');
+            const scrollSections = document.querySelectorAll('.pets-scroll-section');
             if ('IntersectionObserver' in window) {
                 const sectionObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {

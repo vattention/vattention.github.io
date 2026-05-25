@@ -4,47 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facio Plugin Privacy Policy - Vattention</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --brand-green: #b2e732;
+            --brand-green-ink: #10130a;
+            --deck-bg: #09090b;
+            --deck-panel: rgba(17, 17, 20, 0.76);
+            --deck-rule: rgba(255, 255, 255, 0.08);
+            --deck-text: #fafafa;
+            --deck-text-dim: #a1a1aa;
+            --deck-text-muted: #71717a;
+            --f-head: 'Space Grotesk', sans-serif;
+            --f-body: 'DM Sans', sans-serif;
+        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: var(--f-body);
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            color: var(--deck-text-dim);
+            background:
+                linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px),
+                radial-gradient(760px 420px at 74% 3%, rgba(178, 231, 50, 0.09) 0%, transparent 58%),
+                linear-gradient(180deg, var(--deck-bg) 0%, #050505 54%, #0b0b0d 100%);
+            background-size: 64px 64px, 64px 64px, auto, auto;
             padding: 20px;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.48;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+            background-size: 256px 256px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background: var(--deck-panel);
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid var(--deck-rule);
+            border-radius: 0;
+            box-shadow: none;
         }
         h1 {
-            color: #2c3e50;
+            color: var(--deck-text);
+            font-family: var(--f-head);
             margin-bottom: 10px;
-            font-size: 2em;
+            font-size: 2.4em;
+            line-height: 1.05;
         }
         .last-updated {
-            color: #7f8c8d;
+            color: var(--deck-text-muted);
             font-size: 0.9em;
             margin-bottom: 30px;
         }
         h2 {
-            color: #34495e;
+            color: var(--deck-text);
+            font-family: var(--f-head);
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 1.5em;
-            border-bottom: 2px solid #ecf0f1;
+            border-bottom: 1px solid var(--deck-rule);
             padding-bottom: 10px;
         }
         h3 {
-            color: #34495e;
+            color: var(--deck-text);
+            font-family: var(--f-head);
             margin-top: 20px;
             margin-bottom: 10px;
             font-size: 1.2em;
@@ -60,35 +93,37 @@
             margin-bottom: 8px;
         }
         .highlight {
-            background-color: #fff3cd;
+            background-color: rgba(178, 231, 50, 0.09);
             padding: 15px;
-            border-left: 4px solid #ffc107;
+            border-left: 4px solid var(--brand-green);
             margin: 20px 0;
-            border-radius: 4px;
+            border-radius: 0;
         }
         .section {
             margin-bottom: 30px;
         }
         .contact-info {
-            background-color: #e8f5e9;
+            background-color: rgba(178, 231, 50, 0.09);
             padding: 15px;
-            border-radius: 4px;
+            border: 1px solid var(--deck-rule);
+            border-radius: 0;
             margin-top: 20px;
         }
         strong {
-            color: #2c3e50;
+            color: var(--deck-text);
         }
         a {
-            color: #3498db;
+            color: var(--brand-green);
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
         .summary {
-            background-color: #e3f2fd;
+            background-color: rgba(178, 231, 50, 0.09);
             padding: 20px;
-            border-radius: 4px;
+            border: 1px solid var(--deck-rule);
+            border-radius: 0;
             margin-top: 30px;
         }
         .summary ul {
@@ -96,8 +131,14 @@
             margin-left: 0;
         }
         .summary li:before {
-            content: "✅ ";
+            content: "• ";
+            color: var(--brand-green);
             margin-right: 8px;
+        }
+        code {
+            color: var(--brand-green);
+            background: rgba(255,255,255,0.06);
+            padding: 0.08em 0.35em;
         }
     </style>
 </head>
@@ -354,4 +395,3 @@
     </div>
 </body>
 </html>
-
