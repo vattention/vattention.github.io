@@ -2266,9 +2266,10 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
 }
 
 .article-shell {
-    max-width: 1180px;
+    width: min(1328px, calc(100vw - (var(--home-shell-gutter) * 2)));
+    max-width: none;
     margin: 0 auto;
-    padding: 128px 28px 88px;
+    padding: 128px 0 88px;
 }
 
 .article-back-link {
@@ -2983,7 +2984,8 @@ html[data-theme="light"] strong {
     }
 
     .article-shell {
-        padding: 96px 20px 72px;
+        width: auto;
+        padding: 96px 16px 72px;
     }
 
     .article-hero {
