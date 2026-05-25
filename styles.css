@@ -1468,10 +1468,10 @@ body::before {
 }
 
 .home-landing {
-    min-height: 620px;
+    min-height: 700px;
     height: auto;
     align-items: flex-end;
-    padding: 68px 0 88px;
+    padding: 112px 0 116px;
     overflow: visible;
     background:
         linear-gradient(180deg, rgba(18, 18, 18, 0.96), rgba(9, 9, 11, 1)),
@@ -1521,7 +1521,7 @@ body::before {
 
 .home-feature-section {
     width: 100vw;
-    margin: -84px 0 0 calc(-50vw + 50%);
+    margin: 24px 0 0 calc(-50vw + 50%);
     padding: 0 28px 96px;
     background: var(--deck-bg);
 }
@@ -2508,8 +2508,8 @@ body::before {
     }
 
     .home-landing {
-        min-height: 560px;
-        padding: 104px 0 72px;
+        min-height: 640px;
+        padding: 124px 0 96px;
     }
 
     .home-landing .hero-content {
@@ -2533,7 +2533,7 @@ body::before {
     }
 
     .home-feature-section {
-        margin-top: -44px;
+        margin-top: 16px;
         padding: 0 16px 64px;
     }
 
