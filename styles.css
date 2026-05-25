@@ -1356,8 +1356,8 @@ body::before {
 
 .language-switch {
     position: fixed;
-    top: 14px;
-    right: 28px;
+    top: 11px;
+    right: 32px;
     z-index: 1001;
     display: flex;
     background: rgba(9, 9, 11, 0.72);
@@ -2070,7 +2070,7 @@ body::before {
     }
 
     .language-switch {
-        top: 15px;
+        top: 14px;
         right: 15px;
         padding: 3px;
     }

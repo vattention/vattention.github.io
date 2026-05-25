@@ -10,3 +10,4 @@
 - [x] Test AC10: PACE Engine article is available as a full on-site page, homepage and Blog entries link to it, and the article page keeps an original-source link.
 - [x] Test AC11: Blog pages support the existing top-right language switch, including the full PACE article body and original-source link text.
 - [x] Test AC12: Homepage navigation uses a full-width top bar, and the PACE article detail page has a Glasswing-style hero, dek, and Continue reading anchor.
+- [x] Test AC13: Top-right language switch is vertically aligned with the full-width nav on homepage, Blog, and article pages across desktop and mobile.
