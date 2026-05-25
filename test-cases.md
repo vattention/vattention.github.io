@@ -25,3 +25,4 @@
 - [x] Test AC25: Homepage hero statement text is reduced in scale on desktop and mobile without overflowing or changing the hero copy.
 - [x] Test AC26: Homepage hero title text is reduced in scale on desktop and mobile while preserving hierarchy, copy, and responsive layout.
 - [x] Test AC27: Homepage latest essay entry title is reduced in scale on desktop and mobile without changing the article title or card layout.
+- [x] Test AC28: Homepage navigation brand and language switch align to the same outer shell as the hero and latest essay card on desktop, wide, and mobile viewports.

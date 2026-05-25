@@ -1280,6 +1280,7 @@ a:hover {
     --deck-text-muted: #71717a;
     --f-head: 'Space Grotesk', sans-serif;
     --f-body: 'DM Sans', sans-serif;
+    --home-shell-gutter: max(28px, calc((100vw - 1328px) / 2));
 }
 
 body {
@@ -1321,7 +1322,7 @@ body::before {
     justify-content: space-between;
     gap: 32px;
     min-height: 68px;
-    padding: 0 190px 0 32px;
+    padding: 0 calc(var(--home-shell-gutter) + 158px) 0 var(--home-shell-gutter);
     border-bottom: 1px solid var(--deck-rule);
     background: rgba(9, 9, 11, 0.88);
     backdrop-filter: blur(16px);
@@ -1357,7 +1358,7 @@ body::before {
 .language-switch {
     position: fixed;
     top: 11px;
-    right: 32px;
+    right: var(--home-shell-gutter);
     z-index: 1001;
     display: flex;
     background: rgba(9, 9, 11, 0.72);
