@@ -25,22 +25,52 @@
         <button id="lang-en" class="active">EN</button>
     </div>
 
-    <main class="blog-shell">
-        <header class="blog-hero">
-            <p class="section-label" data-zh="Vattention Blog" data-en="Vattention Blog">Vattention Blog</p>
-            <h1 data-zh="关于实时交互模型、视频创作与 AI 产品的笔记" data-en="Notes on real-time interaction models, video creation, and AI products">Notes on real-time interaction models, video creation, and AI products</h1>
+    <main class="blog-landing">
+        <header class="blog-hero blog-hero-grid">
+            <div>
+                <p class="section-label" data-zh="Vattention Blog" data-en="Vattention Blog">Vattention Blog</p>
+                <h1 data-zh="实时交互模型与 AI 创作产品笔记" data-en="Notes on real-time interaction models and AI creation products">Notes on real-time interaction models and AI creation products</h1>
+            </div>
             <p data-zh="这里收录团队围绕创作体验、后期制作 Agent、模型与产品一体化的公开思考。" data-en="Public notes from our work on creator experience, post-production agents, and model-product integration.">Public notes from our work on creator experience, post-production agents, and model-product integration.</p>
         </header>
 
-        <section class="blog-list" aria-label="Blog posts">
-            <a class="blog-post-card" href="blog-pace-engine-interaction-model.html">
+        <section class="featured-post-section" aria-label="Featured post">
+            <div class="section-header split">
                 <div>
-                    <p class="card-label" data-zh="Interaction Model · May 13, 2026" data-en="Interaction Model · May 13, 2026">Interaction Model · May 13, 2026</p>
+                    <p class="section-label" data-zh="Featured" data-en="Featured">Featured</p>
+                    <h2 class="section-title" data-zh="最新文章" data-en="Latest essay">Latest essay</h2>
+                </div>
+                <span class="blog-count" data-zh="1 篇文章" data-en="1 essay">1 essay</span>
+            </div>
+            <a class="featured-post-card" href="blog-pace-engine-interaction-model.html">
+                <div class="featured-post-meta">
+                    <span data-zh="Interaction Model" data-en="Interaction Model">Interaction Model</span>
+                    <span>May 13, 2026</span>
+                </div>
+                <div class="featured-post-body">
                     <h2 data-zh="从《文明》的回合制到《星际》的实时制：AI 产品形态正在经历的范式迁移" data-en="From Civilization’s Turn-Based Era to StarCraft’s Real-Time Era: The Paradigm Shift AI Products Are Entering">From Civilization’s Turn-Based Era to StarCraft’s Real-Time Era: The Paradigm Shift AI Products Are Entering</h2>
                     <p data-zh="一篇关于 PACE Engine、实时交互模型和视频创作 Agent 产品范式的长文。" data-en="A long-form essay on PACE Engine, real-time interaction models, and product paradigms for video creation agents.">A long-form essay on PACE Engine, real-time interaction models, and product paradigms for video creation agents.</p>
                 </div>
-                <span data-zh="阅读站内全文" data-en="Read on Vattention">Read on Vattention</span>
+                <span class="featured-post-link" data-zh="阅读站内全文" data-en="Read on Vattention">Read on Vattention</span>
             </a>
+        </section>
+
+        <section class="blog-topics-section" aria-label="Writing themes">
+            <p class="section-label" data-zh="Themes" data-en="Themes">Themes</p>
+            <div class="blog-topic-grid">
+                <article class="blog-topic-card">
+                    <h3 data-zh="实时交互模型" data-en="Real-time interaction models">Real-time interaction models</h3>
+                    <p data-zh="关于模型如何在时间轴上持续感知、预测和参与创作。" data-en="How models perceive, predict, and participate continuously on the user's timeline.">How models perceive, predict, and participate continuously on the user's timeline.</p>
+                </article>
+                <article class="blog-topic-card">
+                    <h3 data-zh="视频创作 Agent" data-en="Video creation agents">Video creation agents</h3>
+                    <p data-zh="围绕后期制作、动作链和创作者控制感的产品判断。" data-en="Product thinking around post-production, action chains, and creator control.">Product thinking around post-production, action chains, and creator control.</p>
+                </article>
+                <article class="blog-topic-card">
+                    <h3 data-zh="模型与产品一体化" data-en="Model-product integration">Model-product integration</h3>
+                    <p data-zh="从应用场景反推模型目标，并让能力边界塑造产品形态。" data-en="Deriving model objectives from product context, and letting capability boundaries shape the interface.">Deriving model objectives from product context, and letting capability boundaries shape the interface.</p>
+                </article>
+            </div>
         </section>
     </main>
 
