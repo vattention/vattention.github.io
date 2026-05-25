@@ -1977,7 +1977,10 @@ body::before {
 }
 
 .blog-landing {
-    max-width: 1180px;
+    width: min(1328px, calc(100vw - (var(--home-shell-gutter) * 2)));
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .blog-hero {
@@ -2635,9 +2638,13 @@ body::before {
         margin-top: 1.5rem;
     }
 
-    .blog-landing,
     .blog-shell {
         padding: 104px 20px 64px;
+    }
+
+    .blog-landing {
+        width: auto;
+        padding: 104px 16px 64px;
     }
 
     .blog-hero-grid {

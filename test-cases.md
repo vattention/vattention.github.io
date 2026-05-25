@@ -30,3 +30,4 @@
 - [x] Test AC30: Homepage Human-AI Collaboration section visually aligns with the latest essay card width, panel treatment, spacing, and responsive layout.
 - [x] Test AC31: Blog listing article titles use a smaller restrained scale on desktop and mobile without changing post text or layout.
 - [x] Test AC32: Homepage renders the user voices and Careers block directly below the top latest essay entry while keeping the Careers anchor and responsive layout intact.
+- [x] Test AC33: Blog listing page content width aligns to the navigation shell on desktop and remains overflow-free on mobile.
