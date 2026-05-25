@@ -1828,7 +1828,8 @@ body::before {
 .intro-content {
     display: grid;
     grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
-    gap: clamp(48px, 8vw, 124px);
+    column-gap: clamp(48px, 8vw, 124px);
+    row-gap: clamp(14px, 2vw, 24px);
     align-items: start;
     width: min(1328px, calc(100vw - 56px));
     max-width: none;
@@ -1875,7 +1876,7 @@ body::before {
     font-size: 1rem;
     line-height: 1.7;
     margin: 0;
-    padding-top: 1.2rem;
+    padding-top: 0.9rem;
     border-top: 1px solid var(--deck-rule);
 }
 
@@ -2003,8 +2004,8 @@ body::before {
     margin: 0.7rem 0 1.5rem;
     color: var(--deck-text);
     font-family: var(--f-head);
-    font-size: clamp(2.7rem, 6vw, 5.25rem);
-    line-height: 1.02;
+    font-size: clamp(2.15rem, 4vw, 3.65rem);
+    line-height: 1.06;
 }
 
 .blog-hero p:not(.section-label) {
@@ -2393,7 +2394,7 @@ body::before {
     width: fit-content;
     gap: 1.25rem;
     padding: 6px 0;
-    animation: voice-scroll-horizontal 58s linear infinite;
+    animation: voice-scroll-horizontal 88s linear infinite;
     will-change: transform;
 }
 
@@ -2616,7 +2617,7 @@ body::before {
     }
 
     .intro-description {
-        margin-top: 1rem;
+        margin-top: 0.85rem;
     }
 
     .company-grid {
@@ -2654,7 +2655,7 @@ body::before {
     }
 
     .blog-hero h1 {
-        font-size: clamp(2.35rem, 10vw, 3.4rem);
+        font-size: clamp(1.9rem, 7.4vw, 2.55rem);
     }
 
     .featured-post-section,

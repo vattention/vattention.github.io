@@ -32,3 +32,6 @@
 - [x] Test AC32: Homepage renders the user voices and Careers block directly below the top latest essay entry while keeping the Careers anchor and responsive layout intact.
 - [x] Test AC33: Blog listing page content width aligns to the navigation shell on desktop and remains overflow-free on mobile.
 - [x] Test AC34: PACE article section headings in both Chinese and English no longer begin with numeric prefixes.
+- [x] Test AC35: Homepage user voices replace the commerce video card with a Reaction creator and add knowledge talking-head, short drama, and professional creator cards in both visible and loop duplicate sets.
+- [x] Test AC36: Homepage Manifesto / Human-AI Collaboration panel has tighter right-column vertical spacing on desktop and mobile without overflow.
+- [x] Test AC37: Blog listing hero title uses a smaller restrained scale on desktop and mobile while staying aligned to the navigation shell.
