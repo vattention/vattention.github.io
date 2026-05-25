@@ -1829,7 +1829,7 @@ body::before {
     display: grid;
     grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
     column-gap: clamp(48px, 8vw, 124px);
-    row-gap: clamp(14px, 2vw, 24px);
+    row-gap: clamp(8px, 1.2vw, 14px);
     align-items: start;
     width: min(1328px, calc(100vw - 56px));
     max-width: none;
@@ -1867,16 +1867,16 @@ body::before {
 .intro-subtitle {
     color: var(--deck-text);
     font-size: clamp(1.05rem, 1.35vw, 1.24rem);
-    line-height: 1.65;
+    line-height: 1.56;
     margin: 0;
 }
 
 .intro-description {
     color: var(--deck-text-dim);
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.58;
     margin: 0;
-    padding-top: 0.9rem;
+    padding-top: 0.55rem;
     border-top: 1px solid var(--deck-rule);
 }
 
@@ -2617,7 +2617,7 @@ body::before {
     }
 
     .intro-description {
-        margin-top: 0.85rem;
+        margin-top: 0.5rem;
     }
 
     .company-grid {
