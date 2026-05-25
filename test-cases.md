@@ -20,3 +20,4 @@
 - [x] Test AC20: Homepage hero positioning does not describe Vattention as building for real-time video creation, and instead uses Human-AI Collaboration in both languages.
 - [x] Test AC21: Homepage hero statement uses proactive agents in English and matching 主动智能体 wording in Chinese.
 - [x] Test AC22: Homepage latest essay title uses a smaller feature-title scale while preserving first-viewport visibility and no responsive overflow.
+- [x] Test AC23: Homepage hero content outer edges align with the latest essay card outer edges on desktop and mobile.
