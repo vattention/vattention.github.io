@@ -5,3 +5,5 @@
 - [x] Test AC5: Job detail pages load the same Space Grotesk / DM Sans fonts and black-green job-page styling.
 - [x] Test AC6: Facio privacy policy page uses the same dark teaser visual language instead of the old white document style.
 - [x] Test AC7: Homepage shows an anonymous user voices section above Careers with horizontally looping cards and no avatar images.
+- [x] Test AC8: Homepage has a company-style top navigation, company/product sections, and a Latest card linking to the PACE Engine article.
+- [x] Test AC9: `blog.html` exists, uses the same dark visual language, and lists the PACE Engine article as a blog entry.

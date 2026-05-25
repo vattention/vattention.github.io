@@ -83,6 +83,16 @@
     </style>
 </head>
 <body>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a class="site-brand" href="index.html" aria-label="Vattention home">Vattention</a>
+        <div class="site-nav-links">
+            <a href="#research" data-zh="研究" data-en="Research">Research</a>
+            <a href="#products" data-zh="产品" data-en="Products">Products</a>
+            <a href="blog.html" data-zh="Blog" data-en="Blog">Blog</a>
+            <a href="#careers" data-zh="招聘" data-en="Careers">Careers</a>
+        </div>
+    </nav>
+
     <!-- 语言切换按钮 -->
     <div class="language-switch">
         <button id="lang-zh">中文</button>
@@ -101,6 +111,7 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
+            <p class="hero-kicker" data-zh="AI Research and Products for Video Creation" data-en="AI Research and Products for Video Creation">AI Research and Products for Video Creation</p>
             <h1 class="hero-title">
                 <span class="char" data-char="V">V</span>
                 <span class="char" data-char="a">a</span>
@@ -114,6 +125,11 @@
                 <span class="char" data-char="n">n</span>
             </h1>
             <p class="hero-subtitle" data-zh="思接千载，视通万里" data-en="Visionary Attention, Future Invention">Visionary Attention, Future Invention</p>
+            <p class="hero-description" data-zh="我们构建面向视频创作的实时交互模型与产品，让 AI 成为创作者能看见、能协作、能共同完成后期制作的伙伴。" data-en="We build real-time interaction models and products for video creation, turning AI into a collaborator that can see, respond, and help finish post-production work.">We build real-time interaction models and products for video creation, turning AI into a collaborator that can see, respond, and help finish post-production work.</p>
+            <div class="hero-actions">
+                <a class="hero-link primary" href="blog.html" data-zh="阅读 Blog" data-en="Read the Blog">Read the Blog</a>
+                <a class="hero-link" href="#careers" data-zh="查看职位" data-en="View Careers">View Careers</a>
+            </div>
         </div>
     </header>
 
@@ -135,6 +151,48 @@
                     — <a href="https://www.mikecaptain.com" target="_blank" rel="noopener noreferrer">Michael</a>, James, and the entire Vattention team
                 </p>
             </div>
+        </section>
+
+        <section class="company-grid-section" id="research">
+            <div class="section-header">
+                <p class="section-label" data-zh="公司主页" data-en="Company">Company</p>
+                <h2 class="section-title" data-zh="为创作者构建实时协作型 AI" data-en="Building real-time collaborative AI for creators">Building real-time collaborative AI for creators</h2>
+            </div>
+            <div class="company-grid">
+                <article class="company-card">
+                    <p class="card-label" data-zh="Research" data-en="Research">Research</p>
+                    <h3 data-zh="实时交互模型" data-en="Real-time interaction models">Real-time interaction models</h3>
+                    <p data-zh="我们关注 AI 如何在创作过程中看见上下文、理解意图、被打断并主动参与，而不是只在任务结束后给出一次性结果。" data-en="We study how AI can see context, understand intent, be interrupted, and participate during creation instead of only producing one-off results after the work is done.">We study how AI can see context, understand intent, be interrupted, and participate during creation instead of only producing one-off results after the work is done.</p>
+                </article>
+                <article class="company-card" id="products">
+                    <p class="card-label" data-zh="Products" data-en="Products">Products</p>
+                    <h3 data-zh="面向后期制作的 Agent" data-en="Agents for post-production">Agents for post-production</h3>
+                    <p data-zh="从素材理解、粗剪生成、反馈执行到多版本输出，我们把模型能力落到视频编辑真实工作流里。" data-en="From media understanding and rough cuts to feedback execution and versioning, we bring model capabilities into real video editing workflows.">From media understanding and rough cuts to feedback execution and versioning, we bring model capabilities into real video editing workflows.</p>
+                </article>
+                <article class="company-card">
+                    <p class="card-label" data-zh="Team" data-en="Team">Team</p>
+                    <h3 data-zh="研究、工程与创作交叉" data-en="Research, engineering, and craft">Research, engineering, and craft</h3>
+                    <p data-zh="团队由 AI、视频工程、产品、设计和内容创作背景的人组成，持续把前沿模型变成创作者愿意每天使用的工具。" data-en="Our team combines AI, video engineering, product, design, and content backgrounds to turn frontier models into tools creators want to use every day.">Our team combines AI, video engineering, product, design, and content backgrounds to turn frontier models into tools creators want to use every day.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="latest-section" aria-label="Latest from Vattention">
+            <div class="section-header split">
+                <div>
+                    <p class="section-label" data-zh="Latest" data-en="Latest">Latest</p>
+                    <h2 class="section-title" data-zh="最新文章与思考" data-en="Latest writing and notes">Latest writing and notes</h2>
+                </div>
+                <a class="section-link" href="blog.html" data-zh="查看全部 Blog" data-en="View all Blog">View all Blog</a>
+            </div>
+            <a class="blog-feature-card" href="https://www.mikecaptain.com/2026/05/13/pace-engine-interaction-model/" target="_blank" rel="noopener noreferrer">
+                <div>
+                    <p class="card-label" data-zh="Blog · Interaction Model" data-en="Blog · Interaction Model">Blog · Interaction Model</p>
+                    <h3 data-zh="PACE Engine: Interaction Model" data-en="PACE Engine: Interaction Model">PACE Engine: Interaction Model</h3>
+                    <p data-zh="关于实时交互模型、创作者工作流和 AI 后期制作产品范式的长文思考。" data-en="A long-form note on real-time interaction models, creator workflows, and AI post-production product paradigms.">A long-form note on real-time interaction models, creator workflows, and AI post-production product paradigms.</p>
+                </div>
+                <span data-zh="阅读文章" data-en="Read article">Read article</span>
+            </a>
         </section>
 
         <!-- 团队成员滚动展示 -->
@@ -491,7 +549,7 @@
                 </div>
             </section>
 
-            <section class="careers-section">
+            <section class="careers-section" id="careers">
                 <h2 class="section-title" data-zh="开放职位" data-en="Careers">Careers</h2>
                 </p>
                 <div class="job-category">

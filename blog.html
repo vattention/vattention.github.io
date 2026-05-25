@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vattention Blog</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+</head>
+<body class="blog-page">
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a class="site-brand" href="index.html" aria-label="Vattention home">Vattention</a>
+        <div class="site-nav-links">
+            <a href="index.html#research" data-zh="研究" data-en="Research">Research</a>
+            <a href="index.html#products" data-zh="产品" data-en="Products">Products</a>
+            <a href="blog.html" data-zh="Blog" data-en="Blog">Blog</a>
+            <a href="index.html#careers" data-zh="招聘" data-en="Careers">Careers</a>
+        </div>
+    </nav>
+
+    <div class="language-switch">
+        <button id="lang-zh">中文</button>
+        <button id="lang-en" class="active">EN</button>
+    </div>
+
+    <main class="blog-shell">
+        <header class="blog-hero">
+            <p class="section-label" data-zh="Vattention Blog" data-en="Vattention Blog">Vattention Blog</p>
+            <h1 data-zh="关于实时交互模型、视频创作与 AI 产品的笔记" data-en="Notes on real-time interaction models, video creation, and AI products">Notes on real-time interaction models, video creation, and AI products</h1>
+            <p data-zh="这里收录团队围绕创作者工作流、后期制作 Agent、模型与产品一体化的公开思考。" data-en="Public notes from our work on creator workflows, post-production agents, and model-product integration.">Public notes from our work on creator workflows, post-production agents, and model-product integration.</p>
+        </header>
+
+        <section class="blog-list" aria-label="Blog posts">
+            <a class="blog-post-card" href="https://www.mikecaptain.com/2026/05/13/pace-engine-interaction-model/" target="_blank" rel="noopener noreferrer">
+                <div>
+                    <p class="card-label" data-zh="Interaction Model · May 13, 2026" data-en="Interaction Model · May 13, 2026">Interaction Model · May 13, 2026</p>
+                    <h2 data-zh="PACE Engine: Interaction Model" data-en="PACE Engine: Interaction Model">PACE Engine: Interaction Model</h2>
+                    <p data-zh="一篇关于 PACE Engine、实时交互模型和视频创作 Agent 产品范式的长文。" data-en="A long-form essay on PACE Engine, real-time interaction models, and product paradigms for video creation agents.">A long-form essay on PACE Engine, real-time interaction models, and product paradigms for video creation agents.</p>
+                </div>
+                <span data-zh="打开文章" data-en="Open article">Open article</span>
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© <span id="currentYear"></span> Vattention. All rights reserved.<br><br>Singapore | Hangzhou | Beijing</p>
+        </div>
+    </footer>
+
+    <script src="language-switch.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
