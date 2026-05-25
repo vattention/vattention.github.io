@@ -1211,6 +1211,7 @@ body {
 
 /* 平滑滚动 */
 html {
+    background-color: var(--deck-bg, #09090b);
     scroll-behavior: smooth;
 }
 

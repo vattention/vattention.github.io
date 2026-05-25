@@ -37,3 +37,4 @@
 - [x] Test AC37: Blog listing hero title uses a smaller restrained scale on desktop and mobile while staying aligned to the navigation shell.
 - [x] Test AC38: Blog listing hero title is reduced to a column-header scale on desktop and mobile without horizontal overflow.
 - [x] Test AC39: Blog listing hero title and featured article title are both reduced further on desktop and mobile without horizontal overflow.
+- [x] Test AC40: Root page background is dark so top overscroll between fixed navigation and page content does not flash white.
