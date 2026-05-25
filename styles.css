@@ -1504,7 +1504,7 @@ body::before {
 .home-hero-title {
     color: var(--deck-text);
     font-family: var(--f-head);
-    font-size: clamp(3.65rem, 6.2vw, 7.25rem);
+    font-size: clamp(3.25rem, 5.5vw, 6.35rem);
     font-weight: 700;
     line-height: 0.96;
     letter-spacing: 0;
@@ -2522,7 +2522,7 @@ body::before {
     }
 
     .home-hero-title {
-        font-size: clamp(2.85rem, 11.5vw, 4.65rem);
+        font-size: clamp(2.55rem, 10.2vw, 4.1rem);
         max-width: 720px;
     }
 
