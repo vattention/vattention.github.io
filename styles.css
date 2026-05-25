@@ -1677,6 +1677,121 @@ body::before {
     white-space: nowrap;
 }
 
+.article-shell {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 132px 28px 88px;
+}
+
+.article-back-link {
+    display: inline-flex;
+    margin-bottom: 36px;
+    color: var(--deck-text-dim);
+    font-family: var(--f-head);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.article-back-link:hover {
+    color: var(--brand-green);
+}
+
+.article-wrap {
+    border-top: 1px solid var(--deck-rule);
+}
+
+.article-hero {
+    padding: 42px 0 34px;
+    border-bottom: 1px solid var(--deck-rule);
+}
+
+.article-hero h1 {
+    max-width: 960px;
+    margin: 0.75rem 0 1.4rem;
+    color: var(--deck-text);
+    font-family: var(--f-head);
+    font-size: clamp(2.35rem, 6vw, 5rem);
+    line-height: 1.05;
+}
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+    color: var(--deck-text-muted);
+    font-size: 0.95rem;
+}
+
+.article-meta a,
+.article-content a,
+.article-source a {
+    color: var(--brand-green);
+    text-decoration: none;
+}
+
+.article-content {
+    max-width: 820px;
+    padding: 56px 0 40px;
+    color: var(--deck-text-dim);
+    font-size: 1.08rem;
+    line-height: 1.95;
+}
+
+.article-content figure {
+    margin: 0 0 48px;
+}
+
+.article-content img {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--deck-rule);
+}
+
+.article-content h2 {
+    margin: 4rem 0 1.15rem;
+    color: var(--deck-text);
+    font-family: var(--f-head);
+    font-size: clamp(1.7rem, 4vw, 2.7rem);
+    line-height: 1.16;
+}
+
+.article-content p,
+.article-content ul,
+.article-content ol,
+.article-content blockquote {
+    margin: 0 0 1.35rem;
+}
+
+.article-content strong {
+    color: var(--deck-text);
+}
+
+.article-content ul,
+.article-content ol {
+    padding-left: 1.4rem;
+}
+
+.article-content li {
+    margin-bottom: 0.8rem;
+}
+
+.article-content blockquote {
+    padding: 24px 28px;
+    border-left: 3px solid var(--brand-green);
+    background: rgba(178, 231, 50, 0.06);
+    color: var(--deck-text);
+}
+
+.article-source {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 820px;
+    padding: 28px 0 0;
+    border-top: 1px solid var(--deck-rule);
+    color: var(--deck-text-muted);
+}
+
 .team-scroll-section,
 .pets-scroll-section {
     background: none;
@@ -1948,6 +2063,24 @@ body::before {
     .blog-post-card span {
         display: inline-block;
         margin-top: 1.5rem;
+    }
+
+    .article-shell {
+        padding: 118px 20px 72px;
+    }
+
+    .article-content {
+        font-size: 1rem;
+        line-height: 1.85;
+    }
+
+    .article-source {
+        display: block;
+    }
+
+    .article-source a {
+        display: inline-block;
+        margin-top: 0.9rem;
     }
 
     .job-category {

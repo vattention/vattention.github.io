@@ -7,3 +7,4 @@
 - [x] Test AC7: Homepage shows an anonymous user voices section above Careers with horizontally looping cards and no avatar images.
 - [x] Test AC8: Homepage has a company-style top navigation, company/product sections, and a Latest card linking to the PACE Engine article.
 - [x] Test AC9: `blog.html` exists, uses the same dark visual language, and lists the PACE Engine article as a blog entry.
+- [x] Test AC10: PACE Engine article is available as a full on-site page, homepage and Blog entries link to it, and the article page keeps an original-source link.
