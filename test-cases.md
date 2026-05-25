@@ -41,3 +41,4 @@
 - [x] Test AC41: A bottom fixed Dark / Light theme switcher appears across homepage, blog, article, and job pages.
 - [x] Test AC42: Theme selection persists in localStorage and updates the page root, navigation, main surfaces, and text colors without horizontal overflow on desktop and mobile.
 - [x] Test AC43: Blog article detail hero title uses a smaller article-scale size on desktop and mobile without horizontal overflow.
+- [x] Test AC44: Homepage Manifesto signature reads "Michael, Founder of Vattention" and no longer includes James or the entire team.
