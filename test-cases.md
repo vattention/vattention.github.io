@@ -24,3 +24,4 @@
 - [x] Test AC24: Homepage hero has more vertical breathing room from the fixed nav and latest essay card while keeping the card visible and aligned.
 - [x] Test AC25: Homepage hero statement text is reduced in scale on desktop and mobile without overflowing or changing the hero copy.
 - [x] Test AC26: Homepage hero title text is reduced in scale on desktop and mobile while preserving hierarchy, copy, and responsive layout.
+- [x] Test AC27: Homepage latest essay entry title is reduced in scale on desktop and mobile without changing the article title or card layout.
