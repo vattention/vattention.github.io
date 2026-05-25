@@ -27,3 +27,4 @@
 - [x] Test AC27: Homepage latest essay entry title is reduced in scale on desktop and mobile without changing the article title or card layout.
 - [x] Test AC28: Homepage navigation brand and language switch align to the same outer shell as the hero and latest essay card on desktop, wide, and mobile viewports.
 - [x] Test AC29: Homepage hero statement no longer limits Vattention to video post-production and supports bilingual multimodal creative positioning.
+- [x] Test AC30: Homepage Human-AI Collaboration section visually aligns with the latest essay card width, panel treatment, spacing, and responsive layout.
