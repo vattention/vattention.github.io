@@ -35,3 +35,4 @@
 - [x] Test AC35: Homepage user voices replace the commerce video card with a Reaction creator and add knowledge talking-head, short drama, and professional creator cards in both visible and loop duplicate sets.
 - [x] Test AC36: Homepage Manifesto / Human-AI Collaboration panel has tighter right-column vertical spacing on desktop and mobile without overflow.
 - [x] Test AC37: Blog listing hero title uses a smaller restrained scale on desktop and mobile while staying aligned to the navigation shell.
+- [x] Test AC38: Blog listing hero title is reduced to a column-header scale on desktop and mobile without horizontal overflow.
