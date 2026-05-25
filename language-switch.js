@@ -18,6 +18,12 @@ function switchLanguage(lang) {
     elements.forEach(element => {
         element.textContent = element.getAttribute(`data-${lang}`);
     });
+
+    // 更新整块双语内容
+    const languageBlocks = document.querySelectorAll('[data-lang-block]');
+    languageBlocks.forEach(block => {
+        block.hidden = block.getAttribute('data-lang-block') !== lang;
+    });
     
     // 更新页面语言属性
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';

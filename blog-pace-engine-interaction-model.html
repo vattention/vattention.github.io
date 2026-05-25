@@ -22,21 +22,26 @@
         </div>
     </nav>
 
+    <div class="language-switch">
+        <button id="lang-zh">中文</button>
+        <button id="lang-en" class="active">EN</button>
+    </div>
+
     <main class="article-shell">
-        <a class="article-back-link" href="blog.html">Back to Blog</a>
+        <a class="article-back-link" href="blog.html" data-zh="返回 Blog" data-en="Back to Blog">Back to Blog</a>
 
         <article class="article-wrap">
             <header class="article-hero">
                 <p class="section-label">Interaction Model · May 13, 2026</p>
-                <h1>从《文明》的回合到《星际》的实时：AI 产品形态正在经历的范式迁移</h1>
+                <h1 data-zh="从《文明》的回合到《星际》的实时：AI 产品形态正在经历的范式迁移" data-en="From Civilization Turns to StarCraft Real Time: The Paradigm Shift AI Products Are Entering">From Civilization Turns to StarCraft Real Time: The Paradigm Shift AI Products Are Entering</h1>
                 <div class="article-meta">
-                    <span>杭州</span>
-                    <span>麦克船长</span>
-                    <a href="https://www.mikecaptain.com/2026/05/13/pace-engine-interaction-model/" target="_blank" rel="noopener noreferrer">查看原文</a>
+                    <span data-zh="杭州" data-en="Hangzhou">Hangzhou</span>
+                    <span data-zh="麦克船长" data-en="MikeCaptain">MikeCaptain</span>
+                    <a href="https://www.mikecaptain.com/2026/05/13/pace-engine-interaction-model/" target="_blank" rel="noopener noreferrer" data-zh="查看原文" data-en="Original article">Original article</a>
                 </div>
             </header>
 
-            <div class="article-content">
+            <div class="article-content" data-lang-block="zh">
                 <figure>
                     <img src="https://www.mikecaptain.com/img/src2/2026/05/2026-05-13-pace-engine-interaction-model-1.png" alt="PACE Engine interaction model article cover">
                 </figure>
@@ -113,9 +118,86 @@
                 <p>我们正走在这条路上。</p>
             </div>
 
+            <div class="article-content" data-lang-block="en" hidden>
+                <figure>
+                    <img src="https://www.mikecaptain.com/img/src2/2026/05/2026-05-13-pace-engine-interaction-model-1.png" alt="PACE Engine interaction model article cover">
+                </figure>
+
+                <h2>1. A Path the Game Industry Walked 30 Years Ago</h2>
+                <p>Let me start with a bit of game history.</p>
+                <p>In <strong>1991</strong>, Sid Meier released <em>Civilization</em>, bringing turn-based strategy games to a peak that still feels alive today. It was deep, complex, and endlessly replayable. Players could think, plan, decide, and then move to the next turn.</p>
+                <p>Just one year later, in <strong>1992</strong>, Westwood Studios released <em>Dune II: Battle for Arrakis</em>. It established the foundation of real-time strategy: resource gathering, base building, tech trees, fog of war, and mouse-driven real-time control. Its sales were not explosive, but almost every later RTS stood on its design template.</p>
+                <p>Three years after that, in <strong>1995</strong>, Westwood made RTS a global commercial hit with <em>Command &amp; Conquer</em>: multiplayer battles, cinematic storytelling, and fluid control brought the genre out of enthusiast circles and into the mainstream.</p>
+                <p>Then in <strong>1998</strong>, Blizzard's <em>StarCraft</em> pushed RTS to an esports summit and shaped the next two decades.</p>
+                <p>From <em>Civilization</em> to <em>StarCraft</em>, strategy games completed a seven-year paradigm shift: from "I take a step, the system takes a step" to "hands on the mouse, eyes on the battlefield." The core change was not that games became more complex. It was that players no longer had to wait for the system to resolve a turn.</p>
+                <p>This was not just a random evolution in game style. A game is an independent, simplified world. People first participated in that world through turns not because turns were naturally better, but because the technology of the time could not carry real time. Once compute, input devices, and engine technology caught up, participation naturally moved from turn-based to real-time.</p>
+                <ol>
+                    <li><strong>Turn-based systems</strong> are the result of discretizing the continuous world into slow, manageable turns.</li>
+                    <li><strong>The real world</strong> is already happening as high-frequency real-time interaction. Physics does not wait for a turn to settle.</li>
+                </ol>
+                <p>Real time is, at a deeper level, simply higher-frequency turns: <strong>micro-turn based</strong>. This has long been true in engineering. Early RTC systems chopped continuous speech into tiny audio packets, transmitted them, and stitched them back together. Today's RTM, or Real-time Model, follows the same path: continuous input and output streams split into micro-turns. "Real time" is ultimately "turns small enough to feel continuous."</p>
+                <p>The game industry did not move from turns to real time as a matter of taste. When technology allowed it, human-system participation returned toward the native shape of the real world.</p>
+                <p>AI is now walking the same road.</p>
+
+                <h2>2. AI Is Moving from TBM to RTM</h2>
+                <p>The game industry moved from <strong>Turn-Based</strong> to <strong>Real-Time</strong>, enabling FPS, RTS, MOBA, STG, and many other real-time interaction forms. AI is now moving from <strong>TBM</strong> to <strong>RTM</strong>. This is the core distinction I want to draw:</p>
+                <ul>
+                    <li><strong>Turn-Based Model, or TBM</strong>: the model works by turns. You speak, it waits for you to finish, freezes perception, generates a response, and then waits again. It feels like writing letters back and forth.</li>
+                    <li><strong>Real-Time Model, or RTM</strong>: the model works by streams. Input and output flow at the same time, and the model advances with the user's rhythm. In conversation, it listens and speaks synchronously. In creation and editing, it moves with your hands and picks up your intent. In embodied action, it perceives, decides, and acts continuously.</li>
+                </ul>
+                <p>These are fundamentally different paradigms, not just points on a speed spectrum. A fast TBM is still TBM. A slow RTM is still RTM. The difference is not latency alone, but the model's relationship to time.</p>
+                <p>The AI products most people know from the past few years, including GPT, Claude, and Gemini-style chat LLMs, are essentially TBMs. The industry has refined that path to a very high level.</p>
+                <p>But TBM breaks down in scenarios where users operate densely, intent is continuous, and waiting is unacceptable. Those scenarios do not need a smarter TBM. They need an RTM: a model that works by streams, stays present, and moves on the same timeline as the user.</p>
+                <p>Video editing is a natural battlefield for RTM:</p>
+                <ul>
+                    <li><strong>Dense operation</strong>: an editor may interact dozens of times per minute, dragging timelines, cutting clips, adding transitions, and adjusting audio.</li>
+                    <li><strong>Continuous intent</strong>: the tail of one action often contains the beginning of the next. After adding a J-cut, the editor may immediately need to handle a transition. After adjusting background music, they may need to duck vocals. Intent is a chain, not a pile of isolated prompts.</li>
+                    <li><strong>Waiting breaks creation</strong>: a loading spinner or a "thinking..." moment can interrupt the fragile state of creative flow.</li>
+                </ul>
+                <p>What TBM cannot do here is exactly what RTM must do: respond in the moment, take over the next beat, and place possibilities in front of the user just as their hand starts to move.</p>
+
+                <h2>3. What We Are Building: PACE</h2>
+                <p>One of our core technical directions is called <strong>PACE: Predictive Action Chain Engine</strong>. It is, in essence, an RTM born for video editing. The problem it solves is not "how can AI become smarter?" but "how can AI truly be present?" Between the current user action and the very next moment, it prepares likely next actions ahead of time.</p>
+                <p>PACE can be summarized in three lines:</p>
+                <ul>
+                    <li><strong>Predict creative intent from context in real time.</strong></li>
+                    <li><strong>Provide intelligent action guidance as the predictive brain of an Agent product.</strong></li>
+                    <li><strong>Respond to editing action chains with low latency.</strong></li>
+                </ul>
+                <p>We are not building PACE by training a generic model first and wrapping it in an editing interface later. We are building it through <strong>model-application co-design</strong>: the model and the product are designed and iterated together from day one. Every action type, timing constraint, and user pause in the product feeds back into the model objective; the model's capability boundary, in turn, shapes how much predictive interaction the product can expose.</p>
+                <p>This is not "a model plus a shell." It is a complete real-time system designed for creative scenarios. Model-application integration is the condition that lets this engine run, and it is also the biggest difference between our path and simply wrapping a general LLM in a UI.</p>
+                <p>We chose editing as the landing point for real-time AI because it is one of the few true creative arenas of the AI era. Users are not here to have AI replace their work; they are here to create together with AI. The joy of editing, writing, and design lies in having an idea and making it real. If AI follows a pure replacement path here, it destroys the pleasure of creation. Its better role is human-AI cocreation: the always-on collaborator beside the creator, aware of context and half a step faster.</p>
+                <p>PACE is our answer at the engine layer: a real-time engine built for cocreation.</p>
+
+                <h2>4. We Are Not the Only Ones Moving This Way</h2>
+                <p>Zooming out, many teams are moving toward RTM.</p>
+                <p><strong>Audio</strong> got there early. Full-duplex conversational RTMs such as Moshi, PersonaPlex, and Nemotron VoiceChat have already shown simultaneous input and output streams. Audio had to move first because audio itself is a time stream. Once a model waits for the user to finish before replying, the feeling of conversation collapses.</p>
+                <p><strong>Embodied intelligence</strong> is also moving firmly in this direction. Physical Intelligence's π0, an RTM for robot control, uses a clear two-layer architecture: a fast always-on policy catches every perception-action loop, while a slower reasoning layer handles long-horizon goals and complex planning. A late response in chat is annoying; a late response in robotics can cause a collision.</p>
+                <p><strong>General multimodal interaction</strong> is converging too. Thinking Machines recently published <a href="https://thinkingmachines.ai/blog/interaction-models/" target="_blank" rel="noopener noreferrer">Interaction Models</a>, which names and explains this paradigm in detail. Their language around interaction being part of the model and time-aligned micro-turns is essentially the same underlying direction.</p>
+                <p>Audio, embodied AI, general multimodal interaction, and video editing are different modalities and different teams, but their explorations are converging on the same paradigm. That makes us more confident in PACE: it is not a lonely bet, but part of the hidden current of this era.</p>
+
+                <h2>5. The Shared Foundation: System 1 / System 2</h2>
+                <p>Behind these seemingly separate explorations sits a shared theoretical foundation: <strong>System 1 and System 2</strong>.</p>
+                <p>The framework was formally introduced by psychologists Keith Stanovich and Richard West in dual-process theory, and later popularized beyond psychology by Daniel Kahneman in <em>Thinking, Fast and Slow</em>. It describes a simple idea: the mind has two cooperating systems. System 1 is intuitive, fast, cheap, and always on. System 2 is slower reasoning and planning: expensive, scarce, and summoned when needed.</p>
+                <p>This psychology framework has genuinely influenced engineering intuition. Full-duplex audio models, embodied RTMs, and Thinking Machines' interaction model all carry an S1/S2 flavor: which tasks should go to the always-on fast brain, and which should be handled asynchronously by the slow brain?</p>
+                <p>PACE is this same pattern applied to video editing. The fast brain lays out the next possible action in real time; the slow brain streams in more complex long-horizon judgment.</p>
+
+                <h2>6. A Judgment</h2>
+                <p>Pulling the thread together:</p>
+                <blockquote>
+                    <p>Moshi is an RTM for audio conversation.<br>π0 is an RTM for embodied intelligence.<br>Thinking Machines is building a foundational multimodal RTM.<br>PACE is an RTM for creation.</p>
+                </blockquote>
+                <p>Different modalities, different teams, and different locations are converging on <strong>RTM: System 1/2 plus real-time micro-turns</strong>. This is not coincidence. It is the direction AI product form points to at this stage.</p>
+                <p>In the past few years, the industry competed over model intelligence, parameter scale, and context length. Those are competitions inside TBM. But when AI reaches the application layer, intelligence is only a prerequisite. <strong>Presence</strong> becomes the key. The model must live on the same timeline as the user, inside the same action chain, before intent is fully formed.</p>
+                <p>PACE is our answer: an RTM built through model-application integration.</p>
+                <p>The next five years of AI will not only be a race inside TBM. It will be about RTM: agents that can collaborate and cocreate with people in real time, inside their actions, before their intent has fully crystallized. It is not here to replace you. It is here to create with you.</p>
+                <p>When a new paradigm is named, it still takes years to define a category. This is not a moment for FOMO. It is a window for doing the work carefully.</p>
+                <p>We are on that road.</p>
+            </div>
+
             <footer class="article-source">
-                <span>Originally published on MikeCaptain.com</span>
-                <a href="https://www.mikecaptain.com/2026/05/13/pace-engine-interaction-model/" target="_blank" rel="noopener noreferrer">打开原文链接</a>
+                <span data-zh="原文发布于 MikeCaptain.com" data-en="Originally published on MikeCaptain.com">Originally published on MikeCaptain.com</span>
+                <a href="https://www.mikecaptain.com/2026/05/13/pace-engine-interaction-model/" target="_blank" rel="noopener noreferrer" data-zh="打开原文链接" data-en="Open original article">Open original article</a>
             </footer>
         </article>
     </main>
@@ -126,6 +208,7 @@
         </div>
     </footer>
 
+    <script src="language-switch.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var yearSpan = document.getElementById('currentYear');
