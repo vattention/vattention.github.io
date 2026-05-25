@@ -1989,10 +1989,28 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
     padding: 88px 0;
 }
 
+.latest-section {
+    width: 100vw;
+    margin: 0 0 0 calc(-50vw + 50%);
+    padding-right: 28px;
+    padding-left: 28px;
+}
+
 .section-header {
     max-width: 980px;
     margin: 0 auto 30px;
     text-align: center;
+}
+
+.latest-section .section-header,
+.latest-section .blog-feature-card {
+    width: min(1328px, calc(100vw - (var(--home-shell-gutter) * 2)));
+    max-width: none;
+}
+
+.latest-section .section-header {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .section-header.split {
@@ -2875,6 +2893,16 @@ html[data-theme="light"] strong {
     .featured-post-card {
         display: block;
         text-align: left;
+    }
+
+    .latest-section {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .latest-section .section-header,
+    .latest-section .blog-feature-card {
+        width: calc(100vw - 32px);
     }
 
     .blog-feature-card span,
