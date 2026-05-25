@@ -45,3 +45,4 @@
 - [x] Test AC45: Homepage Latest writing section uses the same shell width as the navigation and homepage feature card on desktop and mobile.
 - [x] Test AC46: Blog listing title area sits closer to the top navigation with a compact hero height on desktop and mobile.
 - [x] Test AC47: Homepage light mode uses dark readable text for section titles and light surfaces for company, latest, voice, and pet sections.
+- [x] Test AC48: Homepage hero statement no longer emphasizes multimodality and instead describes richer, more expressive content creation in both Chinese and English.
