@@ -12,3 +12,4 @@
 - [x] Test AC12: Homepage navigation uses a full-width top bar, and the PACE article detail page has a Glasswing-style hero, dek, and Continue reading anchor.
 - [x] Test AC13: Top-right language switch is vertically aligned with the full-width nav on homepage, Blog, and article pages across desktop and mobile.
 - [x] Test AC14: Blog listing page is redesigned as a content hub with editorial hero, featured essay, and topic grid, with bilingual copy and no responsive overflow.
+- [x] Test AC15: Homepage hero includes an Anthropic-style latest essay entry under the title, linking to the newest on-site Blog article with bilingual copy.
