@@ -49,3 +49,4 @@
 - [x] Test AC49: Blog article detail shell aligns its left edge with the navigation brand and homepage shell on desktop, wide, and mobile viewports.
 - [x] Test AC50: Dark / Light theme switcher is hidden across shared site pages while leaving theme support code in place.
 - [x] Test AC51: Blog article detail includes a bilingual table of contents before the body, with links to all six section headings and a lightweight article-native style.
+- [x] Test AC52: Blog article table of contents sits to the left of the body as a sticky sidebar on desktop, while only the active language's TOC is visible.
