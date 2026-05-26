@@ -249,6 +249,18 @@ body::before {
     margin-bottom: 1.5rem;
 }
 
+.application-email a,
+.application-email a:visited {
+    color: var(--brand-green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.application-email a:hover {
+    color: var(--brand-green-hover);
+    text-decoration: underline;
+}
+
 .project-list {
     list-style: none;
     padding: 0;
