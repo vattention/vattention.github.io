@@ -1411,7 +1411,7 @@ html[data-theme="light"] .site-nav {
     right: var(--home-shell-gutter);
     bottom: max(18px, env(safe-area-inset-bottom));
     z-index: 1002;
-    display: flex;
+    display: none;
     gap: 4px;
     padding: 4px;
     border: 1px solid rgba(255, 255, 255, 0.12);

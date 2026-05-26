@@ -47,3 +47,4 @@
 - [x] Test AC47: Homepage light mode uses dark readable text for section titles and light surfaces for company, latest, voice, and pet sections.
 - [x] Test AC48: Homepage hero statement no longer emphasizes multimodality and instead describes richer, more expressive content creation in both Chinese and English.
 - [x] Test AC49: Blog article detail shell aligns its left edge with the navigation brand and homepage shell on desktop, wide, and mobile viewports.
+- [x] Test AC50: Dark / Light theme switcher is hidden across shared site pages while leaving theme support code in place.
