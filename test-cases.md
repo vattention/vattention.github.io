@@ -52,3 +52,4 @@
 - [x] Test AC52: Blog article table of contents sits to the left of the body as a sticky sidebar on desktop, while only the active language's TOC is visible.
 - [x] Test AC53: Shared homepage, blog, and article mobile layouts use a compact Anthropic-inspired top navigation, restrained single-column hero rhythm, and overflow-free story/article sections.
 - [x] Test AC54: Shared navigation shows a right-side hamburger menu from mobile through 1024px-wide viewports, opens the Research / Blog / Careers links, and returns to desktop links above that range.
+- [x] Test AC55: Shared CSS and JavaScript references include a cache-busting version query so production mobile browsers fetch the latest mobile layout assets.
