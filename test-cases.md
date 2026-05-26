@@ -50,3 +50,4 @@
 - [x] Test AC50: Dark / Light theme switcher is hidden across shared site pages while leaving theme support code in place.
 - [x] Test AC51: Blog article detail includes a bilingual table of contents before the body, with links to all six section headings and a lightweight article-native style.
 - [x] Test AC52: Blog article table of contents sits to the left of the body as a sticky sidebar on desktop, while only the active language's TOC is visible.
+- [x] Test AC53: Shared homepage, blog, and article mobile layouts use a compact Anthropic-inspired top navigation, restrained single-column hero rhythm, and overflow-free story/article sections.

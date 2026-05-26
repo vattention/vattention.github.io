@@ -1392,6 +1392,10 @@ html[data-theme="light"] .site-nav {
     color: var(--brand-green);
 }
 
+.site-nav-toggle {
+    display: none;
+}
+
 .language-switch {
     position: fixed;
     top: 11px;
@@ -2875,29 +2879,98 @@ html[data-theme="light"] strong {
         left: 0;
         right: 0;
         min-height: 64px;
-        padding: 0 116px 0 16px;
+        padding: 0 14px 0 16px;
         gap: 14px;
-        overflow: auto;
+        overflow: visible;
+    }
+
+    .site-brand {
+        font-size: 1.12rem;
+        letter-spacing: 0;
+    }
+
+    .site-nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--deck-text);
+        cursor: pointer;
+    }
+
+    .site-nav-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        margin-left: auto;
+        background: currentColor;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .site-nav.is-open .site-nav-toggle span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .site-nav.is-open .site-nav-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .site-nav.is-open .site-nav-toggle span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     .site-nav-links {
-        gap: 12px;
+        position: fixed;
+        top: 64px;
+        right: 16px;
+        left: 16px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0;
+        border: 1px solid var(--deck-rule);
+        background: var(--deck-bg);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+        backdrop-filter: blur(18px);
+    }
+
+    html[data-theme="light"] .site-nav-links {
+        background: var(--deck-bg);
+        box-shadow: 0 24px 70px rgba(66, 55, 38, 0.16);
+    }
+
+    .site-nav.is-open .site-nav-links {
+        display: flex;
     }
 
     .site-nav-links a {
-        font-size: 0.82rem;
+        padding: 14px 18px;
+        color: var(--deck-text);
+        font-size: 1rem;
+        border-bottom: 1px solid var(--deck-rule);
+    }
+
+    .site-nav-links a:last-child {
+        border-bottom: 0;
     }
 
     .language-switch {
         top: 14px;
-        right: 15px;
-        padding: 3px;
+        right: 64px;
+        padding: 2px;
     }
 
     .language-switch button {
-        padding: 6px 12px;
+        padding: 6px 9px;
         font-size: 12px;
-        min-width: 35px;
+        min-width: 32px;
     }
 
     .theme-switcher {
@@ -2913,8 +2986,9 @@ html[data-theme="light"] strong {
     }
 
     .home-landing {
-        min-height: 640px;
-        padding: 124px 0 96px;
+        min-height: 0;
+        justify-content: flex-start;
+        padding: 126px 0 72px;
     }
 
     .home-landing .hero-content {
@@ -2927,53 +3001,64 @@ html[data-theme="light"] strong {
     }
 
     .home-hero-title {
-        font-size: clamp(2.55rem, 10.2vw, 4.1rem);
+        font-size: clamp(2.35rem, 9.6vw, 3.25rem);
+        line-height: 1.06;
         max-width: 720px;
     }
 
     .home-hero-statement {
-        margin-top: 2rem;
+        margin-top: 1.55rem;
         max-width: 620px;
-        font-size: clamp(1.08rem, 4.5vw, 1.35rem);
+        font-size: clamp(1rem, 4vw, 1.16rem);
+        font-weight: 400;
+        line-height: 1.5;
     }
 
     .home-feature-section {
-        margin-top: 16px;
-        padding: 0 16px 64px;
+        margin-top: 0;
+        padding: 0 16px 56px;
     }
 
     .home-feature-card {
         grid-template-columns: 1fr;
         width: calc(100vw - 32px);
-        min-height: 680px;
-        gap: 32px;
-        padding: 32px 22px;
+        min-height: 0;
+        gap: 28px;
+        padding: 30px 24px;
     }
 
     .home-feature-title {
-        font-size: clamp(1.35rem, 6.2vw, 2.1rem);
+        font-size: clamp(1.34rem, 5.6vw, 1.85rem);
+        line-height: 1.15;
     }
 
     .home-feature-visual {
         width: min(100%, 430px);
-        order: -1;
+        aspect-ratio: 1.1;
+        order: 0;
+    }
+
+    .home-feature-summary {
+        font-size: 0.98rem;
+        line-height: 1.6;
     }
 
     .intro-section {
-        padding: 0 16px 72px;
+        padding: 0 16px 64px;
     }
 
     .intro-content {
         display: block;
         width: calc(100vw - 32px);
-        padding: 32px 22px;
+        padding: 34px 24px;
         border-radius: 0;
     }
 
     .intro-title {
         max-width: none;
         margin-bottom: 1.6rem;
-        font-size: clamp(2rem, 9vw, 3rem);
+        font-size: clamp(1.85rem, 8vw, 2.55rem);
+        line-height: 1.12;
     }
 
     .intro-title::before {
@@ -3003,8 +3088,7 @@ html[data-theme="light"] strong {
     }
 
     .latest-section {
-        padding-right: 16px;
-        padding-left: 16px;
+        padding: 56px 16px;
     }
 
     .latest-section .section-header,
@@ -3025,7 +3109,7 @@ html[data-theme="light"] strong {
 
     .blog-landing {
         width: auto;
-        padding: 80px 16px 64px;
+        padding: 92px 16px 64px;
     }
 
     .blog-hero-grid {
@@ -3035,12 +3119,25 @@ html[data-theme="light"] strong {
     }
 
     .blog-hero h1 {
-        font-size: clamp(1.55rem, 5.8vw, 2.05rem);
+        font-size: clamp(1.7rem, 7vw, 2.35rem);
+        line-height: 1.12;
+    }
+
+    .blog-hero p:not(.section-label) {
+        font-size: 1.02rem;
+        line-height: 1.65;
+    }
+
+    .featured-post-section .section-title,
+    .latest-section .section-title {
+        font-size: clamp(1.45rem, 6.2vw, 1.95rem);
+        line-height: 1.14;
+        margin-bottom: 1rem;
     }
 
     .featured-post-section,
     .blog-topics-section {
-        padding: 44px 0;
+        padding: 42px 0;
     }
 
     .featured-post-card {
@@ -3058,12 +3155,27 @@ html[data-theme="light"] strong {
 
     .article-shell {
         width: auto;
-        padding: 96px 16px 72px;
+        padding: 92px 16px 72px;
     }
 
     .article-hero {
-        min-height: 520px;
-        padding: 44px 0 36px;
+        min-height: 0;
+        padding: 34px 0 40px;
+    }
+
+    .article-hero h1 {
+        font-size: clamp(2rem, 8.7vw, 2.45rem);
+        line-height: 1.08;
+    }
+
+    .article-dek {
+        font-size: 1.04rem;
+        line-height: 1.58;
+    }
+
+    .article-meta {
+        gap: 0.55rem 0.9rem;
+        font-size: 0.9rem;
     }
 
     .article-body-layout {
