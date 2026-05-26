@@ -51,3 +51,4 @@
 - [x] Test AC51: Blog article detail includes a bilingual table of contents before the body, with links to all six section headings and a lightweight article-native style.
 - [x] Test AC52: Blog article table of contents sits to the left of the body as a sticky sidebar on desktop, while only the active language's TOC is visible.
 - [x] Test AC53: Shared homepage, blog, and article mobile layouts use a compact Anthropic-inspired top navigation, restrained single-column hero rhythm, and overflow-free story/article sections.
+- [x] Test AC54: Shared navigation shows a right-side hamburger menu from mobile through 1024px-wide viewports, opens the Research / Blog / Careers links, and returns to desktop links above that range.
