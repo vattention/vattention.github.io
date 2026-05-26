@@ -2331,6 +2331,7 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
 .article-meta {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 0.7rem 1rem;
     color: var(--deck-text-muted);
     font-size: 0.95rem;
