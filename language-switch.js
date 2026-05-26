@@ -22,7 +22,10 @@ function switchLanguage(lang) {
     // 更新整块双语内容
     const languageBlocks = document.querySelectorAll('[data-lang-block]');
     languageBlocks.forEach(block => {
-        block.hidden = block.getAttribute('data-lang-block') !== lang;
+        const isActive = block.getAttribute('data-lang-block') === lang;
+        block.hidden = !isActive;
+        block.setAttribute('aria-hidden', String(!isActive));
+        block.classList.toggle('is-active-language-block', isActive);
     });
     
     // 更新页面语言属性
