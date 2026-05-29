@@ -1306,11 +1306,15 @@ body {
     font-family: var(--f-body);
     color: var(--deck-text);
     background:
+        linear-gradient(180deg, rgba(9, 9, 11, 0.48) 0%, rgba(5, 5, 5, 0.78) 54%, rgba(11, 11, 13, 0.93) 100%),
+        url('vattention-background-rtm.png'),
         linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px),
         radial-gradient(760px 420px at 74% 3%, rgba(178, 231, 50, 0.09) 0%, transparent 58%),
         linear-gradient(180deg, var(--deck-bg) 0%, #050505 54%, #0b0b0d 100%);
-    background-size: 64px 64px, 64px 64px, auto, auto;
+    background-size: auto, cover, 64px 64px, 64px 64px, auto, auto;
+    background-position: center top, center top, left top, left top, center top, center top;
+    background-repeat: no-repeat, no-repeat, repeat, repeat, no-repeat, no-repeat;
 }
 
 html[data-theme="light"] body {
@@ -1327,7 +1331,7 @@ body::before {
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.48;
+    opacity: 0.42;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
     background-size: 256px 256px;
 }
