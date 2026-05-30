@@ -1582,14 +1582,30 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
 }
 
 .home-landing {
+    position: relative;
     min-height: 700px;
     height: auto;
     align-items: flex-end;
     padding: 112px 0 116px;
-    overflow: visible;
+    overflow: hidden;
     background:
-        linear-gradient(180deg, rgba(18, 18, 18, 0.96), rgba(9, 9, 11, 1)),
-        var(--deck-bg);
+        linear-gradient(180deg, rgba(9, 9, 11, 0.72) 0%, rgba(9, 9, 11, 0.68) 38%, rgba(9, 9, 11, 0.94) 78%, var(--deck-bg) 100%),
+        linear-gradient(90deg, rgba(9, 9, 11, 0.94) 0%, rgba(9, 9, 11, 0.6) 52%, rgba(9, 9, 11, 0.9) 100%),
+        url('background.jpg');
+    background-size: auto, auto, cover;
+    background-position: center top, center top, center center;
+    background-repeat: no-repeat;
+}
+
+.home-landing::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 220px;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(9, 9, 11, 0), var(--deck-bg) 86%);
 }
 
 .home-landing .hero-video-container,
@@ -1598,6 +1614,8 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
 }
 
 .home-landing .hero-content {
+    position: relative;
+    z-index: 1;
     width: min(1328px, calc(100vw - 56px));
     max-width: none;
     padding: 0;
@@ -2718,6 +2736,10 @@ html[data-theme="light"] .home-landing {
         var(--deck-bg);
 }
 
+html[data-theme="light"] .home-landing::after {
+    background: linear-gradient(180deg, rgba(241, 235, 222, 0), var(--deck-bg) 86%);
+}
+
 html[data-theme="light"] .home-feature-section,
 html[data-theme="light"] .intro-section {
     background: var(--deck-bg);
@@ -3085,6 +3107,18 @@ html[data-theme="light"] strong {
         min-height: 0;
         justify-content: flex-start;
         padding: 126px 0 72px;
+        background:
+            linear-gradient(180deg, rgba(9, 9, 11, 0.82) 0%, rgba(9, 9, 11, 0.78) 38%, rgba(9, 9, 11, 0.96) 78%, var(--deck-bg) 100%),
+            linear-gradient(90deg, rgba(9, 9, 11, 0.94) 0%, rgba(9, 9, 11, 0.7) 54%, rgba(9, 9, 11, 0.92) 100%),
+            url('background.jpg');
+        background-size: auto, auto, cover;
+        background-position: center top, center top, center top;
+    }
+
+    html[data-theme="light"] .home-landing {
+        background:
+            linear-gradient(180deg, rgba(250, 246, 237, 0.98), rgba(241, 235, 222, 1)),
+            var(--deck-bg);
     }
 
     .home-landing .hero-content {

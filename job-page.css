@@ -50,15 +50,17 @@ body::before {
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -2;
-    opacity: 0.42;
+    opacity: 0.34;
+    filter: saturate(0.9) contrast(1.05);
 }
 
 .job-background-overlay {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(180deg, rgba(9, 9, 11, 0.52) 0%, rgba(9, 9, 11, 0.88) 62%, rgba(5, 5, 5, 0.96) 100%),
-        linear-gradient(90deg, rgba(178, 231, 50, 0.12) 0%, transparent 30%, transparent 70%, rgba(178, 231, 50, 0.08) 100%);
+        linear-gradient(180deg, rgba(9, 9, 11, 0.7) 0%, rgba(9, 9, 11, 0.82) 46%, rgba(5, 5, 5, 0.96) 76%, #050505 100%),
+        linear-gradient(90deg, rgba(9, 9, 11, 0.78) 0%, rgba(9, 9, 11, 0.42) 48%, rgba(9, 9, 11, 0.72) 100%),
+        radial-gradient(760px 420px at 74% 3%, rgba(178, 231, 50, 0.1) 0%, transparent 58%);
     z-index: -1;
 }
 
@@ -370,8 +372,9 @@ html[data-theme="light"] .job-background-image {
 
 html[data-theme="light"] .job-background-overlay {
     background:
-        linear-gradient(180deg, rgba(250, 246, 237, 0.58) 0%, rgba(245, 241, 232, 0.9) 62%, rgba(238, 231, 216, 0.98) 100%),
-        linear-gradient(90deg, rgba(111, 148, 0, 0.1) 0%, transparent 30%, transparent 70%, rgba(111, 148, 0, 0.07) 100%);
+        linear-gradient(180deg, rgba(250, 246, 237, 0.68) 0%, rgba(245, 241, 232, 0.9) 54%, rgba(238, 231, 216, 0.98) 100%),
+        linear-gradient(90deg, rgba(250, 246, 237, 0.7) 0%, rgba(250, 246, 237, 0.32) 48%, rgba(250, 246, 237, 0.66) 100%),
+        radial-gradient(760px 420px at 74% 3%, rgba(111, 148, 0, 0.1) 0%, transparent 58%);
 }
 
 html[data-theme="light"] .job-background-text {
@@ -415,6 +418,23 @@ html[data-theme="light"] strong {
 }
 
 @media (max-width: 768px) {
+    .job-background-image {
+        background-position: center top;
+        opacity: 0.28;
+    }
+
+    .job-background-overlay {
+        background:
+            linear-gradient(180deg, rgba(9, 9, 11, 0.82) 0%, rgba(9, 9, 11, 0.86) 48%, rgba(5, 5, 5, 0.98) 82%, #050505 100%),
+            linear-gradient(90deg, rgba(9, 9, 11, 0.88) 0%, rgba(9, 9, 11, 0.54) 50%, rgba(9, 9, 11, 0.84) 100%);
+    }
+
+    html[data-theme="light"] .job-background-overlay {
+        background:
+            linear-gradient(180deg, rgba(250, 246, 237, 0.78) 0%, rgba(245, 241, 232, 0.92) 56%, rgba(238, 231, 216, 0.98) 100%),
+            linear-gradient(90deg, rgba(250, 246, 237, 0.78) 0%, rgba(250, 246, 237, 0.48) 50%, rgba(250, 246, 237, 0.76) 100%);
+    }
+
     .language-switch {
         top: 15px;
         right: 15px;
