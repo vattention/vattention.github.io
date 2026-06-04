@@ -1286,6 +1286,7 @@ a:hover {
     --deck-text-muted: #71717a;
     --f-head: 'Space Grotesk', sans-serif;
     --f-body: 'DM Sans', sans-serif;
+    --f-brand: 'Rubik', sans-serif;
     --home-shell-gutter: max(28px, calc((100vw - 1328px) / 2));
 }
 
@@ -1371,7 +1372,7 @@ html[data-theme="light"] .site-nav {
 
 .site-brand {
     color: var(--deck-text);
-    font-family: var(--f-head);
+    font-family: var(--f-brand);
     font-weight: 700;
     text-decoration: none;
 }
