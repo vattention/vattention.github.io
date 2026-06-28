@@ -1736,26 +1736,33 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
     justify-self: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background:
-        linear-gradient(90deg, rgba(178, 231, 50, 0.14) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(178, 231, 50, 0.11) 1px, transparent 1px),
-        linear-gradient(135deg, rgba(178, 231, 50, 0.16), transparent 42%),
+        radial-gradient(circle at 72% 28%, rgba(178, 231, 50, 0.2), transparent 28%),
+        radial-gradient(circle at 26% 72%, rgba(255, 255, 255, 0.12), transparent 26%),
+        linear-gradient(90deg, rgba(178, 231, 50, 0.1) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(178, 231, 50, 0.08) 1px, transparent 1px),
+        linear-gradient(135deg, rgba(178, 231, 50, 0.1), transparent 46%),
         rgba(255, 255, 255, 0.025);
-    background-size: 46px 46px, 46px 46px, auto, auto;
+    background-size: auto, auto, 46px 46px, 46px 46px, auto, auto;
 }
 
 .home-feature-visual::before,
 .home-feature-visual::after {
     content: '';
     position: absolute;
-    inset: 13%;
-    border: 2px solid rgba(255, 255, 255, 0.82);
-    clip-path: polygon(0 14%, 22% 0, 44% 12%, 62% 0, 100% 18%, 84% 48%, 100% 76%, 72% 100%, 44% 84%, 18% 100%, 0 72%, 16% 44%);
+    pointer-events: none;
+}
+
+.home-feature-visual::before {
+    inset: 18%;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    transform: rotate(45deg);
 }
 
 .home-feature-visual::after {
-    inset: 24%;
-    opacity: 0.42;
-    transform: rotate(18deg);
+    inset: 28%;
+    border: 1px solid rgba(178, 231, 50, 0.34);
+    border-radius: 999px;
+    box-shadow: 0 0 44px rgba(178, 231, 50, 0.08);
 }
 
 .feature-grid {
@@ -1768,20 +1775,61 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
 
 .feature-line {
     position: absolute;
-    height: 2px;
-    width: 82%;
-    left: 9%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.54), transparent);
 }
 
 .feature-line.one {
-    top: 31%;
-    transform: rotate(27deg);
+    top: 58%;
+    left: 12%;
+    width: 76%;
+    height: 1px;
 }
 
 .feature-line.two {
-    bottom: 28%;
-    transform: rotate(-18deg);
+    top: 14%;
+    left: 34%;
+    width: 1px;
+    height: 74%;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.46), transparent);
+}
+
+.feature-curve {
+    position: absolute;
+    left: 20%;
+    bottom: 24%;
+    width: 62%;
+    height: 34%;
+    border-top: 3px solid var(--brand-green);
+    border-right: 3px solid var(--brand-green);
+    border-radius: 0 72% 0 0;
+    transform: skewX(-16deg) rotate(-3deg);
+    box-shadow: 0 -12px 36px rgba(178, 231, 50, 0.12);
+}
+
+.feature-node {
+    position: absolute;
+    z-index: 2;
+    width: 11px;
+    height: 11px;
+    border: 2px solid var(--brand-green);
+    border-radius: 999px;
+    background: #09090b;
+    box-shadow: 0 0 0 7px rgba(178, 231, 50, 0.1), 0 0 26px rgba(178, 231, 50, 0.22);
+}
+
+.feature-node.node-one {
+    left: 24%;
+    bottom: 26%;
+}
+
+.feature-node.node-two {
+    left: 48%;
+    bottom: 38%;
+}
+
+.feature-node.node-three {
+    right: 17%;
+    top: 25%;
 }
 
 .feature-chip {
@@ -1798,20 +1846,20 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
     letter-spacing: 0.12em;
 }
 
-.feature-chip:nth-of-type(4) {
-    top: 18%;
-    left: 12%;
+.feature-chip.chip-taste {
+    top: 17%;
+    left: 13%;
 }
 
-.feature-chip:nth-of-type(5) {
-    top: 50%;
-    right: 10%;
+.feature-chip.chip-calibration {
+    top: 48%;
+    right: 8%;
     color: var(--brand-green);
 }
 
-.feature-chip:nth-of-type(6) {
-    bottom: 16%;
-    left: 22%;
+.feature-chip.chip-leverage {
+    bottom: 14%;
+    left: 20%;
 }
 
 .hero-actions {
@@ -2768,20 +2816,35 @@ html[data-theme="light"] .home-feature-read {
 html[data-theme="light"] .home-feature-visual {
     border-color: rgba(25, 22, 18, 0.16);
     background:
-        linear-gradient(90deg, rgba(111, 148, 0, 0.16) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(111, 148, 0, 0.13) 1px, transparent 1px),
-        linear-gradient(135deg, rgba(111, 148, 0, 0.14), transparent 42%),
+        radial-gradient(circle at 72% 28%, rgba(111, 148, 0, 0.18), transparent 28%),
+        radial-gradient(circle at 26% 72%, rgba(25, 22, 18, 0.08), transparent 26%),
+        linear-gradient(90deg, rgba(111, 148, 0, 0.14) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(111, 148, 0, 0.11) 1px, transparent 1px),
+        linear-gradient(135deg, rgba(111, 148, 0, 0.12), transparent 46%),
         rgba(25, 22, 18, 0.035);
-    background-size: 46px 46px, 46px 46px, auto, auto;
+    background-size: auto, auto, 46px 46px, 46px 46px, auto, auto;
 }
 
-html[data-theme="light"] .home-feature-visual::before,
+html[data-theme="light"] .home-feature-visual::before {
+    border-color: rgba(25, 22, 18, 0.2);
+}
+
 html[data-theme="light"] .home-feature-visual::after {
-    border-color: rgba(25, 22, 18, 0.72);
+    border-color: rgba(111, 148, 0, 0.36);
+    box-shadow: 0 0 44px rgba(111, 148, 0, 0.08);
 }
 
 html[data-theme="light"] .feature-line {
     background: linear-gradient(90deg, transparent, rgba(25, 22, 18, 0.42), transparent);
+}
+
+html[data-theme="light"] .feature-line.two {
+    background: linear-gradient(180deg, transparent, rgba(25, 22, 18, 0.38), transparent);
+}
+
+html[data-theme="light"] .feature-node {
+    background: #faf6ed;
+    box-shadow: 0 0 0 7px rgba(111, 148, 0, 0.1), 0 0 26px rgba(111, 148, 0, 0.16);
 }
 
 html[data-theme="light"] .feature-chip,
