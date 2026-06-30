@@ -1,68 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vattention Careers - AI Engineer, Backend &amp; Agent</title>
+    <title>Vattention Careers - AI Engineer, Backend & Agent</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="stylesheet" href="styles.css?v=20260603-rubik-brand">
     <link rel="stylesheet" href="job-page.css?v=20260531-bg-hero">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Rubik:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 背景层 -->
     <div class="job-background">
         <div class="job-background-image"></div>
         <div class="job-background-overlay"></div>
         <div class="job-background-text">Vattention</div>
     </div>
+
+    <!-- 语言切换按钮 -->
+    <div class="language-switch">
+        <button id="lang-zh" class="active">中文</button>
+        <button id="lang-en">EN</button>
+    </div>
+
     <div class="container job-content-wrapper">
         <nav class="breadcrumb">
-            <a href="index.html" class="breadcrumb-link" data-zh="← 返回职位列表" data-en="← Back to Careers">← Back to Careers</a>
+            <a href="index.html" class="breadcrumb-link">← Back to Careers</a>
             <span class="breadcrumb-separator">|</span>
-            <span class="breadcrumb-current" data-zh="申请" data-en="Apply">Apply</span>
+            <span class="breadcrumb-current">Apply</span>
         </nav>
+
         <header class="job-header">
             <div class="job-meta">
-                <span class="job-category" data-zh="Product Development" data-en="Product Development">Product Development</span>
-                <span class="job-type" data-zh="全职" data-en="Full-time">Full-time</span>
-                <span class="job-location" data-zh="⚲ Hangzhou" data-en="⚲ Hangzhou">⚲ Hangzhou</span>
+                <span class="job-category" data-zh="工程" data-en="Engineering">工程</span>
+                <span class="job-type" data-zh="全职" data-en="Full-time">全职</span>
+                <span class="job-location" data-zh="⚲ 杭州 / 北京" data-en="⚲ Hangzhou / Beijing">⚲ Hangzhou / Beijing</span>
             </div>
-            <h1 class="job-title" data-zh="AI Engineer, Backend &amp; Agent" data-en="AI Engineer, Backend &amp; Agent">AI Engineer, Backend &amp; Agent</h1>
+            <h1 class="job-title" data-zh="AI 工程师，后端 & Agent" data-en="AI Engineer, Backend & Agent">AI 工程师，后端与智能体</h1>
         </header>
+
         <main class="job-content">
             <section class="job-section">
-                <h2 class="section-title" data-zh="职位描述" data-en="Job Description">Job Description</h2>
-                <p class="section-text" data-zh="As a software engineer of backend and agent, you'll be responsible for building platforms that support our product features. Sometimes this means inventing highly available distributed systems. Sometimes this means handling the challenges of scaling to millions of creators." data-en="As a software engineer of backend and agent, you'll be responsible for building platforms that support our product features. Sometimes this means inventing highly available distributed systems. Sometimes this means handling the challenges of scaling to millions of creators.">As a software engineer of backend and agent, you'll be responsible for building platforms that support our product features. Sometimes this means inventing highly available distributed systems. Sometimes this means handling the challenges of scaling to millions of creators.</p>
-                <p class="section-text" data-zh="Responsibilities:" data-en="Responsibilities:">Responsibilities:</p>
+                <h2 class="section-title" data-zh="职位描述" data-en="Job Description">职位描述</h2>
+                <p class="section-text" data-zh="负责 AI 核心产品的后端分布式架构设计与开发，以及 Agent 产品端侧后台的引擎层功能开发。" data-en="As a software engineer of backend and agent, you'll be responsible for building platforms that support our product features. Sometimes this means inventing highly available distributed systems. Sometimes this means handling the challenges of scaling to millions of creators.">
+                    负责 AI 核心产品的后端分布式架构设计与开发，以及 Agent 产品端侧后台的引擎层功能开发。
+                </p>
+                <p class="section-text" data-zh="主要职责：" data-en="Responsibilities:">主要职责：</p>
                 <ul class="project-list">
-                    <li data-zh="Design and develop backend architecture for AI core products, building highly available and low-latency backend systems" data-en="Design and develop backend architecture for AI core products, building highly available and low-latency backend systems">Design and develop backend architecture for AI core products, building highly available and low-latency backend systems</li>
-                    <li data-zh="Develop video AI Agent features including decision-making, scheduling, tool module implementation, and multimodal data processing (text/image/audio/video)" data-en="Develop video AI Agent features including decision-making, scheduling, tool module implementation, and multimodal data processing (text/image/audio/video)">Develop video AI Agent features including decision-making, scheduling, tool module implementation, and multimodal data processing (text/image/audio/video)</li>
-                    <li data-zh="Develop cloud platform services, infrastructure and architecture setup and optimization, build comprehensive CI/CD pipelines based on Docker, K8s, structured logging, distributed tracing and performance monitoring systems" data-en="Develop cloud platform services, infrastructure and architecture setup and optimization, build comprehensive CI/CD pipelines based on Docker, K8s, structured logging, distributed tracing and performance monitoring systems">Develop cloud platform services, infrastructure and architecture setup and optimization, build comprehensive CI/CD pipelines based on Docker, K8s, structured logging, distributed tracing and performance monitoring systems</li>
-                    <li data-zh="Work closely with product, client and algorithm teams to clarify technical requirements and implementation paths, jointly advance AI products from concept to implementation" data-en="Work closely with product, client and algorithm teams to clarify technical requirements and implementation paths, jointly advance AI products from concept to implementation">Work closely with product, client and algorithm teams to clarify technical requirements and implementation paths, jointly advance AI products from concept to implementation</li>
-                    <li data-zh="Drive project advancement and core team building with strong ownership" data-en="Drive project advancement and core team building with strong ownership">Drive project advancement and core team building with strong ownership</li>
+                    <li data-zh="负责 AI 核心产品的后端架构设计与开发，构建高可用、低延迟的后端系统" data-en="Design and develop backend architecture for AI core products, building highly available and low-latency backend systems">
+                        负责AI核心产品的后端架构设计与开发，构建高可用、低延迟的后端系统
+                    </li>
+                    <li data-zh="负责视频 AI Agent 功能开发，包括决策、调度、记忆、意图理解、虚拟沙箱等" data-en="Develop video AI Agent features including decision-making, scheduling, tool module implementation, and multimodal data processing (text/image/audio/video)">
+                        负责视频 AI Agent 功能开发，包括决策、调度、记忆、意图理解、虚拟沙箱等
+                    </li>
+                    <li data-zh="负责在云平台开发各项服务，基础设施和架构搭建与优化，基于 Docker、K8s 等搭建完善的 CI / CD 流水线、结构化日志、分布式追踪及性能监控体系，保障系统可观测性与故障快速排查能力" data-en="Develop cloud platform services, infrastructure and architecture setup and optimization, build comprehensive CI/CD pipelines based on Docker, K8s, structured logging, distributed tracing and performance monitoring systems">
+                        负责在云平台开发各项服务，基础设施和架构搭建与优化，基于 Docker、K8s 等搭建完善的CI/CD流水线、结构化日志、分布式追踪及性能监控体系，保障系统可观测性与故障快速排查能力
+                    </li>
+                    <li data-zh="与产品、客户端及算法团队紧密协作，明确技术需求与实现路径，共同推进 AI 产品从概念到落地的全流程" data-en="Work closely with product, client and algorithm teams to clarify technical requirements and implementation paths, jointly advance AI products from concept to implementation">
+                        与产品、客户端及算法团队紧密协作，明确技术需求与实现路径，共同推进 AI 产品从概念到落地的全流程
+                    </li>
+                    <li data-zh="以强烈的 ownership 驱动产研团队项目推进、公司核心团队建设" data-en="Drive project advancement and core team building with strong ownership">
+                        以强烈的 ownership 驱动产研团队项目推进、公司核心团队建设
+                    </li>
                 </ul>
-                <p class="section-text" data-zh="Requirements:" data-en="Requirements:">Requirements:</p>
+                <p class="section-text" data-zh="任职要求：" data-en="Requirements:">任职要求：</p>
                 <ul class="project-list">
-                    <li data-zh="Bachelor's degree or above in Computer Science, Information Technology, Software Engineering or related fields, solid computer foundation" data-en="Bachelor's degree or above in Computer Science, Information Technology, Software Engineering or related fields, solid computer foundation">Bachelor's degree or above in Computer Science, Information Technology, Software Engineering or related fields, solid computer foundation</li>
-                    <li data-zh="3+ years of backend development experience, 1+ year of AI-related experience" data-en="3+ years of backend development experience, 1+ year of AI-related experience">3+ years of backend development experience, 1+ year of AI-related experience</li>
-                    <li data-zh="Familiar with Python/FastAPI and other common frameworks, solid backend development and distributed systems experience, proficient in MySQL/PostgreSQL/Redis/Kafka and other common infrastructure services" data-en="Familiar with Python/FastAPI and other common frameworks, solid backend development and distributed systems experience, proficient in MySQL/PostgreSQL/Redis/Kafka and other common infrastructure services">Familiar with Python/FastAPI and other common frameworks, solid backend development and distributed systems experience, proficient in MySQL/PostgreSQL/Redis/Kafka and other common infrastructure services</li>
-                    <li data-zh="Experience in AI technology engineering implementation, familiar with AI Agent, Workflow, RAG and other core concepts, familiar with pgvector, Pinecone and other vector databases" data-en="Experience in AI technology engineering implementation, familiar with AI Agent, Workflow, RAG and other core concepts, familiar with pgvector, Pinecone and other vector databases">Experience in AI technology engineering implementation, familiar with AI Agent, Workflow, RAG and other core concepts, familiar with pgvector, Pinecone and other vector databases</li>
-                    <li data-zh="Cloud-native and engineering practice capabilities: familiar with at least one mainstream cloud platform (AWS, Alibaba Cloud, etc.), cloud service deployment experience; familiar with Docker, K8s and other container technologies, master CI/CD construction, log monitoring and troubleshooting methods" data-en="Cloud-native and engineering practice capabilities: familiar with at least one mainstream cloud platform (AWS, Alibaba Cloud, etc.), cloud service deployment experience; familiar with Docker, K8s and other container technologies, master CI/CD construction, log monitoring and troubleshooting methods">Cloud-native and engineering practice capabilities: familiar with at least one mainstream cloud platform (AWS, Alibaba Cloud, etc.), cloud service deployment experience; familiar with Docker, K8s and other container technologies, master CI/CD construction, log monitoring and troubleshooting methods</li>
-                    <li data-zh="Familiar with video development processes and AI applications in video scenarios (such as intelligent editing, content generation, subtitle generation, etc.) preferred" data-en="Familiar with video development processes and AI applications in video scenarios (such as intelligent editing, content generation, subtitle generation, etc.) preferred">Familiar with video development processes and AI applications in video scenarios (such as intelligent editing, content generation, subtitle generation, etc.) preferred</li>
-                    <li data-zh="Open mindset and technical problem-solving ability, willing to actively learn new technologies, able to quickly adapt to business changes and solve complex technical challenges" data-en="Open mindset and technical problem-solving ability, willing to actively learn new technologies, able to quickly adapt to business changes and solve complex technical challenges">Open mindset and technical problem-solving ability, willing to actively learn new technologies, able to quickly adapt to business changes and solve complex technical challenges</li>
-                    <li data-zh="Self-driven with stronger initiative than 80% of peers; highly hands-on and practical" data-en="Self-driven with stronger initiative than 80% of peers; highly hands-on and practical">Self-driven with stronger initiative than 80% of peers; highly hands-on and practical</li>
-                    <li data-zh="Enjoy helping and supporting team members" data-en="Enjoy helping and supporting team members">Enjoy helping and supporting team members</li>
-                    <li data-zh="Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights" data-en="Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights">Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights</li>
+                    <li data-zh="计算机科学、信息技术、软件工程等相关专业学士或以上学历，扎实的计算机基础" data-en="Bachelor's degree or above in Computer Science, Information Technology, Software Engineering or related fields, solid computer foundation">计算机科学、信息技术、软件工程等相关专业学士或以上学历，扎实的计算机基础</li>
+                    <li data-zh="3 年以上后端开发经验，1 年以上 AI 相关经验" data-en="3+ years of backend development experience, 1+ year of AI-related experience">3 年以上后端开发经验，1 年以上 AI 相关经验</li>
+                    <li data-zh="熟悉 Python / FastAPI 等常见框架，具备扎实的后端开发与分布式系统经验，熟练掌握 MySQL / PostgreSQL / Redis / Kafka 等常见基础服务" data-en="Familiar with Python/FastAPI and other common frameworks, solid backend development and distributed systems experience, proficient in MySQL/PostgreSQL/Redis/Kafka and other common infrastructure services">熟悉 Python / FastAPI 等常见框架，具备扎实的后端开发与分布式系统经验，熟练掌握 MySQL / PostgreSQL / Redis / Kafka 等常见基础服务</li>
+                    <li data-zh="具备AI技术工程化落地经验，熟悉 AI Agent、Workflow、RAG 等核心概念，熟悉 pgvector、Pinecone 等向量库的使用" data-en="Experience in AI technology engineering implementation, familiar with AI Agent, Workflow, RAG and other core concepts, familiar with pgvector, Pinecone and other vector databases">具备AI技术工程化落地经验，熟悉AI Agent、Workflow、RAG等核心概念，熟悉 pgvector、Pinecone 等向量库的使用</li>
+                    <li data-zh="具备云原生与工程化实践能力：熟悉至少一个主流云平台（AWS、阿里云等），有云服务部署经验；熟悉 Docker、K8s 等容器技术，掌握 CI/CD 构建、日志监控和故障排查方法" data-en="Cloud-native and engineering practice capabilities: familiar with at least one mainstream cloud platform (AWS, Alibaba Cloud, etc.), cloud service deployment experience; familiar with Docker, K8s and other container technologies, master CI/CD construction, log monitoring and troubleshooting methods">具备云原生与工程化实践能力：熟悉至少一个主流云平台（AWS、阿里云等），有云服务部署经验；熟悉Docker、K8s等容器技术，掌握CI/CD构建、日志监控和故障排查方法</li>
+                    <li data-zh="熟悉视频开发流程和AI在视频场景中的应用场景（如智能剪辑、内容生成、字幕生成等）者优先" data-en="Familiar with video development processes and AI applications in video scenarios (such as intelligent editing, content generation, subtitle generation, etc.) preferred">熟悉视频开发流程和AI在视频场景中的应用场景（如智能剪辑、内容生成、字幕生成等）者优先</li>
+                    <li data-zh="具有开放心态与技术攻坚能力，愿意主动学习新技术，能快速适应业务变化并解决复杂技术挑战" data-en="Open mindset and technical problem-solving ability, willing to actively learn new technologies, able to quickly adapt to business changes and solve complex technical challenges">具有开放心态与技术攻坚能力，愿意主动学习新技术，能快速适应业务变化并解决复杂技术挑战</li>
+                    <li data-zh="自驱力高于 80% 同龄人，动手能力强" data-en="Self-driven with stronger initiative than 80% of peers; highly hands-on and practical">自驱力高于80%同龄人，动手能力强</li>
+                    <li data-zh="能从帮助团队伙伴的过程中获得快乐" data-en="Enjoy helping and supporting team members">能从帮助团队伙伴的过程中获得快乐</li>
+                    <li data-zh="乐于表达自己的真实想法，不内耗" data-en="Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights">乐于表达自己的真实想法，不内耗</li>
                 </ul>
             </section>
+
+            <section class="job-section">
+                <h2 class="section-title" data-zh="关于 Vattention" data-en="About Vattention">关于 Vattention</h2>
+                <p class="section-text">
+                    <b style="color:#fff;"><span data-zh="时空注力（Vattention）" data-en="Vattention ">时空注力（Vattention）</span></b>
+                    <span data-zh="智能科技有限公司是一家致力于人机共创变革力量的公司，相信这是内容创作未来的基础。我们构建智能生产力工具，赋能创作者以无与伦比的效率和影响力将愿景变为现实。" data-en="is a company dedicated to the transformative power of Human-AI Co-creation, believing it to be fundamental to the future of content creation. We build intelligent productivity tools that empower creators to bring their visions to life with unparalleled efficiency and impact.">是一家致力于人机共创变革力量的公司，相信这是内容创作未来的基础。我们构建智能生产力工具，赋能创作者以无与伦比的效率和影响力将愿景变为现实。</span>
+                </p>
+                <p class="section-text">
+                    <span data-zh="我们的组织架构非常扁平，团队小而精。我们特别欣赏那些追求真理、充满激情并具有创造力的人。我们在激烈的辩论、大胆的想法和代码交付中茁壮成长。" data-en="Our organization is highly flat, and our team is small and talent dense. We especially appreciate people who seek truth, are passionate, and possess creativity. We thrive on intense debates, wild ideas, and shipping code.">Our organization is highly flat, and our team is small and talent dense. We especially appreciate people who seek truth, are passionate, and possess creativity. We thrive on intense debates, wild ideas, and shipping code.</span>
+                </p>
+                <p class="section-text">
+                    <span data-zh="我们的团队汇聚了来自领先科技公司和顶尖大学的人才，包括 " data-en="Our team brings together talent from leading tech companies and top universities, including ">Our team brings together talent from leading tech companies and top universities, including </span>
+                    <b style="color:#fff;"><span data-zh="阿里巴巴、字节跳动、腾讯、百度、小米、北京大学、中国科学技术大学、清华大学、华中科技大学、哥伦比亚大学、帝国理工学院" data-en="Alibaba, ByteDance, Tencent, Baidu, Xiaomi, Peking University, Univ. of Sci & Tech of China, Tsinghua University, Huazhong University of Science and Technology, Columbia University, and Imperial College London">Alibaba, ByteDance, Tencent, Baidu, Xiaomi, Peking University, Univ. of Sci & Tech of China, Tsinghua University, Huazhong University of Science and Technology, Columbia University, and Imperial College London</span></b>
+                    <span data-zh="。我们还有来自 AI 独角兽团队的成员，如 " data-en=". We also have members from AI unicorns such as ">。我们还有来自AI独角兽公司的成员，如</span>
+                    <b style="color:#fff;"><span data-zh="即梦 AI、微软小冰、出门问问、零一万物" data-en=" Dreamina AI, Microsoft Xiaoice, Mobvoi, and 01.AI">Dreamina AI, Microsoft Xiaoice, Mobvoi, and 01.AI</span></b>
+                    <span data-zh="，以及来自内容驱动公司和机构的成员，如 " data-en=", as well as from content-driven companies and institutions like ">，以及来自内容驱动公司和机构的成员，如</span>
+                    <b style="color:#fff;"><span data-zh="剪映、快手、虎牙、哔哩哔哩、欢聚时代。" data-en="CapCut, Kwai, Huya, Bilibili, Joyy, Wondershare Filmora.">CapCut, Kwai, Huya, Bilibili, Joyy, Wondershare Filmora.</span></b>
+                </p>
+            </section>
+
+            <section class="job-section">
+                <h2 class="section-title" data-zh="申请流程" data-en="Application Process">Application Process</h2>
+                <p class="section-text" data-zh="经过初步审核后，候选人将被邀请参加2-3次在线面试。最后阶段是现场访问，包括实践练习（可选）、深入讨论和团队会面。" data-en="Upon an initial review, candidates will be invited for 2-3 online interviews. The final stage is an on-site visit, which includes a practical exercise (optional), in-depth discussions, and a meeting with the team.">
+                    Upon an initial review, candidates will be invited for 2-3 online interviews. The final stage is an on-site visit, which includes a practical exercise (optional), in-depth discussions, and a meeting with the team.
+                </p>
+            </section>
+
+
             <section class="application-section">
                 <h2 class="section-title" data-zh="打造真正的 Video Editing Agent" data-en="Build a True Video Editing Agent">Build a True Video Editing Agent</h2>
+                <p class="section-subtitle" data-zh="帮助我们推进为 AI 辅助视频创作提供动力的研究" data-en="Help us advance the research that powers AI-assisted video creation">Help us advance the research that powers AI-assisted video creation</p>
+
                 <p class="section-text application-email" style="text-align: center; font-size: 1.2em; margin-top: 2em;">
                     <span data-zh="请将您的简历发送至：" data-en="Please send your resume to: ">Please send your resume to: </span><a href="mailto:careers@vattention.com">careers@vattention.com</a>
                 </p>
             </section>
         </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">© <span id="currentYear"></span> Vattention. All rights reserved.<br/><br/>Singapore | Hangzhou | Beijing</p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var yearSpan = document.getElementById('currentYear');
+                        if (yearSpan) {
+                            yearSpan.textContent = new Date().getFullYear();
+                        }
+                    });
+                </script>
+            </div>
+        </footer>
     </div>
-    <script src="language-switch.js"></script>
-    <script src="theme-switch.js"></script>
+
+    <script>
+        // 语言切换功能
+        let currentLanguage = 'zh';
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+
+            // 更新按钮状态
+            document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+
+            // 更新页面内容
+            const elements = document.querySelectorAll('[data-zh][data-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+
+            // 更新页面语言属性
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+
+            // 保存语言偏好到本地存储
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // 初始化语言切换
+        document.addEventListener('DOMContentLoaded', function() {
+            // 从本地存储获取语言偏好
+            const savedLanguage = localStorage.getItem('preferredLanguage') || 'zh';
+            switchLanguage(savedLanguage);
+
+            // 绑定按钮事件
+            document.getElementById('lang-zh').addEventListener('click', () => switchLanguage('zh'));
+            document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
+        });
+
+        // 表单提交处理
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = currentLanguage === 'zh' ? '感谢您的申请！我们会尽快与您联系。' : 'Thank you for your application! We will get back to you soon.';
+            alert(message);
+        });
+    </script>
+    <script src="theme-switch.js?v=20260526-mobile-cache"></script>
 </body>
 </html>

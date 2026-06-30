@@ -1,67 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vattention Careers - AI Engineer, Model Algorithm</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="stylesheet" href="styles.css?v=20260603-rubik-brand">
     <link rel="stylesheet" href="job-page.css?v=20260531-bg-hero">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Rubik:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 背景层 -->
     <div class="job-background">
         <div class="job-background-image"></div>
         <div class="job-background-overlay"></div>
         <div class="job-background-text">Vattention</div>
     </div>
+
+    <!-- 语言切换按钮 -->
+    <div class="language-switch">
+        <button id="lang-zh" class="active">中文</button>
+        <button id="lang-en">EN</button>
+    </div>
+
     <div class="container job-content-wrapper">
         <nav class="breadcrumb">
-            <a href="index.html" class="breadcrumb-link" data-zh="← 返回职位列表" data-en="← Back to Careers">← Back to Careers</a>
+            <a href="index.html" class="breadcrumb-link">← Back to Careers</a>
             <span class="breadcrumb-separator">|</span>
-            <span class="breadcrumb-current" data-zh="申请" data-en="Apply">Apply</span>
+            <span class="breadcrumb-current">Apply</span>
         </nav>
+
         <header class="job-header">
             <div class="job-meta">
-                <span class="job-category" data-zh="Product Development" data-en="Product Development">Product Development</span>
-                <span class="job-type" data-zh="全职" data-en="Full-time">Full-time</span>
-                <span class="job-location" data-zh="⚲ Hangzhou" data-en="⚲ Hangzhou">⚲ Hangzhou</span>
+                <span class="job-category" data-zh="工程" data-en="Engineering">工程</span>
+                <span class="job-type" data-zh="全职" data-en="Full-time">全职</span>
+                <span class="job-location" data-zh="⚲ 杭州 / 北京" data-en="⚲ Hangzhou / Beijing">⚲ Hangzhou / Beijing</span>
             </div>
-            <h1 class="job-title" data-zh="AI Engineer, Model Algorithm" data-en="AI Engineer, Model Algorithm">AI Engineer, Model Algorithm</h1>
+            <h1 class="job-title" data-zh="AI 工程师，模型算法" data-en="AI Engineer, Model Algorithm">AI 工程师，模型算法</h1>
         </header>
+
         <main class="job-content">
             <section class="job-section">
-                <h2 class="section-title" data-zh="职位描述" data-en="Job Description">Job Description</h2>
-                <p class="section-text" data-zh="Design and develop model algorithms for AI core products, build data and training processes, create highly available and low-latency model algorithm systems." data-en="Design and develop model algorithms for AI core products, build data and training processes, create highly available and low-latency model algorithm systems.">Design and develop model algorithms for AI core products, build data and training processes, create highly available and low-latency model algorithm systems.</p>
-                <p class="section-text" data-zh="Responsibilities:" data-en="Responsibilities:">Responsibilities:</p>
+                <h2 class="section-title" data-zh="岗位描述" data-en="Job Description">岗位描述 | Job Description</h2>
+                <p class="section-text" data-zh="负责 AI 核心产品的模型算法设计与开发，构建数据与训练流程，打造高可用、低延迟的模型算法系统。" data-en="Design and develop model algorithms for AI core products, build data and training processes, create highly available and low-latency model algorithm systems.">
+                    负责 AI 核心产品的模型算法设计与开发，构建数据与训练流程，打造高可用、低延迟的模型算法系统。<br>
+                    <span class="en">Design and develop model algorithms for AI core products, build data and training processes, create highly available and low-latency model algorithm systems.</span>
+                </p>
+                <p class="section-text" data-zh="主要职责：" data-en="Responsibilities:">主要职责 | Responsibilities:</p>
                 <ul class="project-list">
-                    <li data-zh="Responsible for the full pipeline of post-training for large video understanding models, including SFT, RM training, RLHF/PPO/DPO optimization, to enhance model understanding in video scenarios." data-en="Responsible for the full pipeline of post-training for large video understanding models, including SFT, RM training, RLHF/PPO/DPO optimization, to enhance model understanding in video scenarios.">Responsible for the full pipeline of post-training for large video understanding models, including SFT, RM training, RLHF/PPO/DPO optimization, to enhance model understanding in video scenarios.</li>
-                    <li data-zh="Build aligned data systems for the video domain, focusing on data construction, selection, and quality control to support model performance in core tasks such as video content analysis." data-en="Build aligned data systems for the video domain, focusing on data construction, selection, and quality control to support model performance in core tasks such as video content analysis.">Build aligned data systems for the video domain, focusing on data construction, selection, and quality control to support model performance in core tasks such as video content analysis.</li>
-                    <li data-zh="Research video temporal modeling and multimodal reasoning technologies to optimize model performance for complex video tasks (e.g., plot decomposition, content summarization)." data-en="Research video temporal modeling and multimodal reasoning technologies to optimize model performance for complex video tasks (e.g., plot decomposition, content summarization).">Research video temporal modeling and multimodal reasoning technologies to optimize model performance for complex video tasks (e.g., plot decomposition, content summarization).</li>
-                    <li data-zh="Apply model compression and acceleration techniques to balance video understanding accuracy and inference efficiency, driving technology implementation in products." data-en="Apply model compression and acceleration techniques to balance video understanding accuracy and inference efficiency, driving technology implementation in products.">Apply model compression and acceleration techniques to balance video understanding accuracy and inference efficiency, driving technology implementation in products.</li>
-                    <li data-zh="Drive project advancement and core team building with strong ownership" data-en="Drive project advancement and core team building with strong ownership">Drive project advancement and core team building with strong ownership</li>
+                    <li data-zh="负责视频理解大模型后训练全流程研发，包括SFT、RM训练、RLHF/PPO/DPO等技术优化，提升模型在视频场景的理解能力。" data-en="Responsible for the full pipeline of post-training for large video understanding models, including SFT, RM training, RLHF/PPO/DPO optimization, to enhance model understanding in video scenarios.">负责视频理解大模型后训练全流程研发，包括SFT、RM训练、RLHF/PPO/DPO等技术优化，提升模型在视频场景的理解能力。</li>
+                    <li data-zh="构建视频领域对齐数据体系，聚焦数据构造、筛选与质量管控，支撑模型在视频内容分析等核心任务的表现。" data-en="Build aligned data systems for the video domain, focusing on data construction, selection, and quality control to support model performance in core tasks such as video content analysis.">
+                        构建视频领域对齐数据体系，聚焦数据构造、筛选与质量管控，支撑模型在视频内容分析等核心任务的表现。
+                    </li>
+                    <li data-zh="研究视频时序建模、多模态推理等技术，优化视频复杂任务（剧情拆解、内容摘要等）的模型效果。" data-en="Research video temporal modeling and multimodal reasoning technologies to optimize model performance for complex video tasks (e.g., plot decomposition, content summarization).">
+                        研究视频时序建模、多模态推理等技术，优化视频复杂任务（剧情拆解、内容摘要等）的模型效果。<br>
+                        <span class="en">Research video temporal modeling and multimodal reasoning technologies to optimize model performance for complex video tasks (e.g., plot decomposition, content summarization).</span>
+                    </li>
+                    <li data-zh="应用模型压缩与加速技术，平衡视频理解精度与推理效率，推动技术在产品中落地。" data-en="Apply model compression and acceleration techniques to balance video understanding accuracy and inference efficiency, driving technology implementation in products.">
+                        应用模型压缩与加速技术，平衡视频理解精度与推理效率，推动技术在产品中落地。<br>
+                        <span class="en">Apply model compression and acceleration techniques to balance video understanding accuracy and inference efficiency, driving technology implementation in products.</span>
+                    </li>
+                    <li data-zh="以强烈的 ownership 驱动产研团队项目推进、公司核心团队建设" data-en="Drive project advancement and core team building with strong ownership">
+                        以强烈的 ownership 驱动产研团队项目推进、公司核心团队建设
+                    </li>
                 </ul>
-                <p class="section-text" data-zh="Qualifications:" data-en="Qualifications:">Qualifications:</p>
+                <p class="section-text" data-zh="任职资格：" data-en="Qualifications:">任职资格 | Qualifications:</p>
                 <ul class="project-list">
-                    <li data-zh="Master's degree or above in computer science, machine learning or related fields, or bachelor's degree with 3+ years of experience in large model post-training." data-en="Master's degree or above in computer science, machine learning or related fields, or bachelor's degree with 3+ years of experience in large model post-training.">Master's degree or above in computer science, machine learning or related fields, or bachelor's degree with 3+ years of experience in large model post-training.</li>
-                    <li data-zh="Proficient in Python and PyTorch; familiar with large model training stacks such as Huggingface, Megatron, and Deepspeed." data-en="Proficient in Python and PyTorch; familiar with large model training stacks such as Huggingface, Megatron, and Deepspeed.">Proficient in Python and PyTorch; familiar with large model training stacks such as Huggingface, Megatron, and Deepspeed.</li>
-                    <li data-zh="Practical experience with SFT/RM/RLHF; familiar with DPO/PPO/GRPO and other post-training techniques; experience in video understanding is a plus." data-en="Practical experience with SFT/RM/RLHF; familiar with DPO/PPO/GRPO and other post-training techniques; experience in video understanding is a plus.">Practical experience with SFT/RM/RLHF; familiar with DPO/PPO/GRPO and other post-training techniques; experience in video understanding is a plus.</li>
-                    <li data-zh="Familiar with Transformer architecture and model compression techniques; proficient in efficient parameter tuning methods such as LoRA." data-en="Familiar with Transformer architecture and model compression techniques; proficient in efficient parameter tuning methods such as LoRA.">Familiar with Transformer architecture and model compression techniques; proficient in efficient parameter tuning methods such as LoRA.</li>
-                    <li data-zh="Strong problem-solving skills and team spirit; passionate about continuous learning in video AI technologies." data-en="Strong problem-solving skills and team spirit; passionate about continuous learning in video AI technologies.">Strong problem-solving skills and team spirit; passionate about continuous learning in video AI technologies.</li>
-                    <li data-zh="Self-driven with stronger initiative than 80% of peers; highly hands-on and practical." data-en="Self-driven with stronger initiative than 80% of peers; highly hands-on and practical.">Self-driven with stronger initiative than 80% of peers; highly hands-on and practical.</li>
-                    <li data-zh="Enjoy helping and supporting team members." data-en="Enjoy helping and supporting team members.">Enjoy helping and supporting team members.</li>
-                    <li data-zh="Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights." data-en="Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights.">Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights.</li>
-                    <li data-zh="Comfortable expressing genuine ideas openly and avoids overthinking." data-en="Comfortable expressing genuine ideas openly and avoids overthinking.">Comfortable expressing genuine ideas openly and avoids overthinking.</li>
+                    <li data-zh="计算机、机器学习等相关专业硕士及以上学历，或本科3年以上大模型后训练经验。" data-en="Master's degree or above in computer science, machine learning or related fields, or bachelor's degree with 3+ years of experience in large model post-training.">
+                        计算机、机器学习等相关专业硕士及以上学历，或本科3年以上大模型后训练经验。<br>
+                        <span class="en">Master's degree or above in computer science, machine learning or related fields, or bachelor's degree with 3+ years of experience in large model post-training.</span>
+                    </li>
+                    <li data-zh="精通Python及PyTorch框架，熟悉Huggingface、Megatron、Deepspeed等大模型训练栈。" data-en="Proficient in Python and PyTorch; familiar with large model training stacks such as Huggingface, Megatron, and Deepspeed.">
+                        精通Python及PyTorch框架，熟悉Huggingface、Megatron、Deepspeed等大模型训练栈。<br>
+                        <span class="en">Proficient in Python and PyTorch; familiar with large model training stacks such as Huggingface, Megatron, and Deepspeed.</span>
+                    </li>
+                    <li data-zh="具备SFT/RM/RLHF实战经验，熟悉DPO/PPO/GRPO等后训练技术，有视频理解经验者优先。" data-en="Practical experience with SFT/RM/RLHF; familiar with DPO/PPO/GRPO and other post-training techniques; experience in video understanding is a plus.">
+                        具备SFT/RM/RLHF实战经验，熟悉DPO/PPO/GRPO等后训练技术，有视频理解经验者优先。<br>
+                        <span class="en">Practical experience with SFT/RM/RLHF; familiar with DPO/PPO/GRPO and other post-training techniques; experience in video understanding is a plus.</span>
+                    </li>
+                    <li data-zh="了解Transformer架构及模型压缩技术，掌握LoRA等参数高效微调方法。" data-en="Familiar with Transformer architecture and model compression techniques; proficient in efficient parameter tuning methods such as LoRA.">
+                        了解Transformer架构及模型压缩技术，掌握LoRA等参数高效微调方法。<br>
+                        <span class="en">Familiar with Transformer architecture and model compression techniques; proficient in efficient parameter tuning methods such as LoRA.</span>
+                    </li>
+                    <li data-zh="具备良好的问题解决能力与团队协作精神，对视频AI技术有持续学习热情。" data-en="Strong problem-solving skills and team spirit; passionate about continuous learning in video AI technologies.">
+                        具备良好的问题解决能力与团队协作精神，对视频AI技术有持续学习热情。<br>
+                        <span class="en">Strong problem-solving skills and team spirit; passionate about continuous learning in video AI technologies.</span>
+                    </li>
+                    <li data-zh="自驱力强，主动性高，动手能力突出，乐于实践。" data-en="Self-driven with stronger initiative than 80% of peers; highly hands-on and practical.">
+                        自驱力强，主动性高，动手能力突出，乐于实践。<br>
+                        <span class="en">Self-driven with stronger initiative than 80% of peers; highly hands-on and practical.</span>
+                    </li>
+                    <li data-zh="乐于帮助和支持团队成员。" data-en="Enjoy helping and supporting team members.">
+                        乐于帮助和支持团队成员。<br>
+                        <span class="en">Enjoy helping and supporting team members.</span>
+                    </li>
+                    <li data-zh="对新技术和新产品有强烈好奇心，乐于探索和分享。" data-en="Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights.">
+                        对新技术和新产品有强烈好奇心，乐于探索和分享。<br>
+                        <span class="en">Strong curiosity to explore new technologies and experiment with new products, coupled with a willingness to share insights.</span>
+                    </li>
+                    <li data-zh="善于坦诚表达真实想法，避免过度思虑。" data-en="Comfortable expressing genuine ideas openly and avoids overthinking.">
+                        善于坦诚表达真实想法，避免过度思虑。<br>
+                        <span class="en">Comfortable expressing genuine ideas openly and avoids overthinking.</span>
+                    </li>
                 </ul>
             </section>
+
+            <section class="job-section">
+                <h2 class="section-title" data-zh="关于 Vattention" data-en="About Vattention">关于 Vattention</h2>
+                <p class="section-text">
+                    <b style="color:#fff;"><span data-zh="时空注力（Vattention）" data-en="Vattention ">时空注力（Vattention）</span></b>
+                    <span data-zh="智能科技有限公司是一家致力于人机共创变革力量的公司，相信这是内容创作未来的基础。我们构建智能生产力工具，赋能创作者以无与伦比的效率和影响力将愿景变为现实。" data-en="is a company dedicated to the transformative power of Human-AI Co-creation, believing it to be fundamental to the future of content creation. We build intelligent productivity tools that empower creators to bring their visions to life with unparalleled efficiency and impact.">是一家致力于人机共创变革力量的公司，相信这是内容创作未来的基础。我们构建智能生产力工具，赋能创作者以无与伦比的效率和影响力将愿景变为现实。</span>
+                </p>
+                <p class="section-text">
+                    <span data-zh="我们的组织架构非常扁平，团队小而精。我们特别欣赏那些追求真理、充满激情并具有创造力的人。我们在激烈的辩论、大胆的想法和代码交付中茁壮成长。" data-en="Our organization is highly flat, and our team is small and talent dense. We especially appreciate people who seek truth, are passionate, and possess creativity. We thrive on intense debates, wild ideas, and shipping code.">Our organization is highly flat, and our team is small and talent dense. We especially appreciate people who seek truth, are passionate, and possess creativity. We thrive on intense debates, wild ideas, and shipping code.</span>
+                </p>
+                <p class="section-text">
+                    <span data-zh="我们的团队汇聚了来自领先科技公司和顶尖大学的人才，包括 " data-en="Our team brings together talent from leading tech companies and top universities, including ">Our team brings together talent from leading tech companies and top universities, including </span>
+                    <b style="color:#fff;"><span data-zh="阿里巴巴、字节跳动、腾讯、百度、小米、北京大学、中国科学技术大学、哥伦比亚大学、加州大学洛杉矶分校、华中科技大学、帝国理工学院" data-en="Alibaba, ByteDance, Tencent, Baidu, Xiaomi, Peking University, Univ. of Sci & Tech of China, Columbia University, Univ. of California Los Angeles, and Imperial College London">Alibaba、ByteDance, Tencent, Baidu, Xiaomi, Peking University, Univ. of Sci & Tech of China, Columbia University, Univ. of California Los Angeles, and Imperial College London</span></b>
+                    <span data-zh="。我们还有来自 AI 独角兽团队的成员，如 " data-en=". We also have members from AI unicorns such as ">. We also have members from AI unicorns such as </span>
+                    <b style="color:#fff;"><span data-zh="即梦 AI、微软小冰、出门问问、零一万物" data-en="Dreamina AI, Microsoft Xiaoice, Mobvoi, and 01.AI">Dreamina AI, Microsoft Xiaoice, Mobvoi, and 01.AI</span></b>
+                    <span data-zh="，以及来自内容驱动公司和机构的成员，如 " data-en=", as well as from content-driven companies and institutions like ">, as well as from content-driven companies and institutions like </span>
+                    <b style="color:#fff;"><span data-zh="剪映、快手、哔哩哔哩、北京电影学院、欢聚时代" data-en="CapCut, Kwai, Joyy, Beijing Film Academy, Wondershare Filmora, Bilibili">CapCut, Kwai, Joyy, Beijing Film Academy, Wondershare Filmora, Bilibili</span></b>
+                    <span data-zh="。" data-en=".">.</span>
+                </p>
+            </section>
+
+            <section class="job-section">
+                <h2 class="section-title" data-zh="申请流程" data-en="Application Process">Application Process</h2>
+                <p class="section-text" data-zh="经过初步审核后，候选人将被邀请参加2-3次在线面试。最后阶段是现场访问，包括实践练习（可选）、深入讨论和团队会面。" data-en="Upon an initial review, candidates will be invited for 2-3 online interviews. The final stage is an on-site visit, which includes a practical exercise (optional), in-depth discussions, and a meeting with the team.">
+                    Upon an initial review, candidates will be invited for 2-3 online interviews. The final stage is an on-site visit, which includes a practical exercise (optional), in-depth discussions, and a meeting with the team.
+                </p>
+            </section>
+
+
             <section class="application-section">
                 <h2 class="section-title" data-zh="打造真正的 Video Editing Agent" data-en="Build a True Video Editing Agent">Build a True Video Editing Agent</h2>
+                <p class="section-subtitle" data-zh="帮助我们推进为 AI 辅助视频创作提供动力的研究" data-en="Help us advance the research that powers AI-assisted video creation">Help us advance the research that powers AI-assisted video creation</p>
+
                 <p class="section-text application-email" style="text-align: center; font-size: 1.2em; margin-top: 2em;">
                     <span data-zh="请将您的简历发送至：" data-en="Please send your resume to: ">Please send your resume to: </span><a href="mailto:careers@vattention.com">careers@vattention.com</a>
                 </p>
             </section>
         </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">© <span id="currentYear"></span> Vattention. All rights reserved.<br/><br/>Singapore | Hangzhou | Beijing</p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var yearSpan = document.getElementById('currentYear');
+                        if (yearSpan) {
+                            yearSpan.textContent = new Date().getFullYear();
+                        }
+                    });
+                </script>
+            </div>
+        </footer>
     </div>
-    <script src="language-switch.js"></script>
-    <script src="theme-switch.js"></script>
+
+    <script src="language-switch.js?v=20260526-mobile-cache"></script>
+    <script src="theme-switch.js?v=20260526-mobile-cache"></script>
 </body>
 </html>
