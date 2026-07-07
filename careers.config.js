@@ -123,6 +123,16 @@ window.VATTENTION_CAREERS_CONFIG = {
             visible: true
         },
         {
+            id: 'ai_product_content_growth_intern',
+            categoryId: 'go-to-market',
+            titleZh: 'AI 产品 - 内容与用户增长实习生',
+            titleEn: 'Content & Growth Intern, AI Product',
+            locationZh: '⚲ 杭州 / 远程',
+            locationEn: '⚲ Hangzhou / Remote',
+            url: 'ai_product_content_growth_intern.html',
+            visible: true
+        },
+        {
             id: 'human_resource_manager',
             categoryId: 'go-to-market',
             titleZh: '人力资源经理',
