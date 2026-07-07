@@ -133,6 +133,16 @@ window.VATTENTION_CAREERS_CONFIG = {
             visible: true
         },
         {
+            id: 'overseas_social_media_operations_intern',
+            categoryId: 'go-to-market',
+            titleZh: '海外社媒运营实习生',
+            titleEn: 'Global Social Media Operations Intern',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'overseas_social_media_operations_intern.html',
+            visible: true
+        },
+        {
             id: 'human_resource_manager',
             categoryId: 'go-to-market',
             titleZh: '人力资源经理',
