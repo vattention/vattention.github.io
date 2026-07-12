@@ -103,6 +103,16 @@ window.VATTENTION_CAREERS_CONFIG = {
             visible: true
         },
         {
+            id: 'data_scientist',
+            categoryId: 'go-to-market',
+            titleZh: '增长数据科学家',
+            titleEn: 'Growth Data Scientist',
+            locationZh: '⚲ 杭州 / 北京',
+            locationEn: '⚲ Hangzhou / Beijing',
+            url: 'data_scientist.html',
+            visible: true
+        },
+        {
             id: 'community_operations',
             categoryId: 'go-to-market',
             titleZh: '社区运营',
