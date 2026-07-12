@@ -103,6 +103,16 @@ window.VATTENTION_CAREERS_CONFIG = {
             visible: true
         },
         {
+            id: 'growth_engineer_mkt',
+            categoryId: 'go-to-market',
+            titleZh: '增长工程师（MKT 方向）',
+            titleEn: 'Growth Engineer, Marketing',
+            locationZh: '⚲ 杭州 / 北京',
+            locationEn: '⚲ Hangzhou / Beijing',
+            url: 'growth_engineer_mkt.html',
+            visible: true
+        },
+        {
             id: 'data_scientist',
             categoryId: 'go-to-market',
             titleZh: '增长数据科学家',
