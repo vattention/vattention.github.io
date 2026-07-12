@@ -25,8 +25,8 @@ window.VATTENTION_CAREERS_CONFIG = {
         {
             id: 'ai_engineer_backend',
             categoryId: 'product-development',
-            titleZh: 'AI 工程师，后端 & Agent',
-            titleEn: 'AI Engineer, Backend & Agent',
+            titleZh: 'Agent 研发工程师',
+            titleEn: 'Agent Engineer',
             locationZh: '⚲ 杭州 / 北京',
             locationEn: '⚲ Hangzhou / Beijing',
             url: 'ai_engineer_backend.html',
