@@ -13,13 +13,23 @@ window.VATTENTION_CAREERS_CONFIG = {
     ],
     jobs: [
         {
-            id: 'fullstack_engineer_frontend',
+            id: 'designer',
             categoryId: 'product-development',
-            titleZh: '全栈工程师，偏前端',
-            titleEn: 'Full Stack Engineer, Frontend Focus',
-            locationZh: '⚲ 杭州 / 北京',
-            locationEn: '⚲ Hangzhou / Beijing',
-            url: 'fullstack_engineer_frontend.html',
+            titleZh: '设计工程师',
+            titleEn: 'Design Engineer',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'designer.html',
+            visible: true
+        },
+        {
+            id: 'product_engineer_ai',
+            categoryId: 'product-development',
+            titleZh: '产品工程师，AI Agent',
+            titleEn: 'Product Engineer, AI Agent',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'product_engineer_ai.html',
             visible: true
         },
         {
@@ -33,6 +43,16 @@ window.VATTENTION_CAREERS_CONFIG = {
             visible: true
         },
         {
+            id: 'fullstack_engineer_frontend',
+            categoryId: 'product-development',
+            titleZh: '全栈工程师，偏前端',
+            titleEn: 'Full Stack Engineer, Frontend Focus',
+            locationZh: '⚲ 杭州 / 北京',
+            locationEn: '⚲ Hangzhou / Beijing',
+            url: 'fullstack_engineer_frontend.html',
+            visible: true
+        },
+        {
             id: 'ai_engineer_model',
             categoryId: 'product-development',
             titleZh: 'AI 工程师，模型算法',
@@ -41,6 +61,16 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationEn: '⚲ Hangzhou / Beijing',
             url: 'ai_engineer_model.html',
             visible: true
+        },
+        {
+            id: 'product_engineer_urd',
+            categoryId: 'product-development',
+            titleZh: '产品工程师，数据与视效',
+            titleEn: 'Product Engineer, Data & VFX',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'product_engineer_urd.html',
+            visible: false
         },
         {
             id: 'client_engineer',
@@ -53,26 +83,6 @@ window.VATTENTION_CAREERS_CONFIG = {
             visible: false
         },
         {
-            id: 'product_engineer_ai',
-            categoryId: 'product-development',
-            titleZh: '产品工程师，AI Agent',
-            titleEn: 'Product Engineer, AI Agent',
-            locationZh: '⚲ 杭州',
-            locationEn: '⚲ Hangzhou',
-            url: 'product_engineer_ai.html',
-            visible: true
-        },
-        {
-            id: 'product_engineer_urd',
-            categoryId: 'product-development',
-            titleZh: '产品工程师，数据与视效',
-            titleEn: 'Product Engineer, Data & VFX',
-            locationZh: '⚲ 杭州',
-            locationEn: '⚲ Hangzhou',
-            url: 'product_engineer_urd.html',
-            visible: true
-        },
-        {
             id: 'product_engineer_video',
             categoryId: 'product-development',
             titleZh: '产品工程师，Desktop Video App',
@@ -81,16 +91,6 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationEn: '⚲ Hangzhou / Beijing',
             url: 'product_engineer_video.html',
             visible: false
-        },
-        {
-            id: 'designer',
-            categoryId: 'product-development',
-            titleZh: '设计工程师',
-            titleEn: 'Design Engineer',
-            locationZh: '⚲ 杭州',
-            locationEn: '⚲ Hangzhou',
-            url: 'designer.html',
-            visible: true
         },
         {
             id: 'growth_marketing',
