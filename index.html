@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=20260715">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=20260715">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=20260715">
-    <link rel="stylesheet" href="styles.css?v=20260715-official-logo">
+    <link rel="stylesheet" href="styles.css?v=20260715-pets-logo">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Rubik:wght@600;700&display=swap" rel="stylesheet">
     <style>
         /* 字母微交互 */
@@ -546,7 +546,16 @@
         <main class="main-content">
             <!-- 宠物角色滚动展示 -->
             <section class="pets-scroll-section">
-                <h2 class="section-title pets-section-title" data-zh="Vattention 团队的宠物队友们" data-en="Vattention Team's Pet Companions">Vattention Team's Pet Companions</h2>
+                <h2 class="section-title pets-section-title">
+                    <span class="pets-title-language" data-lang-block="zh" aria-hidden="true" hidden>
+                        <img class="pets-title-logo" src="assets/logo/vattention-logo-white.svg" width="3600" height="450" alt="Vattention">
+                        <span class="pets-title-copy">团队的宠物队友们</span>
+                    </span>
+                    <span class="pets-title-language" data-lang-block="en" aria-hidden="false">
+                        <img class="pets-title-logo" src="assets/logo/vattention-logo-white.svg" width="3600" height="450" alt="Vattention">
+                        <span class="pets-title-copy">Team's Pet Companions</span>
+                    </span>
+                </h2>
                 <div class="pets-scroll-container">
                     <div class="pets-scroll-track" id="pets-scroll-track">
                         <!-- 宠物卡片将通过 JavaScript 动态加载 -->
@@ -1010,6 +1019,15 @@
                 } else {
                     element.textContent = element.getAttribute(`data-${lang}`);
                 }
+            });
+
+            // 更新包含图片等富内容的双语区块
+            const languageBlocks = document.querySelectorAll('[data-lang-block]');
+            languageBlocks.forEach(block => {
+                const isActive = block.getAttribute('data-lang-block') === lang;
+                block.hidden = !isActive;
+                block.setAttribute('aria-hidden', String(!isActive));
+                block.classList.toggle('is-active-language-block', isActive);
             });
             
             // 更新页面语言属性

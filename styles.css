@@ -881,6 +881,55 @@ body {
     padding: 0 20px;
 }
 
+.pets-title-language {
+    display: inline-flex;
+    max-width: 100%;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 0.26em;
+    row-gap: 0.14em;
+    line-height: 1.15;
+}
+
+.pets-title-language[hidden] {
+    display: none;
+}
+
+.pets-title-logo {
+    position: relative;
+    top: 0.06em;
+    display: block;
+    width: auto;
+    height: 0.86em;
+    flex: 0 0 auto;
+}
+
+.pets-title-language[data-lang-block="zh"] .pets-title-logo {
+    top: 0.04em;
+    height: 1em;
+}
+
+.pets-title-copy {
+    min-width: 0;
+}
+
+html[data-theme="light"] .pets-title-logo {
+    filter: invert(1);
+}
+
+@media (max-width: 520px) {
+    .pets-title-language {
+        align-items: center;
+        row-gap: 0.24em;
+    }
+
+    .pets-title-copy {
+        flex: 1 0 100%;
+        text-align: center;
+    }
+}
+
 .pets-scroll-container {
     width: 100%;
     overflow: hidden;
