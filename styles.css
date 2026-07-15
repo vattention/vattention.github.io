@@ -1371,10 +1371,21 @@ html[data-theme="light"] .site-nav {
 }
 
 .site-brand {
-    color: var(--deck-text);
-    font-family: var(--f-brand);
-    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    line-height: 0;
     text-decoration: none;
+}
+
+.site-brand-logo {
+    display: block;
+    width: clamp(142px, 11vw, 176px);
+    height: auto;
+}
+
+html[data-theme="light"] .site-brand-logo {
+    filter: invert(1);
 }
 
 .site-nav-links {
@@ -2975,8 +2986,11 @@ html[data-theme="light"] strong {
     }
 
     .site-brand {
-        font-size: 1.12rem;
-        letter-spacing: 0;
+        max-width: 142px;
+    }
+
+    .site-brand-logo {
+        width: 142px;
     }
 
     .site-nav-toggle {
@@ -3094,8 +3108,11 @@ html[data-theme="light"] strong {
     }
 
     .site-brand {
-        font-size: 1.12rem;
-        letter-spacing: 0;
+        max-width: 136px;
+    }
+
+    .site-brand-logo {
+        width: 136px;
     }
 
     .site-nav-toggle {
