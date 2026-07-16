@@ -2650,119 +2650,6 @@ html[data-theme="light"] .theme-switcher button:hover:not([aria-pressed="true"])
     letter-spacing: 0;
 }
 
-.user-voices-section {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding: 34px 0 72px;
-    overflow: hidden;
-}
-
-.voices-header {
-    max-width: 980px;
-    margin: 0 auto 26px;
-    padding: 0 28px;
-    text-align: center;
-}
-
-.voices-label {
-    margin-bottom: 0.65rem;
-    color: var(--brand-green);
-    font-family: var(--f-head);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-}
-
-.voices-title {
-    margin-bottom: 0;
-}
-
-.voice-scroll-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.voice-scroll-container::before,
-.voice-scroll-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-    width: min(18vw, 220px);
-    pointer-events: none;
-}
-
-.voice-scroll-container::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(9, 9, 11, 1), rgba(9, 9, 11, 0));
-}
-
-.voice-scroll-container::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(9, 9, 11, 1), rgba(9, 9, 11, 0));
-}
-
-.voice-scroll-track {
-    display: flex;
-    width: fit-content;
-    gap: 1.25rem;
-    padding: 6px 0;
-    animation: voice-scroll-horizontal 88s linear infinite;
-    will-change: transform;
-}
-
-.voice-scroll-track:hover {
-    animation-play-state: paused;
-}
-
-@keyframes voice-scroll-horizontal {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.voice-card {
-    flex: 0 0 clamp(280px, 28vw, 420px);
-    min-height: 220px;
-    padding: 24px 24px 26px;
-    border: 1px solid var(--deck-rule);
-    background: rgba(17, 17, 20, 0.78);
-    color: var(--deck-text-dim);
-}
-
-.voice-card::before {
-    content: '“';
-    display: block;
-    height: 34px;
-    color: var(--brand-green);
-    font-family: var(--f-head);
-    font-size: 3rem;
-    line-height: 0.8;
-}
-
-.voice-role {
-    margin-bottom: 1rem;
-    color: var(--brand-green);
-    font-family: var(--f-head);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
-
-.voice-card p {
-    color: var(--deck-text-dim);
-    font-size: 1rem;
-    line-height: 1.65;
-}
-
 .careers-section {
     max-width: 980px;
 }
@@ -2916,7 +2803,6 @@ html[data-theme="light"] .hero-story-media span {
 
 html[data-theme="light"] .hero-story-link,
 html[data-theme="light"] .blog-post-card,
-html[data-theme="light"] .voice-card,
 html[data-theme="light"] .company-card,
 html[data-theme="light"] .blog-feature-card {
     background: rgba(255, 255, 255, 0.66);
@@ -2929,14 +2815,6 @@ html[data-theme="light"] .hero-story-media {
     background:
         radial-gradient(circle at 20% 20%, rgba(111, 148, 0, 0.16), transparent 34%),
         linear-gradient(135deg, rgba(111, 148, 0, 0.1), rgba(25, 22, 18, 0.035));
-}
-
-html[data-theme="light"] .voice-scroll-container::before {
-    background: linear-gradient(to right, rgba(245, 241, 232, 1), rgba(245, 241, 232, 0));
-}
-
-html[data-theme="light"] .voice-scroll-container::after {
-    background: linear-gradient(to left, rgba(245, 241, 232, 1), rgba(245, 241, 232, 0));
 }
 
 html[data-theme="light"] .blog-topic-card {
@@ -3496,12 +3374,4 @@ html[data-theme="light"] strong {
         padding: 20px 0;
     }
 
-    .user-voices-section {
-        padding-bottom: 54px;
-    }
-
-    .voice-card {
-        flex-basis: 300px;
-        min-height: 240px;
-    }
 }
