@@ -50,7 +50,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州 / 北京',
             locationEn: '⚲ Hangzhou / Beijing',
             url: 'fullstack_engineer_frontend.html',
-            visible: true
+            visible: false
         },
         {
             id: 'ai_engineer_model',
