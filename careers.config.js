@@ -120,7 +120,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州 / 远程',
             locationEn: '⚲ Hangzhou / Remote',
             url: 'ai_product_content_growth_intern.html',
-            visible: true
+            visible: false
         },
         {
             id: 'overseas_social_media_operations_intern',
@@ -130,7 +130,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'overseas_social_media_operations_intern.html',
-            visible: true
+            visible: false
         },
         {
             id: 'video_editing',
