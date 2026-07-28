@@ -133,6 +133,16 @@ window.VATTENTION_CAREERS_CONFIG = {
             visible: false
         },
         {
+            id: 'content_director',
+            categoryId: 'go-to-market',
+            titleZh: '编导',
+            titleEn: 'Content Director',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'content_director.html',
+            visible: true
+        },
+        {
             id: 'video_editing',
             categoryId: 'go-to-market',
             titleZh: '视频剪辑',
