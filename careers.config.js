@@ -110,7 +110,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州 / 北京',
             locationEn: '⚲ Hangzhou / Beijing',
             url: 'growth_engineer_mkt.html',
-            visible: true
+            visible: false
         },
         {
             id: 'ai_product_content_growth_intern',
