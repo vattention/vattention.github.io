@@ -25,8 +25,8 @@ window.VATTENTION_CAREERS_CONFIG = {
         {
             id: 'product_engineer_ai',
             categoryId: 'product-development',
-            titleZh: '产品工程师，AI Agent',
-            titleEn: 'Product Engineer, AI Agent',
+            titleZh: '产品工程师',
+            titleEn: 'Product Engineer',
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'product_engineer_ai.html',
