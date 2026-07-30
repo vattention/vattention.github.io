@@ -60,7 +60,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州 / 北京',
             locationEn: '⚲ Hangzhou / Beijing',
             url: 'ai_engineer_model.html',
-            visible: true
+            visible: false
         },
         {
             id: 'product_engineer_urd',
