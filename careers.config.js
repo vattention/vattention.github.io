@@ -150,7 +150,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'video_editing.html',
-            visible: true
+            visible: false
         },
         {
             id: 'data_scientist',
