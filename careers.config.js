@@ -35,8 +35,8 @@ window.VATTENTION_CAREERS_CONFIG = {
         {
             id: 'super_marketer_trading',
             categoryId: 'go-to-market',
-            titleZh: 'Super Marketer｜金融与交易方向',
-            titleEn: 'Super Marketer — Finance & Trading',
+            titleZh: 'Product Marketer｜金融与交易方向',
+            titleEn: 'Product Marketer — Finance & Trading',
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'super_marketer_trading.html',
@@ -45,8 +45,8 @@ window.VATTENTION_CAREERS_CONFIG = {
         {
             id: 'super_marketer_video',
             categoryId: 'go-to-market',
-            titleZh: 'Super Marketer｜视频创作方向',
-            titleEn: 'Super Marketer — Video Creation',
+            titleZh: 'Product Marketer｜视频创作方向',
+            titleEn: 'Product Marketer — Video Creation',
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'super_marketer_video.html',
