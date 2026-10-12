@@ -1,0 +1,54 @@
+.careers-role .role-brand {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    margin: 0 auto 2rem;
+}
+
+.careers-role .role-brand img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.careers-role .role-brand .role-logo-light,
+html[data-theme="light"] .careers-role .role-logo-dark {
+    display: none;
+}
+
+html[data-theme="light"] .careers-role .role-logo-light {
+    display: block;
+}
+
+.careers-role .job-title {
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+    margin-bottom: 2.5rem;
+}
+
+.careers-role .job-meta .job-category {
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--deck-rule);
+    border-radius: 999px;
+}
+
+.careers-role .application-email {
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .careers-role .container {
+        padding: 0 16px;
+    }
+
+    .careers-role .job-header {
+        margin-top: 96px;
+    }
+
+    .careers-role .breadcrumb {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+}

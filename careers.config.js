@@ -13,6 +13,46 @@ window.VATTENTION_CAREERS_CONFIG = {
     ],
     jobs: [
         {
+            id: 'product_builder_trading',
+            categoryId: 'product-development',
+            titleZh: 'Product Builder｜金融与交易方向',
+            titleEn: 'Product Builder — Finance & Trading',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'product_builder_trading.html',
+            visible: true
+        },
+        {
+            id: 'product_builder_video',
+            categoryId: 'product-development',
+            titleZh: 'Product Builder｜视频创作方向',
+            titleEn: 'Product Builder — Video Creation',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'product_builder_video.html',
+            visible: true
+        },
+        {
+            id: 'super_marketer_trading',
+            categoryId: 'go-to-market',
+            titleZh: 'Super Marketer｜金融与交易方向',
+            titleEn: 'Super Marketer — Finance & Trading',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'super_marketer_trading.html',
+            visible: true
+        },
+        {
+            id: 'super_marketer_video',
+            categoryId: 'go-to-market',
+            titleZh: 'Super Marketer｜视频创作方向',
+            titleEn: 'Super Marketer — Video Creation',
+            locationZh: '⚲ 杭州',
+            locationEn: '⚲ Hangzhou',
+            url: 'super_marketer_video.html',
+            visible: true
+        },
+        {
             id: 'designer',
             categoryId: 'product-development',
             titleZh: '设计工程师',
@@ -20,7 +60,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'designer.html',
-            visible: true
+            visible: false
         },
         {
             id: 'product_engineer_ai',
@@ -30,7 +70,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'product_engineer_ai.html',
-            visible: true
+            visible: false
         },
         {
             id: 'ai_engineer_backend',
@@ -40,7 +80,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州 / 北京',
             locationEn: '⚲ Hangzhou / Beijing',
             url: 'ai_engineer_backend.html',
-            visible: true
+            visible: false
         },
         {
             id: 'fullstack_engineer_frontend',
@@ -100,7 +140,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'growth_marketing.html',
-            visible: true
+            visible: false
         },
         {
             id: 'growth_engineer_mkt',
@@ -140,7 +180,7 @@ window.VATTENTION_CAREERS_CONFIG = {
             locationZh: '⚲ 杭州',
             locationEn: '⚲ Hangzhou',
             url: 'content_director.html',
-            visible: true
+            visible: false
         },
         {
             id: 'video_editing',
