@@ -7,3 +7,10 @@
 *.tfstate
 *.tfstate.backup
 .terraform.lock.hcl
+
+# Cloudflare and Node
+node_modules/
+dist/
+.wrangler/
+.dev.vars*
+.env*

@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "vattention-website",
+  "account_id": "6063f8e0c0049a50fdcd25cc90853cad",
+  "compatibility_date": "2026-10-15",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "routes": [
+    {
+      "pattern": "www.vattention.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "vattention.com",
+      "custom_domain": true
+    }
+  ]
+}

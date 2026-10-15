@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "wrangler": "4.151.0"
+  },
+  "name": "vattention-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "deploy:media": "wrangler r2 object put vattention-website-media/background3.mp4 --file background3.mp4 --content-type video/mp4 --cache-control \"public, max-age=3600\" --remote"
+  }
+}
